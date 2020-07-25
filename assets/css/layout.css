@@ -340,7 +340,7 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__link {
   color: #495057;
-  display: inline-block;
+  display: block;
   border-left: 4px solid transparent;
   padding: .3rem  1rem .5rem .7rem;
 }

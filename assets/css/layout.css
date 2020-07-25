@@ -266,7 +266,7 @@ h4:hover .duik-anchorjs-link {
   width: 100%;
   height: 15rem;
   padding: .5rem 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media (max-height: 500px) {

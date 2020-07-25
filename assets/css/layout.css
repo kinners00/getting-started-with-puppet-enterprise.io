@@ -330,7 +330,7 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__nav {
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   padding-left: 0;
 }
 
@@ -348,7 +348,7 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__link.active {
   color: #007bff;
   border-color: #007bff;
-  padding-top: .10rem;
+  padding-top: .5rem;
 }
 
 .duik-sidebar__link:hover {

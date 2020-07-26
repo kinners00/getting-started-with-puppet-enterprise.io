@@ -4699,9 +4699,9 @@ input[type="button"].btn-block {
 }
 
 .nav-fill .nav-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-box-flex: 2;
+      -ms-flex: 1 2 auto;
+          flex: 1 2 auto;
   text-align: center;
 }
 

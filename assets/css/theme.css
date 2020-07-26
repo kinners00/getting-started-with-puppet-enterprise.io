@@ -13254,10 +13254,6 @@ h4:hover .duik-anchorjs-link {
   color: #fff;
 }
 
-.duik-sidebar--dark hr {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
 @media (min-width: 768px) {
   .duik-sidebar {
     position: fixed;
@@ -13279,7 +13275,7 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__nav {
   list-style: none;
-  margin-bottom: 10rem;
+  margin-bottom: 60rem;
   padding-left: 0;
 }
 

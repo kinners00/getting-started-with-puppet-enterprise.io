@@ -573,6 +573,7 @@ pre code {
 }
 
 .container-fluid {
+  height: 100%;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -13230,6 +13231,7 @@ h4:hover .duik-anchorjs-link {
   list-style: none;
   margin-bottom: 60rem;
   padding-left: 0;
+  height: 100%;
 }
 
 .duik-sidebar__item {

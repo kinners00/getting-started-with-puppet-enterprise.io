@@ -280,7 +280,7 @@ h4:hover .duik-anchorjs-link {
     height: calc(100vh - 5rem);
   }
   .duik-sidebar-sticky--mini {
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 7rem);
   }
 }
 

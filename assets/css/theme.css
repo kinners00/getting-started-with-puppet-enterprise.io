@@ -13192,11 +13192,13 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar {
   z-index: 100;
   padding: 5rem 0 0;
+  height: 100%;
 }
 
 @media (max-height: 500px) {
   .duik-sidebar {
     overflow: auto;
+    height: 100%;
   }
 }
 
@@ -13207,6 +13209,7 @@ h4:hover .duik-anchorjs-link {
 @media (min-width: 768px) {
   .duik-sidebar {
     position: fixed;
+    height: 100%;
     top: 0;
     bottom: 0;
     left: 0;

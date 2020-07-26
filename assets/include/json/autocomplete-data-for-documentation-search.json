@@ -1,20 +1,20 @@
 [
   {
-    "category": "Georgie started",
-    "label": "Georgie",
+    "category": "Puppet Server",
+    "label": "Puppet Enterprise Components",
+    "url": "bootstrap/hs-doc/home.html#doc-whats-included"
+  },{
+    "category": "Puppet Agent",
+    "label": "Puppet Enterprise Components",
     "url": "bootstrap/hs-doc/index.html"
   },{
-    "category": "Getting started",
-    "label": "Approach",
-    "url": "bootstrap/hs-doc/getting-started/approach.html"
+    "category": "Code Manager",
+    "label": "Puppet Enterprise Components",
+    "url": "bootstrap/hs-doc/index.html"
   },{
-    "category": "Getting started",
-    "label": "Changelog",
-    "url": "bootstrap/hs-doc/getting-started/changelog.html"
-  },{
-    "category": "Getting started",
-    "label": "Credits",
-    "url": "bootstrap/hs-doc/getting-started/credits.html"
+    "category": "Control Repo",
+    "label": "Puppet Enterprise Components",
+    "url": "bootstrap/hs-doc/index.html"
   },{
     "category": "Getting started",
     "label": "Customization",

@@ -13169,13 +13169,13 @@ h4:hover .duik-anchorjs-link {
 
 @media (max-height: 500px) {
   .duik-sidebar-sticky {
-    min-height: 15rem;
+    height: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .duik-sidebar-sticky {
-    height: calc(100vh - 5rem);
+    height: 100%
   }
   .duik-sidebar-sticky--mini {
     height: calc(100vh - 22rem);

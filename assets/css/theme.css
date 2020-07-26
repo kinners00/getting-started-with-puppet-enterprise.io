@@ -427,13 +427,6 @@ h6, .h6 {
   line-height: 1.2;
 }
 
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid #e7eaf3;
-}
-
 small,
 .small {
   font-size: 0.875rem;

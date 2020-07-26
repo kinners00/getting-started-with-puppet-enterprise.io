@@ -1,19 +1,19 @@
 [
   {
-    "category": "Puppet Server",
-    "label": "Puppet Enterprise Components",
+    "category": "Puppet Enterprise Components",
+    "label": "Puppet Server",
     "url": "bootstrap/hs-doc/home.html#doc-whats-included"
   },{
-    "category": "Puppet Agent",
-    "label": "Puppet Enterprise Components",
+    "category": "Puppet Enterprise Components",
+    "label": "Puppet Agent",
     "url": "bootstrap/hs-doc/index.html"
   },{
-    "category": "Code Manager",
-    "label": "Puppet Enterprise Components",
+    "category": "Puppet Enterprise Components",
+    "label": "Code Manager",
     "url": "bootstrap/hs-doc/index.html"
   },{
-    "category": "Control Repo",
-    "label": "Puppet Enterprise Components",
+    "category": "Puppet Enterprise Components",
+    "label": "Control Repo",
     "url": "bootstrap/hs-doc/index.html"
   },{
     "category": "Getting started",

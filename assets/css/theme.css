@@ -13259,7 +13259,7 @@ h4:hover .duik-anchorjs-link {
 
 @media (max-height: 500px) {
   .duik-sidebar {
-    overflow: visible;
+    overflow: auto;
   }
 }
 

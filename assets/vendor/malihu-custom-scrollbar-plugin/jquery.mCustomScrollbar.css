@@ -28,7 +28,7 @@ CONTENTS:
 	.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
 	
 	.mCustomScrollBox{ /* contains plugin's markup */
-		position: absolute;
+		position: sticky;
 		overflow: hidden;
 		height: 100%;
 		max-width: 100%;

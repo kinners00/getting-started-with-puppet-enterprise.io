@@ -126,7 +126,7 @@ y-axis
 	.mCSB_scrollTools .mCSB_buttonDown{
 		display: block;
 		position: absolute;
-		height: 80px;
+		height: 20px;
 		width: 100%;
 		overflow: hidden;
 		margin: 0 auto;

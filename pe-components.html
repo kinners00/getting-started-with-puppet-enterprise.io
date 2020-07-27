@@ -80,8 +80,8 @@
             <h5 class="duik-sidebar__heading">PE Walkthrough</h5>
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="how-puppet-works.html">How puppet works</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="pe-components.html">Puppet Enterprise components</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="how-puppet-works.html">How puppet works</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="pe-components.html">Puppet Enterprise components</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Architecture options</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Lab set up</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Workstation set up</a></li>
@@ -122,7 +122,6 @@
         </div>
         <!-- End Sidebar Nav -->
 
-        <!-- End Fast Links -->
 
       </nav>
       <!-- End Sidebar -->
@@ -150,39 +149,17 @@
           <!-- Content -->
           <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom">
             <div class="border-bottom mb-7">
-              <h1 class="font-weight-bold">Introduction</h1>
-              <p class="lead mb-5">Get started with Docs UI Kit, Responsive Website Template for building responsive, mobile-first sites, with Bootstrap and a template starter page.</p>
+              <h1 class="font-weight-bold">Puppet Enterprise Components</h1>
+              <p class="lead mb-5">Understand the various components that power Puppet Enterprise and how they work together</p>
             </div>
 
             <!-- About -->
             <div id="doc-about" class="mb-7">
-              <h2 class="h4 font-weight-bold">About <a class="js-anchor-link duik-anchorjs-link" href="#doc-about" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>Docs UI Kit is beautiful Open Source Bootstrap 4 UI Kit under MIT license. The UI Kit comes with a lot of beautiful complete pages and includes reusable and customizable UI Blocks.</p>
+              <h2 class="h4 font-weight-bold">Puppet Server <a class="js-anchor-link duik-anchorjs-link" href="#doc-about" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>The Puppet server (formally known as Puppet master) is the central hub of activity and process in Puppet Enterprise. The puppet server is the orchestration engine that controls configuration across your infrastructure.</p>
 
-              <p>Docs UI Kit is maintained by Htmlstream team. Do not miss any updates and announcements, stay tuned on our social pages:</p>
+              <p>The puppet server communicates with your nodes via a "puppet agent" installed on your nodes. Once you specify a configuration that a group of servers should recieve, for example NTP, the puppet server will build a list of instructions of what the puppet agent must do to achieve the desired configuration state. This is known as Catalog compilation. Once complete, the catalog is sent to the puppet agent nodes.</p>
 
-              <ul class="list-inline mb-0">
-                <li class="list-inline-item mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-                  <a class="text-dark" target="_blank" href="https://www.facebook.com/htmlstream">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram">
-                  <a class="text-dark" target="_blank" href="https://www.instagram.com/htmlstream">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-                  <a class="text-dark" target="_blank" href="https://twitter.com/htmlstream">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-                  <a class="text-dark" target="_blank" href="https://dribbble.com/htmlstream">
-                    <i class="fab fa-dribbble"></i>
-                  </a>
-                </li>
-              </ul>
             </div>
             <!-- End About -->
 
@@ -190,8 +167,8 @@
 
             <!-- What’s Included -->
             <div id="doc-whats-included" class="mb-7">
-              <h2 class="h4 font-weight-bold">What’s Included <a class="js-anchor-link duik-anchorjs-link" href="#doc-whats-included" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>The download package includes .zip folder, please unzip the compressed folder and you’ll find the following directories and files including all raw source files:</p>
+              <h2 class="h4 font-weight-bold">Puppet agent<a class="js-anchor-link duik-anchorjs-link" href="#doc-whats-included" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>The puppet agent runs on managed nodes as a background service. It periodically checks in with the puppet server (default 30 mins) to verify it's in the desired state that the puppet server expects. If doesn't match the desired state, it will check the catalog sent from the puppet server to understand what it needs to do to become compliant and then enforces it. After enforcing the configuration, it report back to the puppet server to inform it as to what took place on it's puppet agent run. As well as reporting state and puppet agent run information, it also reports key system information using a tool named Facter. The information collected via facter are called "facts" and are stored in the Puppet database on the puppet server.</p>
 
               <pre class="mb-4">
                 <code class="language-plaintext" data-lang="plaintext">

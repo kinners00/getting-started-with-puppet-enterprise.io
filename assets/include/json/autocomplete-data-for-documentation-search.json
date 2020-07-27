@@ -9,8 +9,8 @@
     "url": "pe-components.html#puppet-agent"
   },{
     "category": "Puppet Enterprise Components",
-    "label": "Code Manager",
-    "url": "bootstrap/hs-doc/index.html"
+    "label": "Facter",
+    "url": "pe-components.html#facter"
   },{
     "category": "Puppet Enterprise Components",
     "label": "Control Repo",

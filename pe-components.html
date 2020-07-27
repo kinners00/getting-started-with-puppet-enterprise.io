@@ -89,7 +89,7 @@
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating a plan</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating puppet configurations</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Hiera</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Leveraging puppet forge for creating configs</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using modules from Puppet Forge</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Patch Management</a></li>
 
             </ul>
@@ -153,17 +153,6 @@
             </div>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QFcqvBk1gNA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <span class="reading-time" title="Estimated read time">
-              {% assign words = content | number_of_words %}
-              {% if words < 360 %}
-                1 min
-              {% else %}
-                {{ words | divided_by:180 }} mins
-              {% endif %}
-            </span>
-
-            {% include reading_time.html %}
 
             <!-- About -->
             <div id="puppet-server" class="mb-7">

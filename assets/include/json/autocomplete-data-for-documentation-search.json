@@ -2,11 +2,11 @@
   {
     "category": "Puppet Enterprise Components",
     "label": "Puppet Server",
-    "url": "home.html#doc-whats-included"
+    "url": "pe-components.html#puppet-server"
   },{
     "category": "Puppet Enterprise Components",
     "label": "Puppet Agent",
-    "url": "bootstrap/hs-doc/index.html"
+    "url": "pe-components.html#puppet-agent"
   },{
     "category": "Puppet Enterprise Components",
     "label": "Code Manager",

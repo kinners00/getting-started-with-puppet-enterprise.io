@@ -131,8 +131,8 @@
           <!-- Content Nav -->
           <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
             <ul class="js-scroll-nav duik-content-nav top-3">
-              <li class="duik-content-nav__item"><a href="#puppet-server">About</a></li>
-              <li class="duik-content-nav__item"><a href="#doc-whats-included">What’s Included</a></li>
+              <li class="duik-content-nav__item"><a href="#puppet-server">Puppet Server</a></li>
+              <li class="duik-content-nav__item"><a href="#puppet-agent">Puppet Agent</a></li>
               <li class="duik-content-nav__item"><a href="#doc-getting-started">Getting Started</a></li>
               <li class="duik-content-nav__item"><a href="#doc-starter-template">Starter Template</a></li>
               <li class="duik-content-nav__item">
@@ -169,7 +169,7 @@
             <hr class="mt-7 mb-4">
 
             <!-- What’s Included -->
-            <div id="doc-whats-included" class="mb-7">
+            <div id="puppet-agent" class="mb-7">
               <h2 class="h4 font-weight-bold">Puppet agent<a class="js-anchor-link duik-anchorjs-link" href="#doc-whats-included" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p>The puppet agent runs on managed nodes as a background service. It periodically checks in with the puppet server (default 30 mins) to verify it's in the desired state that the puppet server expects. If doesn't match the desired state, it will check the catalog sent from the puppet server to understand what it needs to do to become compliant and then enforces it. After enforcing the configuration, it report back to the puppet server to inform it as to what took place on it's puppet agent run. As well as reporting state and puppet agent run information, it also reports key system information using a tool named Facter. The information collected via facter are called "facts" and are stored in the Puppet database on the puppet server.</p>
 

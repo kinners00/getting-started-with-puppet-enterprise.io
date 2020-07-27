@@ -133,7 +133,7 @@
             <ul class="js-scroll-nav duik-content-nav top-3">
               <li class="duik-content-nav__item"><a href="#puppet-server">Puppet Server</a></li>
               <li class="duik-content-nav__item"><a href="#puppet-agent">Puppet Agent</a></li>
-              <li class="duik-content-nav__item"><a href="#doc-getting-started">Getting Started</a></li>
+              <li class="duik-content-nav__item"><a href="#facter">facter</a></li>
               <li class="duik-content-nav__item"><a href="#doc-starter-template">Starter Template</a></li>
               <li class="duik-content-nav__item">
                 <a href="#important-globals">Important globals</a>
@@ -172,56 +172,19 @@
               <h2 class="h4 font-weight-bold">Puppet agent<a class="js-anchor-link duik-anchorjs-link" href="#doc-whats-included" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p>The puppet agent runs on managed nodes as a background service. It periodically checks in with the puppet server (default 30 mins) to verify it's in the desired state that the puppet server expects. If doesn't match the desired state, it will check the catalog sent from the puppet server to understand what it needs to do to become compliant and then enforces it. After enforcing the configuration, it report back to the puppet server to inform it as to what took place on it's puppet agent run. As well as reporting state and puppet agent run information, it also reports key system information using a tool named Facter. The information collected via facter are called "facts" and are stored in the Puppet database on the puppet server.</p>
 
-              <pre class="mb-4">
-                <code class="language-plaintext" data-lang="plaintext">
-                  docs-ui-kit/
-                  ├── assets/
-                  │   ├── css/
-                  │   │   ├── styles.css
-                  │   │   ├── styles.min.css
-                  │   ├── img/
-                  │   │   ├── ...
-                  │   ├── img-temp/
-                  │   │   ├── ...
-                  │   ├── include/
-                  │   │   ├── scss/
-                  │   │   │   ├── ...
-                  │   ├── js/
-                  │   │   ├── main.js
-                  │   │   ├── ...
-                  │   ├── vendor/
-                  │   │   ├── bootstrap/
-                  │   │   ├── ...
-                  ├── README.md
-                  ├── package.json
-                  ├── gulpfile.js
-                  ├── index.html
-                </code>
-              </pre>
-
-              <div class="duik-callout duik-callout-info mb-7">
-                <h4 class="h5">Note!</h4>
-                <p class="mb-0">Please open pages via <code>localhost</code> for better experiance. Some libraries might not work properly with pages viewed via the <code>file://</code> protocol like when opening a local HTML file. You may check out <a target="_blank" href="https://www.mamp.info/en/">MAMP Webserver <i class="fas fa-external-link-alt ml-1"></i></a>. It's free and available for both MacOS and Windows.</p>
-              </div>
             </div>
             <!-- End What’s Included -->
 
             <hr class="mt-7 mb-4">
 
             <!-- Getting Started -->
-            <div id="doc-getting-started" class="mb-7">
-              <h2 class="h4 font-weight-bold">Getting Started <a class="js-anchor-link duik-anchorjs-link" href="#doc-getting-started" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>After unziping the download package into your folder, please open a command line and follow below detailed step by step examples.</p>
+            <div id="facter" class="mb-7">
+              <h2 class="h4 font-weight-bold">Facter<a class="js-anchor-link duik-anchorjs-link" href="#facter" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>The Puppet server (formally known as Puppet master) is the central hub of activity and process in Puppet Enterprise. The puppet server is the orchestration engine that controls configuration across your infrastructure.</p>
 
-              <p>A brief overview of the steps to your first task:</p>
-              <ol class="mb-4">
-                <li>Install Node.js and Gulp</li>
-                <li>Install NPM modules <code>package.json</code>.</li>
-                <li>Run Gulp</li>
-              </ol>
+              <p>The puppet server communicates with your nodes via a "puppet agent" installed on your nodes. Once you specify a configuration that a group of servers should recieve, for example NTP, the puppet server will build a list of instructions of what the puppet agent must do to achieve the desired configuration state. This is known as Catalog compilation. Once complete, the catalog is sent to the puppet agent nodes.</p>
 
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Rohq4hClRkk" frameborder="0" allowfullscreen></iframe>
-            </iframe>
+            </div>
 
               <!-- Install Node.js and Gulp -->
               <div class="mb-5">

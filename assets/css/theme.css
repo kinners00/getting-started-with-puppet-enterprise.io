@@ -3616,7 +3616,7 @@ input[type="button"].btn-block {
 }
 
 
-.duik-content-nav__item.collapse.show a {
+.duik-sidebar__link.collapse.show a {
   color: #fff;
 }
 

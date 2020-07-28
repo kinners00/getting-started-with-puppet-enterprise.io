@@ -3616,6 +3616,10 @@ input[type="button"].btn-block {
 }
 
 
+.duik-content-nav__item.collapse.show a {
+  color: #fff;
+}
+
 .collapse.show a {
   color: #fff;
 }

@@ -79,7 +79,7 @@
           <div class="js-scrollbar duik-sidebar-sticky duik-sidebar-sticky--mini">
             <h5 class="duik-sidebar__heading">Getting Started</h5>
             <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
+              <li class="duik-sidebar__item" data-toggle="collapse"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="how-puppet-works.html">How Puppet Enterprise works</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Prerequisites</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="pe-components.html">Install PE</a></li>
@@ -110,7 +110,16 @@
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Integrations</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Troubleshooting</a></li>
             </ul>
-
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Link with href
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
             <h5 class="duik-sidebar__heading">Useful bits</h5>
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Tips on developing puppet code</a></li>
@@ -125,18 +134,13 @@
             </ul>
           </div>
         </div>
-        <div class="accordion" id="accordionExample-001">
-          <div class="js-scrollbar duik-sidebar-sticky duik-sidebar-sticky--mini">
-          <ul class="duik-sidebar__nav">
-            <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
-          </ul>
-        </div>
-      </div>
         <!-- End Sidebar Nav -->
 
 
       </nav>
       <!-- End Sidebar -->
+
+
 
       <main class="ml-sm-auto col-md-8 col-lg-9 col-xl-10 px-4 pt-4">
         <div class="row pt-3">

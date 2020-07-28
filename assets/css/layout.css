@@ -369,6 +369,13 @@ h4:hover .duik-anchorjs-link {
   color: #fff;
 }
 
+.collapseExample {
+  color: #8c98a4;
+  display: inline-block;
+  border-left: 4px solid transparent;
+  padding: .3rem  1rem .5rem .7rem;
+}
+
 /* Page Nav */
 .duik-content-nav {
   position: fixed;

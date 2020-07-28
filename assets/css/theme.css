@@ -3615,11 +3615,6 @@ input[type="button"].btn-block {
   transition: height 0.35s ease;
 }
 
-
-.collapse.show a {
-  color: #fff;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
     -webkit-transition: none;
@@ -13288,8 +13283,8 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__heading {
   font-size: .84rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
   padding-left: calc(.7rem + 4px);
   padding-right: 1rem;
   color: #fff;

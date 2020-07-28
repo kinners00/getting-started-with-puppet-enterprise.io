@@ -369,14 +369,6 @@ h4:hover .duik-anchorjs-link {
   color: #fff;
 }
 
-.collapse li, .collapsing li {
-  color: #fff;
-  display: inline-block;
-  border-left: 4px solid transparent;
-  padding: .3rem  1rem .5rem .7rem;
-}
-
-
 /* Page Nav */
 .duik-content-nav {
   position: fixed;
@@ -387,12 +379,7 @@ h4:hover .duik-anchorjs-link {
   list-style: none;
 }
 
-.duik-sidebar__link.collapse {
-  color: #fff;
-  display: inline-block;
-  border-left: 4px solid transparent;
-  padding: .3rem  1rem .5rem .7rem;
-}
+
 
 .duik-content-nav ul {
   padding-left: 1rem;

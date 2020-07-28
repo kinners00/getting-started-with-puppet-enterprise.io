@@ -3607,6 +3607,7 @@ input[type="button"].btn-block {
 }
 
 .collapsing {
+  color: #fff;
   position: relative;
   height: 0;
   overflow: hidden;
@@ -5066,13 +5067,6 @@ input[type="button"].btn-block {
   display: flex !important;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
-}
-
-.collapse li, .collapsing li {
-  color: #fff;
-  display: inline-block;
-  border-left: 4px solid transparent;
-  padding: .3rem  1rem .5rem .7rem;
 }
 
 .navbar-expand .navbar-toggler {
@@ -13309,13 +13303,6 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__link {
   color: #7e8892;
-  display: inline-block;
-  border-left: 4px solid transparent;
-  padding: .3rem  1rem .5rem .7rem;
-}
-
-.duik-sidebar__link.collapse {
-  color: #fff;
   display: inline-block;
   border-left: 4px solid transparent;
   padding: .3rem  1rem .5rem .7rem;

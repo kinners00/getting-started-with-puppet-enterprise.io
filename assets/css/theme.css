@@ -5068,6 +5068,13 @@ input[type="button"].btn-block {
       flex-basis: auto;
 }
 
+.collapse {
+  color: #8c98a4;
+  display: inline-block;
+  border-left: 4px solid transparent;
+  padding: .3rem  1rem .5rem .7rem;
+}
+
 .navbar-expand .navbar-toggler {
   display: none;
 }
@@ -13302,13 +13309,6 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__link {
   color: #7e8892;
-  display: inline-block;
-  border-left: 4px solid transparent;
-  padding: .3rem  1rem .5rem .7rem;
-}
-
-.duik-sidebar__link.collapse {
-  color: #107ef4;
   display: inline-block;
   border-left: 4px solid transparent;
   padding: .3rem  1rem .5rem .7rem;

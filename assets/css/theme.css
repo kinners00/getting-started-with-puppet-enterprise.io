@@ -5068,7 +5068,7 @@ input[type="button"].btn-block {
       flex-basis: auto;
 }
 
-.collapse a, .collapsing a {
+.collapse li, .collapsing li {
   color: #fff;
   display: inline-block;
   border-left: 4px solid transparent;

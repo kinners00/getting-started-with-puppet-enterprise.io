@@ -369,7 +369,7 @@ h4:hover .duik-anchorjs-link {
   color: #fff;
 }
 
-.collapse a, .collapsing a {
+.collapse li, .collapsing li {
   color: #fff;
   display: inline-block;
   border-left: 4px solid transparent;

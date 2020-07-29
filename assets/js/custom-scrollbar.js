@@ -9,6 +9,6 @@
     });
 
     // Scroll to Active
-    $('.js-scrollbar').mCustomScrollbar('scrollTo', '.js-scrollbar .collapse.show a');
+   // $('.js-scrollbar').mCustomScrollbar('scrollTo', '.js-scrollbar .collapse.show a');
   });
 })(jQuery);

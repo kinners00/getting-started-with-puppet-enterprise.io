@@ -340,7 +340,7 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__link {
   color: #495057;
-  display: inline-block;
+  display: list-item;
   border-left: 4px solid transparent;
   padding: .3rem  1rem .5rem .7rem;
 }
@@ -361,12 +361,16 @@ h4:hover .duik-anchorjs-link {
 }
 
 .duik-sidebar--dark .duik-sidebar__link.active {
-  color: #fff;
-  border-color: #fff;
+  color: #ffae1a;
+  border-radius: 0.0rem;
+  border-color: #33393d;
+  background-color: #33393d;
+  margin-left: 0.1rem;
+  padding-right: 0rem;
 }
 
 .duik-sidebar--dark .duik-sidebar__link:hover {
-  color: #fff;
+  color: #ffad1aff;
 }
 
 /* Page Nav */

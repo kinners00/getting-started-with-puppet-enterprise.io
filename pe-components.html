@@ -70,14 +70,16 @@
 
         <!-- Header Search -->
         <div class="mb-4">
-          <input class="js-search form-control form-control-sm w-100 form-control-dark bg-white-11 text-white border-0 rounded-0" type="text" placeholder="Search..." aria-label="Search..." data-url="assets/include/json/autocomplete-data-for-documentation-search.json">
+          <input class="js-search form-control form-control-sm w-105 form-control-dark bg-white-11 text-white border-0 rounded-0" type="text" placeholder="Search..." aria-label="Search..." data-url="assets/include/json/autocomplete-data-for-documentation-search.json">
         </div>
         <!-- End Header Search -->
 
         <!-- Sidebar Nav -->
         <div class="collapse navbar-collapse" id="sidebar-nav">
           <div class="js-scrollbar duik-sidebar-sticky duik-sidebar-sticky--mini">
-            <h5 class="duik-sidebar__heading">Getting Started</h5>
+            <div class="col">
+            <button tag="btn" class="col-xl"><h5 class="duik-sidebar__heading" href="#gettingstarted" data-toggle="collapse" aria-expanded="true" aria-controls="gettingstarted">Getting Started</h5></button>
+            <div class="btn-collapse in" id="gettingstarted">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="how-puppet-works.html">How Puppet Enterprise works</a></li>
@@ -91,18 +93,23 @@
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating puppet configurations</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using modules from Puppet Forge</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Patch Management</a></li>
+            </div>
             </ul>
 
-            <h5 class="duik-sidebar__heading" href="#goingfurther" type="link" data-toggle="collapse" aria-expanded="false" aria-controls="goingfurther">Going Further</h5>
+
+
+            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#goingfurther" data-toggle="collapse" aria-expanded="false" aria-controls="goingfurther">Going Further</h5></button>
             <div class="collapse" id="goingfurther">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Hiera</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Roles and Profiles</a></li> 
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Useful directories</a></li>
+            </div>
             </ul>
-          </div>
 
-            <h5 class="duik-sidebar__heading" href="#advanced" type="link" data-toggle="collapse" aria-expanded="false" aria-controls="advanced">Advanced</h5>
+
+
+            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#advanced" data-toggle="collapse" aria-expanded="false" aria-controls="advanced">Advanced</h5></button>
             <div class="collapse" id="advanced">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Scaling with Compilers</a></li>
@@ -116,26 +123,26 @@
               <!-- <div class="collapse" id="collapseExample1"> -->
                <!--  <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Architecture options</a></li> -->
                <!--  </div>-->
+              </div>
             </ul>
-          </div>
 
 
-            <h5 class="duik-sidebar__heading" href="#usefulbits" type="link" data-toggle="collapse" aria-expanded="false" aria-controls="usefulbits">Useful Bits</h5>
+          <button class="col-xl"><h5 class="duik-sidebar__heading" href="#usefulbits" data-toggle="collapse" aria-expanded="false" aria-controls="usefulbits">Useful Bits</h5></button>
             <div class="collapse" id="usefulbits">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Tips on developing puppet code</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Auto generate puppet code</a></li> 
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Useful directories</a></li>
-            </ul>
-          </div>
+            </div>
+          </ul>
 
-            <h5 class="duik-sidebar__heading" href="#reference" type="link" data-toggle="collapse" aria-expanded="false" aria-controls="reference">Reference</h5>
+          <button class="col-xl"><h5 class="duik-sidebar__heading" href="#reference" type="link" data-toggle="collapse" aria-expanded="false" aria-controls="reference">Reference</h5></button>
             <div class="collapse" id="reference">
-            <ul class="duik-sidebar__nav mb-0">
+            <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Puppet platform</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Puppet Language</a></li>
-            </ul>
-          </div>
+            </div>
+          </ul>
           </div>
         </div>
       </div>

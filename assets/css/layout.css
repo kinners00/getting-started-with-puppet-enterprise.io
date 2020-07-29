@@ -353,12 +353,14 @@ h4:hover .duik-anchorjs-link {
   font-family: Calibre,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-decoration-style: solid;
 }
 
 .duik-sidebar__link.active {
   color: #007bff;
   border-color: #007bff;
   padding-top: .5rem;
+  text-decoration-style: solid;
 }
 
 .duik-sidebar__link:hover {

@@ -320,6 +320,8 @@ h4:hover .duik-anchorjs-link {
 }
 
 .duik-sidebar__heading {
+  margin-bottom: 5px;
+  margin-top: -10px;
   font-size: .84rem;
   font-family: Calibre,Arial,sans-serif;
   font-weight: 600;
@@ -332,7 +334,7 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__nav {
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding-left: 0;
 }
 
@@ -348,7 +350,7 @@ h4:hover .duik-anchorjs-link {
   display: list-item;
   border-left: 4px solid transparent;
   padding: .3rem  1rem .3rem .7rem;
-  margin-left: 0.1em;
+  margin-left: -1em;
   padding-left: 1.5rem;
   font-family: Calibre,Arial,sans-serif;
   font-weight: 400;
@@ -359,7 +361,7 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__link.active {
   color: #007bff;
   border-color: #007bff;
-  padding-top: .5rem;
+  padding-top: .4rem;
   text-decoration-style: solid;
 }
 
@@ -377,8 +379,9 @@ h4:hover .duik-anchorjs-link {
   border-radius: 5px;
   border-color: #33393d;
   background-color: #33393d;
-  margin-left: 0.1em;
-  padding-left: 1.5rem;
+  margin-left: -0.2em;
+  padding-left: 0.9rem;
+  text-decoration-style: solid;
 }
 
 .duik-sidebar--dark .duik-sidebar__link:hover {

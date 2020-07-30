@@ -107,15 +107,20 @@
             </div>
             </ul>
 
+           <!--  duik-sidebar__item duik-sidebar__link.collapse1 a { color: #fff; } -->
 
 
-            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#advanced" data-toggle="collapse" aria-expanded="false" aria-controls="advanced">Advanced</h5></button>
+
+            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#advanced" data-toggle="collapse" aria-expanded="false" aria-controls="advanced">How to</h5></button>
             <div class="collapse" id="advanced">
             <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Scaling with Compilers</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Architecture options</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Back ups</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Disaster Recovery</a></li> 
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#puppetinfra" data-toggle="collapse" aria-expanded="false" aria-controls="puppetinfra">Puppet Infrastructure</a></li>
+              <div class="collapse" id="puppetinfra">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">- Scaling with Compilers</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">- Architecture options</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">- Back ups</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">- Disaster Recovery</a></li>
+            </div>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Puppet Enterprise APIs</a></li> 
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Integrations</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Troubleshooting</a></li>
@@ -123,7 +128,7 @@
               <!-- <div class="collapse" id="collapseExample1"> -->
                <!--  <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Architecture options</a></li> -->
                <!--  </div>-->
-              </div>
+            </div>
             </ul>
 
 

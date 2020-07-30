@@ -338,6 +338,7 @@ h4:hover .duik-anchorjs-link {
   padding-left: 0;
 }
 
+
 .duik-sidebar__item {
   font-size: 80%;
   font-family: Calibre,Arial,sans-serif;
@@ -357,6 +358,7 @@ h4:hover .duik-anchorjs-link {
   font-style: normal;
   text-decoration-style: solid;
 }
+
 
 .duik-sidebar__link.active {
   color: #007bff;
@@ -383,6 +385,36 @@ h4:hover .duik-anchorjs-link {
   padding-left: 0.9rem;
   text-decoration-style: solid;
 }
+
+
+.duik-sidebar__link.sub[aria-expanded="true"]:before {
+  content: '- ';
+  color: #ffae1a;
+  margin-left: -1.8em;
+  padding-left: 1.5rem;
+  text-decoration-style: solid;
+}
+
+.duik-sidebar__link.sub[aria-expanded="true"] {
+  color: #ffae1a;
+  margin-left: -1.8em;
+  padding-left: 1.5rem;
+  text-decoration-style: solid;
+}
+
+
+.duik-sidebar__link.sub[aria-expanded="false"]:before {
+  content: '+ ';
+  margin-left: -2.3em;
+  padding-left: 1.2rem;
+  text-decoration-style: solid;
+}
+
+.duik-sidebar--dark .duik-sidebar__link.subs {
+  margin-left: 0.5em;
+  padding-left: 0.9rem;
+}
+
 
 .duik-sidebar--dark .duik-sidebar__link:hover {
   color: #ffad1aff;

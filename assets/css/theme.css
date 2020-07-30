@@ -3612,6 +3612,7 @@ input[type="button"].btn-block {
   opacity: 0;
 }
 
+
 .collapse:not(.show) {
   display: none;
 }
@@ -13370,7 +13371,7 @@ h4:hover .duik-anchorjs-link {
   list-style: none;
 }
 
-.duik-content-nav ul {
+.duik-content-nav ul{
   padding-left: 1rem;
   list-style: none;
 }

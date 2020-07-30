@@ -390,7 +390,7 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__link.sub[aria-expanded="true"]:before {
   content: '- ';
   color: #ffae1a;
-  margin-left: -1.8em;
+  margin-left: -1.6em;
   padding-left: 1.5rem;
   text-decoration-style: solid;
 }
@@ -410,8 +410,9 @@ h4:hover .duik-anchorjs-link {
   text-decoration-style: solid;
 }
 
-.duik-sidebar--dark .duik-sidebar__link.subs {
-  margin-left: 0.5em;
+.duik-sidebar--dark .duik-sidebar__link.subs:before {
+  content: '\BB'" ";
+  margin-left: -0.5em;
   padding-left: 0.9rem;
 }
 

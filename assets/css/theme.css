@@ -10565,10 +10565,14 @@ button.bg-black-soft:focus {
   .my-sm-auto {
     margin-bottom: auto !important;
   }
-  .ml-sm-auto,
-  .mx-sm-auto {
-    margin-left: 240px;
+
+  @media (min-width: 768px) {
+    .ml-sm-auto, .mx-sm-auto {
+      margin-left: 240px;
   }
+  }
+
+
 }
 
 @media (min-width: 768px) {

@@ -389,19 +389,20 @@ h4:hover .duik-anchorjs-link {
 
 .duik-sidebar__link.sub[aria-expanded="true"]:before {
   content: '- ';
-  color: #ffae1a;
   margin-left: -1.6em;
   padding-left: 1.5rem;
   text-decoration-style: solid;
 }
 
 .duik-sidebar__link.sub[aria-expanded="true"] {
-  color: #ffae1a;
   margin-left: -1.8em;
   padding-left: 1.5rem;
   text-decoration-style: solid;
 }
 
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse  {
+  max-height: none;
+}
 
 .duik-sidebar__link.sub[aria-expanded="false"]:before {
   content: '+ ';

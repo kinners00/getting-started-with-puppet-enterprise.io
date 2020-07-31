@@ -1205,6 +1205,14 @@ a.bg-hover-white:hover {
   top: 3rem;
 }
 
+.js-scroll-nav.duik-content-nav.top-4 {
+  top: 3rem;
+}
+
+.col-xl-10.order-xl-1.duik-content-2.border-bottom.top-2 {
+  top: 0rem;
+}
+
 /*------------------------------------
   Sizing
 ------------------------------------*/

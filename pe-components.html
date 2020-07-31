@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Documentation 3 | Docs - UI Kit</title>
+  <title>How Puppet Works</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -163,10 +163,10 @@
         <div class="row pt-3">
           <!-- Content Nav -->
           <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
-            <ul class="js-scroll-nav duik-content-nav top-3">
-              <li class="duik-content-nav__item"><a href="#puppet-server">Puppet Server</a></li>
-              <li class="duik-content-nav__item"><a href="#puppet-agent">Puppet Agent</a></li>
-              <li class="duik-content-nav__item"><a href="#facter">facter</a></li>
+            <ul class="js-scroll-nav duik-content-nav top-4">
+              <li class="duik-content-nav__item"><a href="#pe-components.html#puppet-server">Puppet Server</a></li>
+              <li class="duik-content-nav__item"><a href="#pe-components.html#puppet-agent">Puppet Agent</a></li>
+              <li class="duik-content-nav__item"><a href="#pe-components.html#facter">facter</a></li>
               <li class="duik-content-nav__item"><a href="#doc-starter-template">Starter Template</a></li>
               <li class="duik-content-nav__item">
                 <a href="#important-globals">Important globals</a>
@@ -180,7 +180,7 @@
           <!-- End Content Nav -->
 
           <!-- Content -->
-          <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom">
+          <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
             <div class="border-bottom mb-7">
               <h1 class="font-weight-bold">How Puppet Works</h1>
               <p class="lead mb-5">Understand the various components that power Puppet Enterprise and how they work together</p>
@@ -193,7 +193,7 @@
 
             <!-- About -->
             <div id="puppet-server" class="mb-7">
-              <h2 class="h4 font-weight-bold">Puppet Server <a class="js-anchor-link duik-anchorjs-link" href="#doc-about" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <h2 class="h4 font-weight-bold">Puppet Server <a class="js-anchor-link duik-anchorjs-link" href="#puppet-server" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p>The Puppet server (formally known as Puppet master) is the central hub of activity and process in Puppet Enterprise. The puppet server is the orchestration engine that controls configuration across your infrastructure.</p>
 
               <p>The puppet server communicates with your nodes via a "puppet agent" installed on your nodes. Once you specify a configuration that a group of servers should recieve, for example NTP, the puppet server will build a list of instructions of what the puppet agent must do to achieve the desired configuration state. This is known as Catalog compilation. Once complete, the catalog is sent to the puppet agent nodes.</p>

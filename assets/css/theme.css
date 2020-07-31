@@ -635,7 +635,6 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
 }
-
 .col {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -10568,7 +10567,7 @@ button.bg-black-soft:focus {
   }
   .ml-sm-auto,
   .mx-sm-auto {
-    margin-left: auto !important;
+    margin-left: 240px;
   }
 }
 

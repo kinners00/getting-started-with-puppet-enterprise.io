@@ -7867,7 +7867,7 @@ button.bg-black-soft:focus {
     display: inline !important;
   }
   .d-xl-inline-block {
-    display: inline-block !important;
+    display: inline-block !important;    
   }
   .d-xl-block {
     display: block !important;
@@ -10586,12 +10586,6 @@ button.bg-black-soft:focus {
   .mb-sm-auto,
   .my-sm-auto {
     margin-bottom: auto !important;
-  }
-
-  @media (min-width: 576px) {
-    .ml-sm-auto, .mx-sm-auto {
-      margin-left: 250px;
-  }
   }
 
   @media (min-width: 768px) {

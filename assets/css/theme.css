@@ -6851,7 +6851,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6964,7 +6964,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -13341,7 +13341,7 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__item {
   font-size: 0.875rem;
   text-align: left;
-  font-family: Calibre,Arial,sans-serif;
+  font-family: "Calibre",Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -13353,7 +13353,7 @@ h4:hover .duik-anchorjs-link {
   padding: .3rem  1rem .5rem .7rem;
   margin-left: -1em;
   padding-left: 1.5rem;
-  font-family: Calibre,Arial,sans-serif;
+  font-family: "Calibre",Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   text-decoration-style: solid;

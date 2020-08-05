@@ -13340,6 +13340,22 @@ h4:hover .duik-anchorjs-link {
   color: #fff;
 }
 
+
+.duik-sidebar__heading.ref:hover {
+  width: 240px;
+  padding-top:  4px;
+  font-size: .84rem;
+  font-family: "Calibre",Arial,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-left: calc(.7rem + 4px);
+  padding-right: 1rem;
+  margin-left: -0.2em;
+  color: #fff;
+}
+
 .duik-sidebar__nav {
   list-style: none;
   margin-bottom: 2rem;

@@ -82,17 +82,18 @@
             <div class="btn-collapse in" id="gettingstarted">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="how-puppet-works.html">How Puppet works</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="how-puppet-works.html">How Puppet works</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Prerequisites</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="pe-components.html">Install PE</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Add nodes to Inventory</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating node groups</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Use existing scripts</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="#">Use existing scripts</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Convert scripts to tasks</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating a plan</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating puppet code</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Puppet Forge content</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Patch Management</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Managing Access</a></li>
             </div>
             </ul>
 
@@ -101,29 +102,44 @@
             <button class="col-xl"><h5 class="duik-sidebar__heading" href="#goingfurther" data-toggle="collapse" aria-expanded="false" aria-controls="goingfurther">Going Further</h5></button>
             <div class="collapse" id="goingfurther">
             <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Hiera</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Roles and Profiles</a></li> 
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Useful directories</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Dynamic node groups</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Coding Best Practice</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Node specific configurations</a></li> 
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Sensitive Parameters</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating modules</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Testing Puppet Code</a></li> 
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Working with enviroments</a></li>
             </div>
             </ul>
 
+
            <!--  duik-sidebar__item duik-sidebar__link.collapse1 a { color: #fff; } -->
 
+           <button class="col-xl"><h5 class="duik-sidebar__heading" href="#peinfra" data-toggle="collapse" aria-expanded="false" aria-controls="peinfra">PE Infrastructure</h5></button>
+           <div class="collapse" id="peinfra">
+           <ul class="duik-sidebar__nav">
+             <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Disaster Recovery</a></li>
+             <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Upgrades</a></li> 
+             <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Back ups</a></li>
+             <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Puppet Enterprise APIs</a></li> 
+           </div>
+         </ul>
 
+         <div class="border-bottom-sidebar"></div>
 
-            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#advanced" data-toggle="collapse" aria-expanded="false" aria-controls="advanced">How to</h5></button>
+            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#advanced" data-toggle="collapse" aria-expanded="false" aria-controls="advanced">Reference</h5></button>
             <div class="collapse" id="advanced">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#puppetinfra" data-toggle="collapse" aria-expanded="false" aria-controls="puppetinfra">Puppet Infrastructure</a></li>
               <div class="collapse" id="puppetinfra">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Scaling with Compilers</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Architecture options</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Back ups</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Disaster Recovery</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Puppet Orchestrator</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Puppet Master</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Puppet Agent</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Puppet Databases</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Security and Comms</a></li>
             </div>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Puppet Enterprise APIs</a></li> 
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Integrations</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Troubleshooting</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="https://puppet.com/docs/pe/2019.8/troubleshooting.html">Troubleshooting</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Important directories & Files</a></li>
               <!-- <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#collapseExample1" id=test data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample1">+ Link with href</a></li> -->
               <!-- <div class="collapse" id="collapseExample1"> -->
                <!--  <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Architecture options</a></li> -->
@@ -131,23 +147,6 @@
             </div>
             </ul>
 
-
-          <button class="col-xl"><h5 class="duik-sidebar__heading" href="#usefulbits" data-toggle="collapse" aria-expanded="false" aria-controls="usefulbits">Useful Bits</h5></button>
-            <div class="collapse" id="usefulbits">
-            <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Tips on developing puppet code</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Auto generate puppet code</a></li> 
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Useful directories</a></li>
-            </div>
-          </ul>
-
-          <button class="col-xl"><h5 class="duik-sidebar__heading" href="#reference" type="link" data-toggle="collapse" aria-expanded="false" aria-controls="reference">Reference</h5></button>
-            <div class="collapse" id="reference">
-            <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Puppet platform</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Puppet Language</a></li>
-            </div>
-          </ul>
           </div>
         </div>
       </div>

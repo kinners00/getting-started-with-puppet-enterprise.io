@@ -6,11 +6,11 @@
   },{
     "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Architecture",
-    "url": "orchestrator.html#uses"
+    "url": "orchestrator.html#architecture"
   },{
     "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Config",
-    "url": "orchestrator.html#uses"
+    "url": "orchestrator.html#configuration"
   },{
     "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Uses",

@@ -163,17 +163,19 @@
           <!-- Content Nav -->
           <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
             <ul class="js-scroll-nav duik-content-nav top-4">
-              <li class="duik-content-nav__item"><a href="#pe-components.html#puppet-server">Puppet Server</a></li>
-              <li class="duik-content-nav__item"><a href="#pe-components.html#puppet-agent">Puppet Agent</a></li>
-              <li class="duik-content-nav__item"><a href="#pe-components.html#facter">facter</a></li>
-              <li class="duik-content-nav__item"><a href="#doc-starter-template">Starter Template</a></li>
+              <li class="duik-content-nav__item"><a href="#description">Description</a></li>
               <li class="duik-content-nav__item">
-                <a href="#important-globals">Important globals</a>
+
+                <a href="#architecture">Architecture</a></li>
                 <ul>
-                  <li class="duik-content-nav__item"><a href="#html5-doctype">HTML5 doctype</a></li>
-                  <li class="duik-content-nav__item"><a href="#responsive-meta-tag">Responsive tag</a></li>
-                </ul>
-              </li>
+                  <li class="duik-content-nav__item"><a href="#pcp">PCP</a></li>
+                  <li class="duik-content-nav__item"><a href="#pxp">PXP</a></li>
+                  <li class="duik-content-nav__item"><a href="#pcpbroker">PCP Broker</a></li>
+                  <li class="duik-content-nav__item"><a href="#pxpagent">PXP Agent</a></li>
+
+              </ul>
+              <li class="duik-content-nav__item"><a href="#configuration">Configuration</a></li>
+              <li class="duik-content-nav__item"><a href="#uses">Uses</a></li>
             </ul>
           </div>
           <!-- End Content Nav -->
@@ -181,292 +183,93 @@
           <!-- Content -->
           <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
             <div class="border-bottom mb-7">
-              <h1 class="font-weight-bold">How Puppet Works</h1>
-              <p class="lead mb-5">Understand the various components that power Puppet Enterprise and how they work together</p>
+              <h1 class="font-weight-bold">Puppet Orchestrator</h1>
+              <p class="lead mb-5">The Engine for change within Puppet Enterprise</p>
             </div>
+
+            <p class="lead mb-5"></p>
 
 
             <!-- About -->
-            <div id="puppet-server" class="mb-7">
-              <h2 class="h4 font-weight-bold">Puppet Server <a class="js-anchor-link duik-anchorjs-link" href="#puppet-server" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>The Puppet server (formally known as Puppet master) is the central hub of activity and process in Puppet Enterprise. The puppet server is the orchestration engine that controls configuration across your infrastructure.</p>
+            <div id="description" class="mb-7">
+              <h2 class="h4 font-weight-bold">Description<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>The Puppet orchestrator is used to orchestrate changes across your infrastructure. </p>
 
-              <p>The puppet server communicates with your nodes via a "puppet agent" installed on your nodes. Once you specify a configuration that a group of servers should recieve, for example NTP, the puppet server will build a list of instructions of what the puppet agent must do to achieve the desired configuration state. This is known as Catalog compilation. Once complete, the catalog is sent to the puppet agent nodes.</p>
-              <div id="videocontainer">
-              <video width="100%" height="100%" controls preload="none" poster="assets/img/test.png">
-                <source src="assets/img/test8.mp4" type="video/mp4"> 
-              Your browser does not support the video tag.
-              </video>
-              </div>
+              <p>Think of it as a set of traffic lights controlling the flow of traffic on a busy intersection. The puppet server puppet is the intersection, “the traffic” would be infrastructure tasks like puppet agent or task/plan runs.</p>
+              
+              <p>To do this, the orchestrator uses pe-orchestrations services which is a JVM-based service in PE. The orchestrator uses PXP agents which run on your managed nodes to control changes across your infrastructure. It does this via the PCP transport.</p>
             </div>
 
             <!-- End About -->
 
-            <hr class="mt-7 mb-4">
+            <hr class="mt-7 mb-4 lead mb-5">
 
             <!-- What’s Included -->
-            <div id="puppet-agent" class="mb-7">
-              <h2 class="h4 font-weight-bold">Puppet agent<a class="js-anchor-link duik-anchorjs-link" href="#doc-whats-included" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>The puppet agent runs on managed nodes as a background service. It periodically checks in with the puppet server (default 30 mins) to verify it's in the desired state that the puppet server expects. If doesn't match the desired state, it will check the catalog sent from the puppet server to understand what it needs to do to become compliant and then enforces it. After enforcing the configuration, it report back to the puppet server to inform it as to what took place on it's puppet agent run. As well as reporting state and puppet agent run information, it also reports key system information using a tool named Facter. The information collected via facter are called "facts" and are stored in the Puppet database on the puppet server.</p>
 
-              <pre class="mb-4">
-                <code class="language-plaintext" data-lang="plaintext">
-                  docs-ui-kit/
-                  ├── assets/
-                  │   ├── css/
-                  │   │   ├── styles.css
-                  │   │   ├── styles.min.css
-                  │   ├── img/
-                  │   │   ├── ...
-                  │   ├── img-temp/
-                  │   │   ├── ...
-                  │   ├── include/
-                  │   │   ├── scss/
-                  │   │   │   ├── ...
-                  │   ├── js/
-                  │   │   ├── main.js
-                  │   │   ├── ...
-                  │   ├── vendor/
-                  │   │   ├── bootstrap/
-                  │   │   ├── ...
-                  ├── README.md
-                  ├── package.json
-                  ├── gulpfile.js
-                  ├── index.html
-                </code>
-              </pre>
+            <div id="architecture" class="mb-7">
+              <h2 class="h4 font-weight-bold">Architecture<a class="js-anchor-link duik-anchorjs-link" href="#architecture" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>The functionality of the orchestrator is derived from the Puppet Execution Protocol (PXP) and the Puppet Communications Protocol (PCP).</p>
+              <p>To do this, the orchestrator uses pe-orchestrations services which is a JVM-based service in PE. The orchestrator uses PXP agents which run on your managed nodes to control changes across your infrastructure. It does this via the PCP transport.</p>
+              <p></p>
+              <p class="lead mb-5"></p>
+              <h2 class="h5 font-weight-bold" id="pcp">PCP (Puppet communication Protocol)<a class="js-anchor-link duik-anchorjs-link" href="#pcp" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p></p>
+              <p>The underlying communication protocol that describes how PXP messages get routed to an agent and back to the orchestrator.</p>
 
-              <div class="duik-callout duik-callout-info mb-7">
-                <h4 class="h5">Note!</h4>
-                <p class="mb-0">Please open pages via <code>localhost</code> for better experiance. Some libraries might not work properly with pages viewed via the <code>file://</code> protocol like when opening a local HTML file. You may check out <a target="_blank" href="https://www.mamp.info/en/">MAMP Webserver <i class="fas fa-external-link-alt ml-1"></i></a>. It's free and available for both MacOS and Windows.</p>
-              </div>
+              <p class="lead mb-5"></p>
 
-            </div>
+              <h2 class="h5 font-weight-bold" id="pxp">PXP (Puppet Execution Protocol)<a class="js-anchor-link duik-anchorjs-link" href="#pxp" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <p>A message format used to request that a task be executed on a remote host and receive responses on the status of that task. This is used by the pe-orchestration services to run Puppet on agents.</p>
+
+              <p class="lead mb-5"></p>
+
+              <h2 class="h5 font-weight-bold" id="pcpbroker">PCP Broker<a class="js-anchor-link duik-anchorjs-link" href="#pcpbroker" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+              <p>A JVM-based service that runs in pe-orchestration-services on the master and in the pe-puppetserver service on compilers. PCP brokers route PCP messages, which declare the content of the message via message type, and identify the sender and intended recipient. PCP brokers on compilers connect to the orchestrator, and the orchestrator uses the brokers to direct messages to PXP agents connected to the compilers. When using compilers, PXP agents running on PE components (the Puppet master, PuppetDB, and the PE console) connect directly to the orchestrator, but all other PXP agents connect to compilers via load balancers.</p>
+
+              <p class="lead mb-5"></p>
+
+              <h2 class="h5 font-weight-bold" id="pxpagent">PXP Agent<a class="js-anchor-link duik-anchorjs-link" href="#pxpagent" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p></p>
+              <p>A system service in the agent package that runs PXP.</p>
+              <p class="lead mb-5"></p>
+
+
+          </div>
             <!-- End What’s Included -->
 
-            <hr class="mt-7 mb-4">
+            <hr class="mt-7 mb-4 lead mb-5">
 
-            <div id="doc-getting-started" class="mb-7">
-              <h2 class="h4 font-weight-bold">Getting Started <a class="js-anchor-link duik-anchorjs-link" href="#doc-getting-started" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>After unziping the download package into your folder, please open a command line and follow below detailed step by step examples.</p>
+            <div id="configuration" class="mb-7">
+              <h2 class="h4 font-weight-bold">Configuration<a class="js-anchor-link duik-anchorjs-link" href="#configuration" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <p>Orchestrator is fundamental to most actions within Puppet Enterprise and should work out of the box upon a successful PE install, however if you want to configure any additional parameters or use orchestrator via other methods, the relevant links are listed below.</p>
+              <p><a href="https://puppet.com/docs/pe/2019.8/configuring_puppet_orchestrator.html">Configuring Puppet Orchestrator</a></p>
+              <p><a href="https://puppet.com/docs/pe/2019.8/orchestrator_api_v1_endpoints.html">Orchestrator API v1 Endpoints</a></p>
+              <p><a href="https://puppet.com/docs/pe/2019.8/bolt_configure_orchestrator.html">Connecting Bolt to PE</a></p>
+              <p><a href="https://puppet.com/docs/pe/2019.8/installing_tasks.html">Installing Tasks and Plans</a></p>
+              <p></p>
 
-              <p>A brief overview of the steps to your first task:</p>
-              <ol class="mb-4">
-                <li>Install Node.js and Gulp</li>
-                <li>Install NPM modules <code>package.json</code>.</li>
-                <li>Run Gulp</li>
-              </ol>
 
-            <!-- Getting Started -->
-            <div id="facter" class="mb-7">
-              <h2 class="h4 font-weight-bold">Facter<a class="js-anchor-link duik-anchorjs-link" href="#facter" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>The Puppet server (formally known as Puppet master) is the central hub of activity and process in Puppet Enterprise. The puppet server is the orchestration engine that controls configuration across your infrastructure.</p>
-
-              <p>The puppet server communicates with your nodes via a "puppet agent" installed on your nodes. Once you specify a configuration that a group of servers should recieve, for example NTP, the puppet server will build a list of instructions of what the puppet agent must do to achieve the desired configuration state. This is known as Catalog compilation. Once complete, the catalog is sent to the puppet agent nodes.</p>
-
+              <hr class="mt-7 mb-4 lead mb-5">
             </div>
+            <!-- Getting Started -->
+            <div id="uses" class="mb-7">
+              <h2 class="h4 font-weight-bold">Uses<a class="js-anchor-link duik-anchorjs-link" href="#uses" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                 <p>Connect with thousands of hosts at the same time without slowing down your network. The Puppet Communications Protocol (PCP) and message broker efficiently mediate communications on your network even as your operational demands grow</p>
+
+                <p>Initiate Puppet jobs whenever you need to update agents.</p>
+
+              <p>Run Puppet tasks and plans (in any programming language that your target nodes can run) to automate manual work across your infrastructure and applications</p>
+
+              <p><a href="https://puppet.com/docs/pe/2019.8/running_puppet_on_demand_with_orch.html">Running Puppet on Demand</a></p>
+              <p><a href="https://puppet.com/docs/pe/2019.8/running_tasks.html">Running tasks</a></p>
+              <p><a href="https://puppet.com/docs/pe/2019.8/running_plans_in_pe.html">Running Plans</a></p>
 
               <!-- Install Node.js and Gulp -->
-              <div class="mb-5">
-                <div class="media mb-3">
-                  <span class="badge badge-primary badge-pill align-self-center mr-2">1</span>
-                  <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0">Install Node.js and Gulp</h4>
-                  </div>
-                </div>
+            
 
-                <div class="mb-4">
-                  <h5 class="h6 font-weight-bold">Installing Node.js</h5>
-                  <p>If you do not have Node installed already, you can get it by <a target="_blank" href="https://nodejs.org/en/">downloading the package installer from Node's website</a>. Please download the stable version of Node.js (LTS) NOT the latest.</p>
-                </div>
-
-                <h5 class="h6 font-weight-bold">Installing Gulp</h5>
-                <p>You need to have Node.js (Node) installed onto your computer before you can install Gulp. When you're done with installing Node, you can install Gulp by using the following command in the command line:</p>
-
-                <p>Please note, first Gulp should be installed globally and for that reason <code>-g</code> command is used.</p>
-                <pre class="mb-4">
-                  <code class="language-js" data-lang="js">
-                    npm install gulp-cli -g
-                  </code>
-                </pre>
-
-                <div class="duik-callout duik-callout-danger mb-7">
-                  <h4 class="h5 text-danger">Important!</h4>
-                  <p class="mb-0">Note: If you are using MacOS please use <code>sudo</code> keyword in the command because they need administrator rights to install Gulp globally.</p>
-                </div>
-              </div>
-              <!-- End Install Node.js and Gulp -->
-
-              <!-- Install NPM Modules -->
-              <div class="mb-4">
-                <div class="media mb-3">
-                  <span class="badge badge-primary badge-pill align-self-center mr-2">2</span>
-                  <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0">Install NPM modules <code>package.json</code></h4>
-                  </div>
-                </div>
-
-                <div class="mb-4">
-                  <h5 class="h6 font-weight-bold">Installing NPM modules</h5>
-                  <p>First, change the command line path into your project folder. if you have not done this before, you may check the following article to quick start <a target="_blank" href="http://www.digitalcitizen.life/command-prompt-how-use-basic-commands">http://www.digitalcitizen.life/command-prompt-how-use-basic-commands</a></p>
-                </div>
-
-                <p>Once the path of your workflow is changed to Docs UI Kit folder, you may run <code>package.json</code> file by using the following command:</p>
-
-                <pre class="mb-4">
-                  <code class="language-js" data-lang="js">
-                    npm install
-                  </code>
-                </pre>
-
-                <p>This time, we're installing <code>Gulp</code> with its all dependency plugins like <code>gulp-sass</code> and others. It might take a few minutes, depends on your internet connection.</p>
-              </div>
-              <!-- End Install NPM Modules -->
-
-              <!-- Run Gulp -->
-              <div class="mb-4">
-                <div class="media mb-3">
-                  <span class="badge badge-primary badge-pill align-self-center mr-2">3</span>
-                  <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0">Run Gulp</h4>
-                  </div>
-                </div>
-
-                <p>Now we have an integrated workflow, try it out run:</p>
-
-                <pre class="mb-4">
-                  <code class="language-js" data-lang="js">
-                    gulp
-                  </code>
-                </pre>
-
-                <p>Now you can try making some changes to <code>assets/include/scss/styles.scss</code> and save it.</p>
-
-                <div class="duik-callout duik-callout-danger mb-7">
-                  <h4 class="h5 text-danger">Important!</h4>
-                  <p class="mb-0">if you are updating any <code>variables</code>, please make sure to save <code>_custom.bootstrap.variables.scss</code> file. It must be refreshed when any varialbes is udated as we updated core Bootstrap codes through SASS to avoid code duplications. The file is located in the following path: <code>assets/include/scss/vendors/bootstrap/..</code></p>
-                  <hr>
-                  <p class="mb-0">OR simply re-run Gulp and all changes will be automatically up to date.</p>
-                </div>
-              </div>
-              <!-- End Run Gulp -->
-            </div>
-            <!-- End Getting Started -->
-
-            <hr class="mt-7 mb-4">
-
-            <!-- Starter Template -->
-            <div id="doc-starter-template" class="mb-7">
-              <h2 class="h4 font-weight-bold">Starter Template <a class="js-anchor-link duik-anchorjs-link" href="#doc-starter-template" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>Start with this basic HTML starter template, or modify any included layout pages. Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
-
-              <pre class="mb-4">
-                <code class="language-html" data-lang="html">
-                  &lt;!doctype html&gt;
-                  &lt;html lang="en"&gt;
-                    &lt;head&gt;
-                      &lt;title&gt;Hello World!&lt;/title&gt;
-
-                      &lt;!-- Meta --&gt;
-                      &lt;meta charset="utf-8"&gt;
-                      &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-
-                      &lt;!-- Favicon --&gt;
-                      &lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;
-
-                      &lt;!-- Web Fonts --&gt;
-                      &lt;link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700%7COpen+Sans:300,400,600,700" rel="stylesheet"&gt;
-
-                      &lt;!-- Bootstrap CSS --&gt;
-                      &lt;link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/css/bootstrap.css"&gt;
-
-                      &lt;!-- Theme Styles --&gt;
-                      &lt;link rel="stylesheet" type="text/css" href="assets/css/styles.css"&gt;
-                    &lt;/head&gt;
-
-                    &lt;body&gt;
-                      &lt;h1&gt;Hello World!!&lt;/h1&gt;
-
-                      &lt;!-- JAVASCRIPTS (Load javascripts at bottom, this will reduce page load time) --&gt;
-                      &lt;!-- Global Vendor --&gt;
-                      &lt;script src="assets/vendors/jquery.min.js"&gt;&lt;/script&gt;
-                      &lt;script src="assets/vendors/jquery.migrate.min.js"&gt;&lt;/script&gt;
-                      &lt;script src="assets/vendors/popper.min.js"&gt;&lt;/script&gt;
-                      &lt;script src="assets/vendors/bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
-
-                      &lt;!-- Theme Settings and Calls --&gt;
-                      &lt;script src="assets/js/main.js"&gt;&lt;/script&gt;
-                      &lt;!-- END JAVASCRIPTS --&gt;
-                    &lt;/body&gt;
-                  &lt;/html&gt;
-                </code>
-              </pre>
-
-              <p class="mb-4">That's all you need for overall page requirements. Visit the <a href="https://getbootstrap.com/docs/4.1/layout/overview/">Bootstrap's Layout docs</a> our official examples to start laying out your site's content and components.</p>
-
-              <div class="mb-4">
-                <ul class="nav nav-bordered" id="testTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="testTab-result" data-toggle="tab" href="#testTab-result-content" role="tab" aria-controls="testTab-result-content" aria-selected="true">Result</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="testTab-code" data-toggle="tab" href="#testTab-code-content" role="tab" aria-controls="testTab-code-content" aria-selected="false">Code</a>
-                  </li>
-                </ul>
-                <div class="tab-content" id="testTabContent">
-                  <div class="tab-pane bg-light fade p-3 show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
-                    <div class="card">
-                      <div class="card-body">
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane bg-light fade p-3" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
-                    <pre>
-                      <code class="language-html" data-lang="html">
-                        &lt;div class="card"&gt;
-                          &lt;div class="card-body"&gt;
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                          &lt;/div&gt;
-                        &lt;/div&gt;
-                      </code>
-                    </pre>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- End  Starter Template -->
-
-            <div id="important-globals" class="mb-7">
-              <h2 class="h4 font-weight-bold">Important globals <a class="js-anchor-link duik-anchorjs-link" href="#important-globals" data-anchorjs-icon="#"></a></h2>
-              <p>Docs UI Kit employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let's dive in.</p>
-            </div>
-
-            <div id="html5-doctype" class="mb-7">
-              <h3 class="h5">HTML5 doctype <a class="js-anchor-link duik-anchorjs-link" href="#html5-doctype" data-anchorjs-icon="#"></a></h3>
-              <p>Docs UI Kit requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.</p>
-
-              <pre>
-                <code class="language-html" data-lang="html">
-                  &lt;!doctype html&gt;
-                  &lt;html lang="en"&gt;
-                    ...
-                  &lt;/html&gt;
-                </code>
-              </pre>
-            </div>
-
-            <div id="responsive-meta-tag" class="mb-7">
-              <h3 class="h5">Responsive meta tag <a class="js-anchor-link duik-anchorjs-link" href="#responsive-meta-tag" data-anchorjs-icon="#"></a></h3>
-              <p>Docs UI Kit is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <span class="text-dark font-weight-bold">add the responsive viewport meta tag</span> to your <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
-
-              <pre>
-                <code class="language-html" data-lang="html">
-                  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-                </code>
-              </pre>
-            </div>
-          </div>
           <!-- End Content -->
         </div>
 
@@ -475,7 +278,7 @@
           <div class="row">
             <!-- Copyright -->
             <div class="col-md-6 text-center text-dark text-md-left mb-3 mb-md-0">
-              &copy; 2019 <a class="text-dark" href="https://htmlstream.com">Htmlstream</a>. All Rights Reserved.
+              &copy; 2020 <a class="text-dark" href="https://puppet.com">Puppet</a>. All Rights Reserved.
             </div>
             <!-- End Copyright -->
 
@@ -483,28 +286,23 @@
             <div class="col-md-6 col-xl-4 align-self-center">
               <ul class="list-inline text-center text-md-right mb-0">
                 <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github">
-                  <a class="text-dark" target="_blank" href="https://github.com/htmlstreamofficial/">
+                  <a class="text-dark" target="_blank" href="https://github.com/kinners00/getting-started-with-puppet-enterprise.io">
                     <i class="fab fa-github"></i>
                   </a>
                 </li>
                 <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-                  <a class="text-dark" target="_blank" href="https://www.facebook.com/htmlstream">
+                  <a class="text-dark" target="_blank" href="https://www.facebook.com/PuppetSoftware">
                     <i class="fab fa-facebook"></i>
                   </a>
                 </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram">
-                  <a class="text-dark" target="_blank" href="https://www.instagram.com/htmlstream">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </li>
                 <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-                  <a class="text-dark" target="_blank" href="https://twitter.com/htmlstream">
+                  <a class="text-dark" target="_blank" href="https://twitter.com/puppetize">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
-                <li class="list-inline-item ml-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-                  <a class="text-dark" target="_blank" href="https://dribbble.com/htmlstream">
-                    <i class="fab fa-dribbble"></i>
+                <li class="list-inline-item ml-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Youtube">
+                  <a class="text-dark" target="_blank" href="https://www.youtube.com/c/Puppet-Inc/featured">
+                    <i class="fab fa-youtube"></i>
                   </a>
                 </li>
               </ul>

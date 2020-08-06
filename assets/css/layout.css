@@ -1438,7 +1438,7 @@ a.bg-hover-white:hover {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   padding: 1.5rem;
-  font-size: 13px;
+  font-size: 15px;
   background: rgba(248, 249, 250, 0.7);
   margin-bottom: 1rem;
 }

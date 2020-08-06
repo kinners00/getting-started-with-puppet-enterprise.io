@@ -5,6 +5,18 @@
     "url": "orchestrator.html"
   },{
     "category": "Puppet Orchestrator",
+    "label": "Puppet Orchestrator Architecture",
+    "url": "orchestrator.html#uses"
+  },{
+    "category": "Puppet Orchestrator",
+    "label": "Puppet Orchestrator Config",
+    "url": "orchestrator.html#uses"
+  },{
+    "category": "Puppet Orchestrator",
+    "label": "Puppet Orchestrator Uses",
+    "url": "orchestrator.html#uses"
+  },{
+    "category": "Puppet Orchestrator",
     "label": "PCP",
     "url": "orchestrator.html#pcp"
   },{
@@ -19,18 +31,6 @@
     "category": "Puppet Orchestrator",
     "label": "PXP Agent",
     "url": "orchestrator.html#pxpagent"
-  },{
-    "category": "Puppet Orchestrator",
-    "label": "Puppet Orchestrator Uses",
-    "url": "orchestrator.html#uses"
-  },{
-    "category": "Puppet Orchestrator",
-    "label": "Puppet Orchestrator Config",
-    "url": "orchestrator.html#uses"
-  },{
-    "category": "Puppet Orchestrator",
-    "label": "Puppet Orchestrator Architecture",
-    "url": "orchestrator.html#uses"
   },{
     "category": "Components",
     "label": "Avatars",

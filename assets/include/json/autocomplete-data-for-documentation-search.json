@@ -32,32 +32,32 @@
     "label": "PXP Agent",
     "url": "orchestrator.html#pxpagent"
   },{
-    "category": "Components",
-    "label": "Avatars",
-    "url": "bootstrap/hs-doc/components/avatars.html"
+    "category": "Getting Started",
+    "label": "Use Existing Scripts",
+    "url": "use-scripts.html"
   },{
-    "category": "Components",
-    "label": "Badge",
+    "category": "Reference",
+    "label": "Puppet Server",
     "url": "bootstrap/hs-doc/components/badge.html"
   },{
-    "category": "Components",
-    "label": "Breadcrumb",
+    "category": "Reference",
+    "label": "Puppet Agent",
     "url": "bootstrap/hs-doc/components/breadcrumb.html"
   },{
-    "category": "Components",
-    "label": "Buttons",
+    "category": "Reference",
+    "label": "Puppet Databases",
     "url": "bootstrap/hs-doc/components/buttons.html"
   },{
-    "category": "Components",
-    "label": "Cards",
+    "category": "Reference",
+    "label": "Facter",
     "url": "bootstrap/hs-doc/components/cards.html"
   },{
-    "category": "Components",
-    "label": "Collapse",
+    "category": "Reference",
+    "label": "Compiler",
     "url": "bootstrap/hs-doc/components/collapse.html"
   },{
-    "category": "Components",
-    "label": "Dividers",
+    "category": "Reference",
+    "label": "Disaster Recovery",
     "url": "bootstrap/hs-doc/components/dividers.html"
   },{
     "category": "Components",

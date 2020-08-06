@@ -1,32 +1,32 @@
 [
   {
-    "category": "Puppet Enterprise Components",
-    "label": "Puppet Server",
-    "url": "pe-components.html#puppet-server"
+    "category": "Reference",
+    "label": "Puppet Orchestrator",
+    "url": "orchestrator.html"
   },{
-    "category": "Puppet Enterprise Components",
-    "label": "Puppet Agent",
-    "url": "pe-components.html#puppet-agent"
+    "category": "Puppet Orchestrator",
+    "label": "PCP",
+    "url": "orchestrator.html#pcp"
   },{
-    "category": "Puppet Enterprise Components",
-    "label": "Facter",
-    "url": "pe-components.html#facter"
+    "category": "Puppet Orchestrator",
+    "label": "PXP",
+    "url": "orchestrator.html#pxp"
   },{
-    "category": "Puppet Enterprise Components",
-    "label": "Control Repo",
-    "url": "bootstrap/hs-doc/index.html"
+    "category": "Puppet Orchestrator",
+    "label": "PCP Broker",
+    "url": "orchestrator.html#pcpbroker"
   },{
-    "category": "Getting started",
-    "label": "Customization",
-    "url": "bootstrap/hs-doc/getting-started/customization.html"
+    "category": "Reference",
+    "label": "PXP Agent",
+    "url": "orchestrator.html#pxpagent"
   },{
-    "category": "Getting started",
-    "label": "File structures",
-    "url": "bootstrap/hs-doc/getting-started/file-structures.html"
+    "category": "Puppet Orchestrator",
+    "label": "Puppet Orch Uses",
+    "url": "orchestrator.html#uses"
   },{
-    "category": "Getting started",
-    "label": "Gulp",
-    "url": "bootstrap/hs-doc/getting-started/gulp.html"
+    "category": "Puppet Orchestrator",
+    "label": "Puppet Orch Config",
+    "url": "orchestrator.html#uses"
   },{
     "category": "Components",
     "label": "Alerts",

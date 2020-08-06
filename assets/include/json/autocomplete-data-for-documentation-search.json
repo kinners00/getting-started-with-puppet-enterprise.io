@@ -28,9 +28,9 @@
     "label": "Puppet Orch Config",
     "url": "orchestrator.html#uses"
   },{
-    "category": "Components",
-    "label": "Alerts",
-    "url": "bootstrap/hs-doc/components/alerts.html"
+    "category": "Puppet Orchestrator",
+    "label": "Puppet Orch Architecture",
+    "url": "orchestrator.html#uses"
   },{
     "category": "Components",
     "label": "Avatars",

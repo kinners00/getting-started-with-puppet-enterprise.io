@@ -417,17 +417,11 @@
                   <div class="tab-pane bg-light fade p-3 show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
                     <pre>
                       <code class="language-js" data-lang="js">
-                        echo "Reconfiguring W32Time..."
-                        w32tm /config /syncfromflags:MANUAL /manualpeerlist:"0.nl.pool.ntp.org 1.nl.pool.ntp.org" /update
-                        echo ""
-                        echo "Resyncing clock..."
-                        w32tm /resync
-                        echo ""
-                        echo "Current time source:"
-                        w32tm /query /source
-                        echo ""
-                        echo "All configured time sources:"
-                        w32tm /query /peers
+                        &lt;div class="card"&gt;
+                          &lt;div class="card-body"&gt;
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                          &lt;/div&gt;
+                        &lt;/div&gt;
                       </code>
                     </pre>
                   </div>

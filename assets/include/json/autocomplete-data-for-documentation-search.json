@@ -2,39 +2,39 @@
   {
     "category": "Reference",
     "label": "Puppet Orchestrator",
-    "url": "orchestrator.html"
+    "url": "reference/orchestrator.html"
   },{
     "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Architecture",
-    "url": "orchestrator.html#architecture"
+    "url": "reference/orchestrator.html#architecture"
   },{
     "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Configuration",
-    "url": "orchestrator.html#configuration"
+    "url": "reference/orchestrator.html#configuration"
   },{
     "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Uses",
-    "url": "orchestrator.html#uses"
+    "url": "reference/orchestrator.html#uses"
   },{
     "category": "Puppet Orchestrator",
     "label": "PCP",
-    "url": "orchestrator.html#pcp"
+    "url": "reference/orchestrator.html#pcp"
   },{
     "category": "Puppet Orchestrator",
     "label": "PXP",
-    "url": "orchestrator.html#pxp"
+    "url": "reference/orchestrator.html#pxp"
   },{
     "category": "Puppet Orchestrator",
     "label": "PCP Broker",
-    "url": "orchestrator.html#pcpbroker"
+    "url": "reference/orchestrator.html#pcpbroker"
   },{
     "category": "Puppet Orchestrator",
     "label": "PXP Agent",
-    "url": "orchestrator.html#pxpagent"
+    "url": "reference/orchestrator.html#pxpagent"
   },{
     "category": "Getting Started",
     "label": "Use Existing Scripts",
-    "url": "use-scripts.html"
+    "url": "getting-started/use-scripts.html"
   },{
     "category": "Reference",
     "label": "Puppet Server",

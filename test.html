@@ -84,9 +84,10 @@
         </div>
         <script>
             $(function(){
-              $('#test').load('sidebar.html');
-              $('#intro').addClass("active")
+              $("#test").load("sidebar.html", function (){ 
+                $("#intro").addClass("active");
             });
+          });
         </script>
 
       </nav>

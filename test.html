@@ -77,7 +77,7 @@
 
         <!-- Sidebar Nav -->
 
-        <!-- End Sidebar Nav -->
+        <!-- End Sidebar Nav --> ---->
 
         <div id=test>
 
@@ -87,10 +87,7 @@
               $("#test").load("sidebar.html", function (){ 
                 $("#nodegroup").addClass("active");
                 $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
-                $("#goingfurther").removeClass("collapse");
-                $("#goingfurther").addClass("btn-collapse in");
-                $("#goingfurther").removeAttr("btn-collapse in");
-                
+                $("#gngfrt").attr( "class", "btn-collapse in" );  
             });
           });
         </script>

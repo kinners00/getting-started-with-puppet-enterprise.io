@@ -86,8 +86,11 @@
             $(function(){
               $("#test").load("sidebar.html", function (){ 
                 $("#nodegroup").addClass("active");
+                $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
                 $("#goingfurther").removeClass("collapse");
                 $("#goingfurther").addClass("btn-collapse in");
+                $("#goingfurther").removeAttr("btn-collapse in");
+                
             });
           });
         </script>

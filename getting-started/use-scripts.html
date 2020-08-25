@@ -174,7 +174,7 @@
                 <a href="#labs">Labs</a>
                 <ul>
                   <li class="duik-content-nav__item"><a href="#createscript">Create script</a></li>
-                  <li class="duik-content-nav__item"><a href="#controlrepo">Add to control-repo</a></li>
+                  <li class="duik-content-nav__item"><a href="#controlrepo">Add script to control-repo</a></li>
                   <li class="duik-content-nav__item"><a href="#deploycode">Deploy Puppet Code</a></li>
                   <li class="duik-content-nav__item"><a href="#runscript">Run Script</a></li>
                 </ul>
@@ -196,18 +196,18 @@
               <p>With PE you can take existing scripts and bring them into PE to enable to you to quickly and easily begin automating at scale. Scripts can use any coding language for example bash, powershell, python etc.</p>
               <p class="lead mb-5"></p>
               <div class="duik-callout duik-callout-danger mb-7">
-                <h4 class="h5 text-danger">Important</h4>
-                <p class="mb-0">The target node must have the pre-reqs neccessary to run the script for a given language.</code></p>
+                <h5 class="h5 text-danger"></h5>
+                <p class="mb-0"><b>Important:</b> The target node must have the pre-reqs neccessary to run the script for a given language.</code></p>
               </div>
             </div>
-
+            <hr class="mt-7 mb-4">
             <!-- End About -->
 
             <p class="lead mb-5"></p>
             <!-- What’s Included -->
             <div id="puppet-agent" class="mb-7">
               <h2 class="h4 font-weight-bold" id="videowalkthrough">Video walkthrough<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p></p>
+              <p class="lead mb-5"></p>
 
               <div id="videocontainer">
                 <video width="100%" height="100%" controls preload="none" poster="../assets/img/test.png">
@@ -247,12 +247,28 @@
                   </div>
                 </div>
 
-                <p><b>-</b> Create a powershell or bash script with the following name:</p>
-                <p><b>Windows:</b> <code>timesync.ps1</code></p>
-                <p><b>Linux:</b> <code>timesync.sh</code></p>
-                <p>Make sure that your script has the correct permissions and is executable.</p>
+
+
+
+                 <p>Create a powershell or bash script with the following name:</p>
+
+
+
+                  <p><b>Windows:</b> <code>timesync.ps1</code></p>
+                  <p><b>Linux:</b> <code>timesync.sh</code></p>
+
+
+
+                <p class="lead mb-5"></p>
+                <div class="duik-callout duik-callout-info mb-7">
+                  <p class="mb-0"><b>Note:</b> Make sure your script successfully runs when executed directly on your test node.</p>
+                </div>
+
+
 
               </div>
+
+
               
               <div class="mb-4">
                 <ul class="nav nav-bordered" id="testTab" role="tablist">
@@ -294,8 +310,8 @@
                 </div>
               </div>
 
-              <p>If you already have a script for Windows or Linux that you <b>know</b> works on your test nodes, feel free to use that instead.</p>
-
+              <p>If you already have a script for Windows or Linux that you know works on your test nodes, feel free to use that instead.</p>
+              <hr class="mt-7 mb-4">
               <p class="lead mb-5"></p>
 
               <div class="mb-4">
@@ -306,13 +322,16 @@
                   </div>
                 </div>
 
-                <p><b>-</b> Navigate to your control repo in Visual Studio Code</p>
-                <p><b>-</b> Create a new folder in <code>/site-modules</code> named <code>lab</code></p>
-                <p><b>-</b> Create a folder in <code>/lab</code> named <code>tasks</code></p>
-                <p><b>-</b> Copy your script to <code>/tasks</code> </p>
+                <ol>
+                  <li>Navigate to your control repo in Visual Studio Code</li>
+                  <li>Create a new folder in <code>/site-modules</code> named <code>lab</code></li>
+                  <li>Create a folder in <code>/lab</code> named <code>tasks</code></li>
+                  <li>Copy your script to <code>/tasks</code></li>
+                </ol>
+
               </div>
               <!-- End Install Node.js and Gulp -->
-
+              <hr class="mt-7 mb-4">
               <p class="lead mb-5"></p>
               <!-- Install NPM Modules -->
               <div class="mb-4">
@@ -324,12 +343,12 @@
                 </div>
                 <p class="lead mb-5"></p>
                 <div class="duik-callout duik-callout-info mb-7">
-                  <h4 class="h5" >Note</h4>
-                  <p class="mb-0">You can <b>skip this step</b> if you already have webhooks configured that automatically trigger a puppet code deploy</p>
+                  <p class="mb-0"><b>Note:</b> You can skip this step if you already have webhooks configured that automatically trigger a puppet code deploy</p>
                 </div>
                 <p class="lead mb-5"></p>
 
-                <p>Run the command below</p>
+                
+                <p>Run the command below:</p>
 
                 <pre class="mb-4">
                   <code class="language-js" data-lang="js">
@@ -340,6 +359,7 @@
                 <p>If successful, your puppet server should have a new version of code from your control repo. This means that your script should be available to use in puppet enterprise!</p>
               </div>
               <!-- End Install NPM Modules -->
+              <hr class="mt-7 mb-4">
               <p class="lead mb-5"></p>
               <!-- Run Gulp -->
               <div class="mb-4">
@@ -350,12 +370,14 @@
                   </div>
                 </div>
 
-                <p><b>-</b> From the puppet console, navigate to <b>Tasks</b> and then click <b>Run Task</b></p>
-                <p><b>-</b> Under the <b>Task</b> click the dropdown <i><b>Enter a task to run</b></i>  and type <b>lab::timesync</b> and choose your task</b></p>
-                <p></p>
-                <p><b>-</b> Scroll down the page and click the dropdown <b>Select a target type</b></p>
 
-                <p><b>-</b> Choose <b>Node group</b> and then select or type the Node group name that contains the desired target for this task. Click <b>Select</b> and then <b>Run task</b>.</p>
+                <ol>
+                  <li>From the puppet console, navigate to <b>Tasks</b> and then click <b>Run Task</b></li>
+                  <li>Under the <b>Task</b> click the dropdown <i><b>Enter a task to run</b></i>  and type <b>lab::timesync</b> and choose your task</b></li>
+                  <li>Scroll down the page and click the dropdown <b>Select a target type</b></li>
+                  <li>Choose <b>Node group</b> and then select or type the Node group name that contains the desired target for this task. Click <b>Select</b> and then <b>Run task</b>.</li>
+                </ol>
+                
                 <p class="lead mb-5"></p>
                 <p>You should see your task run successfully on your node(s) !</p>
                 <p class="lead mb-5"></p>

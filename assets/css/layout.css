@@ -182,7 +182,7 @@ h4:hover .duik-anchorjs-link {
   position: relative;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
-  border-width: 1px 1px 1px 0.25rem;
+  border-width: 0px 1px 0px 0.25rem;
   color: #222;
   border-color: #fff;
   background-color: #f8fafd;

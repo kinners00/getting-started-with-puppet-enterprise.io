@@ -7525,7 +7525,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #1e2022 !important;
+  background-color: #222629;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -13399,7 +13399,7 @@ h4:hover .duik-anchorjs-link {
 }
 
 .duik-sidebar__link {
-  color: #7e8892;
+  color: #ccd4d9;
   display: list-item;
   border-left: 4px solid transparent;
   padding: .3rem  1rem .5rem .7rem;

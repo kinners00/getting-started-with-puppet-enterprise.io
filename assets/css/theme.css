@@ -7565,7 +7565,7 @@ button.bg-black:focus {
 }
 
 .bg-black-soft {
-  background-color: rgba(0, 0, 0, 0.22) !important;
+  background-color: #04080a;
 }
 
 a.bg-black-soft:hover, a.bg-black-soft:focus,

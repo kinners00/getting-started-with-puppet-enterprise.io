@@ -113,6 +113,11 @@ dl {
   margin-bottom: 1rem;
 }
 
+ol.e,
+ul.e {
+  margin-left: -1.2rem;
+}
+
 ol li {
   padding-top: 1rem; 
   padding-bottom: 1rem; 
@@ -535,6 +540,12 @@ mark,
 code {
   font-size: 87.5%;
   color: #a31e07;
+  word-break: break-word;
+}
+
+code.n {
+  font-size: 87.5%;
+  color: #0a0b0c;
   word-break: break-word;
 }
 
@@ -13039,6 +13050,10 @@ a.text-black-soft:hover, a.text-black-soft:focus {
   Default Styles
 ------------------------------------*/
 code {
+  font-size: 100%;
+}
+
+code.n {
   font-size: 100%;
 }
 

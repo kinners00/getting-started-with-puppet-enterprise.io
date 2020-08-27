@@ -115,7 +115,13 @@ dl {
 
 ol.e,
 ul.e {
-  margin-left: -1.2rem;
+  margin-left: -1.1rem;
+}
+
+
+ol.e>li {
+  padding-bottom: 0em;
+  padding-top: .2em;
 }
 
 ol li {

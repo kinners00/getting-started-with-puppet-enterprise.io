@@ -13383,7 +13383,7 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__heading {
   width: 240px;
   padding-top:  4px;
-  font-size: .84rem;
+  font-size: 83%;
   font-family: "Calibre",Arial,sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -13399,7 +13399,7 @@ h4:hover .duik-anchorjs-link {
 .duik-sidebar__heading.ref:hover {
   width: 240px;
   padding-top:  4px;
-  font-size: .84rem;
+  font-size: 83%;
   font-family: "Calibre",Arial,sans-serif;
   font-weight: 600;
   font-style: normal;

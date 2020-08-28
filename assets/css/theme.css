@@ -7991,12 +7991,13 @@ button.bg-black-soft:focus {
 
 #videocontainer {
   position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
 }
 
 #videocontainer video {
   position: absolute;
+  object-fit: fill;
 	top: 0;
 	left: 1.5rem;
 	width: 90%;

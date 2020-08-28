@@ -7995,11 +7995,15 @@ button.bg-black-soft:focus {
   height: 0;
 }
 
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;;
+}
+
 #videocontainer video {
   position: absolute;
   object-fit: fill;
 	top: 0;
-	left: 1.5rem;
+	left: 3rem;
 	width: 90%;
 	height: 100%;
 }

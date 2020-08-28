@@ -185,7 +185,7 @@ h4:hover .duik-anchorjs-link {
   border-width: 0px 1px 0px 0.25rem;
   color: #222;
   border-color: #fff;
-  background-color: #f8fafd;
+  background-color: #f5f8fa;
   border-style: solid;
   border-radius: 1px;
 }
@@ -882,7 +882,6 @@ label {
 .nav-bordered .nav-link.active,
 .nav-bordered .show > .nav-link {
   color: #007bff;
-  border-bottom: solid 3px #007bff;
 }
 
 /*------------------------------------
@@ -1441,13 +1440,14 @@ a.bg-hover-white:hover {
 pre[class*="language-"] {
   padding: 1.5rem;
   font-size: 15px;
-  background: rgba(248, 249, 250, 0.7);
+  background:  #f5f8fa;
   margin-bottom: 1rem;
+  border-left: 4px solid #ccd4d9;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #212529;
+  color: #454c52;
   text-shadow: none;
   white-space: pre-wrap !important;
 }

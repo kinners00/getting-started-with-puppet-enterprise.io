@@ -107,7 +107,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
 	color: #9a6e3a;
-	background: hsla(0, 0%, 100%, .5);
+	background: #f5f8fa;
 }
 
 .token.atrule,
@@ -141,6 +141,7 @@ pre[class*="language-"] {
 
 div.code-toolbar {
 	position: relative;
+	margin-top: -0.rem;
 }
 
 div.code-toolbar > .toolbar {

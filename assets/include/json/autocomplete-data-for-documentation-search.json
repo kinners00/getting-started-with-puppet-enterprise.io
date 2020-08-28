@@ -5,6 +5,10 @@
     "url": "reference/orchestrator.html"
   },{
     "category": "Puppet Orchestrator",
+    "label": "Puppet Orchestrator Description",
+    "url": "reference/orchestrator.html#description"
+  },{
+    "category": "Puppet Orchestrator",
     "label": "Puppet Orchestrator Architecture",
     "url": "reference/orchestrator.html#architecture"
   },{

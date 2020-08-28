@@ -209,7 +209,7 @@
               <h2 class="h4 font-weight-bold" id="videowalkthrough">Video walkthrough<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p class="lead mb-5"></p>
 
-              <div id="videocontainer">
+              <div id="videocontainer" class="lead mb-5">
                 <video width="100%" height="100%" controls preload="none" poster="../assets/img/test.png">
                   <source src="../assets/img/test11.mp4" type="video/mp4"> 
                 Your browser does not support the video tag.
@@ -220,7 +220,6 @@
             </div>
             <!-- End What’s Included -->
 
-            <hr class="mt-7 mb-4">
 
           <div id="Lab" class="mb-7">
 
@@ -280,7 +279,7 @@
                   </li>
                 </ul>
                 <div class="tab-content" id="testTabContent">
-                  <div class="tab-pane bg-light fade p-3 show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
+                  <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
                     <pre>
                       <code class="language-html" data-lang="html">
                         echo "Reconfiguring W32Time..."
@@ -297,7 +296,7 @@
                       </code>
                     </pre>
                   </div>
-                  <div class="tab-pane bg-light fade p-3" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
+                  <div class="tab-pane bg-light fade" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
                     <pre>
                       <code class="language-html" data-lang="html">
                         #!/bin/bash
@@ -351,7 +350,7 @@
                 <p>Run the command below:</p>
 
                 <pre class="mb-4">
-                  <code class="language-js" data-lang="js">
+                  <code class="language-js" data-lang="bash">
                     puppet code deploy --all --wait
                   </code>
                 </pre>

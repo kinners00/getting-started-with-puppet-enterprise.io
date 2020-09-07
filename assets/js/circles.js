@@ -151,7 +151,7 @@
           left:       0,
           textAlign:  'center',
           width:      '100%',
-          fontSize:   (this._radius * .5) + 'px',
+          fontSize:   (this._radius * .4) + 'px',
           height:     this._svgSize + 'px',
           lineHeight: this._svgSize + 'px'
         };

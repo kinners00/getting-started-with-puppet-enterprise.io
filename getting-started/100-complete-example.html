@@ -78,8 +78,8 @@
         <div class="collapse navbar-collapse" id="sidebar-nav">
           <div class="js-scrollbar duik-sidebar-sticky duik-sidebar-sticky--mini">
             <div class="col">
-            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#gettingstarted" data-toggle="btn-collapse in" aria-expanded="false" aria-controls="gettingstarted">Getting Started</h5></button>
-            <div class="btn-collapse in" id="gettingstarted">
+            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#gettingstarted" data-toggle="collapse" aria-expanded="false" aria-controls="gettingstarted">Getting Started</h5></button>
+            <div class="collapse" id="gettingstarted">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="how-puppet-works.html">How Puppet works</a></li>
@@ -92,7 +92,7 @@
             </div>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Add nodes to Inventory</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating node groups</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="../getting-started/use-scripts.html">Use existing scripts</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="../getting-started/use-scripts.html">Use existing scripts</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Convert scripts to tasks</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating a plan</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating puppet code</a></li>
@@ -104,8 +104,8 @@
 
 
 
-            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#goingfurther" data-toggle="collapse" aria-expanded="false" aria-controls="goingfurther">Going Further</h5></button>
-            <div class="collapse" id="goingfurther">
+            <button class="col-xl"><h5 class="duik-sidebar__heading" href="#goingfurther" data-toggle="btn-collapse in" aria-expanded="false" aria-controls="goingfurther">Going Further</h5></button>
+            <div class="btn-collapse in" id="goingfurther">
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Dynamic node groups</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Coding Best Practice</a></li>
@@ -172,7 +172,7 @@
           <!-- Content -->
           <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
               <h1 class="font-weight-bold">Congratulations!</h1>
-              <p class="lead mb-5">You've complete getting started with Puppet!</p>
+              <p class="lead mb-5">You've completed Getting Started!</p>
     
 
 
@@ -181,9 +181,9 @@
 
 
 
-          <div class="circle" id="circles-1">
-          </div>
+          <div class="circle" id="circles-1"></div>
 
+          
             <hr class="mt-7 mb-4">
             <!-- End About -->
 
@@ -200,8 +200,6 @@
             <!-- Starter Template -->
             <div id="doc-starter-template" class="mb-7">
               <h2 class="h4 font-weight-bold" id="whatnext">What's Next?<a class="js-anchor-link duik-anchorjs-link" href="#labs" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              
-              <p class="lead mb-5"></p>
 
 
                 </div>
@@ -211,7 +209,12 @@
 
                  <p>Now that you've mastered the basics of puppet, the next step is <b>Going Further</b>.</p>
                  <p></p>
-                 <p><b>Going Further</b> labs and guides will help build on the knowledge you've picked up in the Getting Started section enabling you to manage Puppet Enterprise at scale following Puppet best practices.</p>
+                 <p class="lead mb-5"></p>
+
+
+                 <h2 class="h4 font-weight-bold" id="whatnext">Going Further<a class="js-anchor-link duik-anchorjs-link" href="#labs" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                 
+                 The Going Further labs and guides will help build on the knowledge you've picked up in the Getting Started section, enabling you to manage Puppet Enterprise at scale following Puppet best practices.</p>
                  <p>Click <a href="#">here</a> to begin!</p>
 
 
@@ -300,10 +303,10 @@
   <script>
     var myCircle = Circles.create({
       id:                  'circles-1',
-      radius:              220,
+      radius:              110,
       value:               100,
       maxValue:            100,
-      width:               30,
+      width:               16,
       text:                function(value){return value + '%';},
       colors:              ['#CCCCCC', '#006666'],
       duration:            1300,

@@ -6647,6 +6647,7 @@ a.close.disabled {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  overflow-y: auto;
   outline: 0;
 }
 
@@ -14532,6 +14533,7 @@ div.code-toolbar > .toolbar a:hover {
 .mCustomScrollbar .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
 .mCustomScrollbar .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 /*------------------------------------

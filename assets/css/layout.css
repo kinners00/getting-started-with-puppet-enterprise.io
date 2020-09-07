@@ -10,6 +10,14 @@ code {
   font-size: 100%;
 }
 
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 a, button {
   outline: none !important;
 }

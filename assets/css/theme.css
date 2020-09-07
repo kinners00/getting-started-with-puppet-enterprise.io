@@ -14560,18 +14560,18 @@ div.code-toolbar > .toolbar a:hover {
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar {
-  width: 1rem;
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.22);
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar-thumb {
-  background-color: #000;
-  border-radius: 0.25rem;
-  outline: 1px solid #000;
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 .ui-autocomplete .left {

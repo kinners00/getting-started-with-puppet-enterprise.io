@@ -69,14 +69,6 @@ body {
   background-color: #fff;
 }
 
-html {
-  overflow:   scroll;
-}
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
-
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
@@ -2092,7 +2084,7 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .table-responsive-sm > .table-bordered {
     border: 0;
@@ -2104,7 +2096,7 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .table-responsive-md > .table-bordered {
     border: 0;
@@ -2116,7 +2108,7 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .table-responsive-lg > .table-bordered {
     border: 0;
@@ -2128,7 +2120,7 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .table-responsive-xl > .table-bordered {
     border: 0;
@@ -2139,7 +2131,7 @@ pre code {
   display: block;
   width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .table-responsive > .table-bordered {
@@ -6656,7 +6648,7 @@ a.close.disabled {
   height: 100%;
   overflow: hidden;
   outline: 0;
-  overflow-y: auto;
+
 }
 
 .modal-dialog {
@@ -6712,7 +6704,7 @@ a.close.disabled {
 }
 
 .modal-dialog-scrollable .modal-body {
-  overflow: auto;
+  overflow-y: auto;
   display:none;
 }
 
@@ -6819,7 +6811,6 @@ a.close.disabled {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 1rem;
-  overflow:auto;
 }
 
 .modal-footer {
@@ -14545,7 +14536,7 @@ div.code-toolbar > .toolbar a:hover {
 .mCustomScrollbar .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
 .mCustomScrollbar .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: rgba(0, 0, 0, 0.2);
-  display: none;
+  display:  none;
 }
 
 /*------------------------------------
@@ -14565,13 +14556,14 @@ div.code-toolbar > .toolbar a:hover {
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar-track {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.22);
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar-thumb {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background-color: #000;
+  border-radius: 0.25rem;
+  outline: 1px solid #000;
 }
 
 .ui-autocomplete .left {

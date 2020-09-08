@@ -10,14 +10,6 @@ code {
   font-size: 100%;
 }
 
-html {
-  overflow:   scroll;
-}
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
-
 a, button {
   outline: none !important;
 }
@@ -286,11 +278,12 @@ h4:hover .duik-anchorjs-link {
   }
 }
 
-@media (max-width: 768px) {
-  .duik-sidebar-sticky {
-    width: calc(100vh - 20rem)
+/*@media (max-width: 768px) {
+    .duik-sidebar-sticky {
+/*    width: calc(100vh - 20rem) 
 }
 }
+*/
 
 @media (min-width: 768px) {
   .duik-sidebar-sticky {
@@ -1512,8 +1505,8 @@ div.code-toolbar > .toolbar a:hover {
 ------------------------------------*/
 .mCustomScrollbar .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
 .mCustomScrollbar .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background-color: rgba(0, 0, 0, 0.2);
+  display:  none;
 }
 
 
@@ -1529,18 +1522,18 @@ div.code-toolbar > .toolbar a:hover {
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  width: 1rem;
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar-track {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.22);
 }
 
 .ui-autocomplete-wrapper--dark .ui-autocomplete::-webkit-scrollbar-thumb {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background-color: #000;
+  border-radius: 0.25rem;
+  outline: 1px solid #000;
 }
 
 .ui-autocomplete .left {

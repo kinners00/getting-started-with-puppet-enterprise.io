@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Using Existing scripts</title>
+  <title>Create task from a script</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -81,24 +81,56 @@
             <button class="col-xl"><h5 class="duik-sidebar__heading" href="#gettingstarted" data-toggle="btn-collapse in" aria-expanded="false" aria-controls="gettingstarted">Getting Started</h5></button>
             <div class="btn-collapse in" id="gettingstarted">
             <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Intro</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="intro.html">Introduction</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="how-puppet-works.html">How Puppet works</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#installpe" data-toggle="collapse" aria-expanded="false" aria-controls="puppetinfra">Install and Configure PE</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#installpe" data-toggle="collapse" aria-expanded="false" aria-controls="puppetinfra">Installing Puppet Enterprise</a></li>
               <div class="collapse" id="installpe">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Prerequisites</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Control Repo</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Install PE</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Configure Code Manager</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">System Requirements</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Downloading & Installing</a></li>
             </div>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Add nodes to Inventory</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating node groups</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link active" href="../getting-started/use-scripts.html">Use existing scripts</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Convert scripts to tasks</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating a plan</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Creating puppet code</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Using Puppet Forge content</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Patch Management</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Managing Access</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#buildinv" data-toggle="collapse" aria-expanded="false" aria-controls="buildinv">Building Inventory</a></li>
+              <div class="collapse" id="buildinv">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Deploying an agent</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Grouping Nodes</a></li>
+            </div>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="#">Enable Package Inventory</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#controlrepo" data-toggle="collapse" aria-expanded="false" aria-controls="controlrepo">Creating a control repository</a></li>
+              <div class="collapse" id="controlrepo">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">What is a control repo?</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Set up the control repo</a></li>
+            </div>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#tasks" data-toggle="btn-collapse in" aria-expanded="true" aria-controls="tasks">Creating & Running tasks</a></li>
+              <div class="btn-collapse in" id="tasks">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">What is a task?</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs active" href="../getting-started/use-scripts.html">LAB: Create task from a script</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Run your task</a></li>
+            </div>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#plans" data-toggle="collapse" aria-expanded="false" aria-controls="plans">Creating & Running plans</a></li>
+              <div class="collapse" id="plans">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">What is a plan?</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Writing a simple plan</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Run your plan</a></li>
+            </div>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#puppetcode" data-toggle="collapse" aria-expanded="false" aria-controls="puppetcode">Enforcing Desired State</a></li>
+              <div class="collapse" id="puppetcode">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Defining state in code</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">Puppet code structure</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Writing your first manifest</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Enforce manifest using PE</a></li>
+            </div>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#patch" data-toggle="collapse" aria-expanded="false" aria-controls="patch">Patch Management</a></li>
+              <div class="collapse" id="patch">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Configure Patch Management</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Patching systems with PE</a></li>
+            </div>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub"  href="#rbac" data-toggle="collapse" aria-expanded="false" aria-controls="rbac">Delagating Control</a></li>
+              <div class="collapse" id="rbac">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">How the RBAC works</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Delegating Permissions</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="#">LAB: Exercising Limited control</a></li>
+
+            </div>
+
             </div>
             </ul>
 
@@ -173,10 +205,10 @@
               <li class="duik-content-nav__item">
                 <a href="#labs">Labs</a>
                 <ul>
-                  <li class="duik-content-nav__item"><a href="#createscript">Create script</a></li>
-                  <li class="duik-content-nav__item"><a href="#controlrepo">Add script to control-repo</a></li>
-                  <li class="duik-content-nav__item"><a href="#deploycode">Deploy Puppet Code</a></li>
-                  <li class="duik-content-nav__item"><a href="#runscript">Run Script</a></li>
+                  <li class="duik-content-nav__item"><a href="#createscript">Create a simple script</a></li>
+                  <li class="duik-content-nav__item"><a href="#addscript">Add script to task directory</a></li>
+                  <li class="duik-content-nav__item"><a href="#deploycode">Find your new Task in PE</a></li>
+                  <li class="duik-content-nav__item"><a href="#runscript">Create Task metadata</a></li>
                 </ul>
               </li>
             </ul>
@@ -185,8 +217,8 @@
 
           <!-- Content -->
           <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
-              <h1 class="font-weight-bold">Use Existing Scripts</h1>
-              <p class="lead mb-5">Run scripts in any language across infrastructure nodes</p>
+              <h1 class="font-weight-bold">Convert Script to Task</h1>
+              <p class="lead mb-5">Take existing scripts and use them in PE as Tasks</p>
 
               <div class="circle" id="circles-1"></div>
               <hr class="mt-7 mb-4">
@@ -194,7 +226,13 @@
             <!-- About -->
             <div id="description" class="mb-7">
               <h2 class="h4 font-weight-bold">Description<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p>With PE you can take existing scripts and bring them into PE to enable to you to quickly and easily begin automating at scale. Scripts can use any coding language for example bash, powershell, python etc.</p>
+              <p>You’ll create and convert a bash/powershell script into a Puppet Task, which can then be used to perform ad-hoc action across your infrastructure in Puppet Enterprise.</p>
+              <p>In this lab you will:</p>
+              <ul class="e">
+                <li>Create a sample script</li>
+                <li>Create task metadata</li>
+                <li>Add to control repo</li>
+              </ul>
               <p class="lead mb-5"></p>
               <div class="duik-callout duik-callout-danger mb-7">
                 <h5 class="h5 text-danger"></h5>
@@ -243,26 +281,24 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">1</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="createscript">Create script<a class="js-anchor-link duik-anchorjs-link" href="#createscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="createscript">Create a simple script<a class="js-anchor-link duik-anchorjs-link" href="#createscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
 
 
 
 
-                 <p>Create a powershell or bash script with the following name:</p>
+                 <p>Create script with the name corresponding to platform:</p>
 
 
 
-                  <p><b>Windows:</b> <code>timesync.ps1</code></p>
-                  <p><b>Linux:</b> <code>timesync.sh</code></p>
+                  <p><b>Linux:</b> <code>lin_info.sh</code></p>
+                  <p><b>Windows:</b> <code>win_info.ps1</code></p>
 
 
 
                 <p class="lead mb-5"></p>
-                <div class="duik-callout duik-callout-info mb-7">
-                  <p class="mb-0"><b>Note:</b> Make sure your script successfully runs when executed directly on your test node.</p>
-                </div>
+
 
 
 
@@ -273,44 +309,37 @@
               <div class="mb-4">
                 <ul class="nav nav-bordered" id="testTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active" id="testTab-result" data-toggle="tab" href="#testTab-result-content" role="tab" aria-controls="testTab-result-content" aria-selected="true">Windows</a>
+                    <a class="nav-link active" id="testTab-result" data-toggle="tab" href="#testTab-result-content" role="tab" aria-controls="testTab-result-content" aria-selected="true">Linux</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="testTab-code" data-toggle="tab" href="#testTab-code-content" role="tab" aria-controls="testTab-code-content" aria-selected="false">Linux</a>
+                    <a class="nav-link" id="testTab-code" data-toggle="tab" href="#testTab-code-content" role="tab" aria-controls="testTab-code-content" aria-selected="false">Windows</a>
                   </li>
                 </ul>
                 <div class="tab-content" id="testTabContent">
                   <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
                     <pre>
                       <code class="language-html" data-lang="html">
-                        echo "Reconfiguring W32Time..."
-                        w32tm /config /syncfromflags:MANUAL /manualpeerlist:"0.nl.pool.ntp.org 1.nl.pool.ntp.org" /update
-                        echo ""
-                        echo "Resyncing clock..."
-                        w32tm /resync
-                        echo ""
-                        echo "Current time source:"
-                        w32tm /query /source
-                        echo ""
-                        echo "All configured time sources:"
-                        w32tm /query /peers   
+                        #!/bin/bash
+                        info=$(lscpu)
+                        echo -e "System Info:\n \n$info"
+                        echo "Your custom parameter was: ${PT_myparam1}"                         
                       </code>
                     </pre>
                   </div>
                   <div class="tab-pane bg-light fade" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
                     <pre>
                       <code class="language-html" data-lang="html">
-                        #!/bin/bash
-                        sudo yum -y install chrony 
-                        sudo systemctl enable --now chronyd
-                        sudo chronyd -q 'server 0.nl.pool.ntp.org iburst'
+                        Param($myparam1)
+                        $systeminfo = systeminfo
+                        Write-Output "System Info:" $systeminfo
+                        Write-Output "Your custom parameter was: ${myparam1}"
                       </code>
                     </pre>
                   </div>
                 </div>
               </div>
 
-              <p>If you already have a script for Windows or Linux that you know works on your test nodes, feel free to use that instead.</p>
+            
               <hr class="mt-7 mb-4">
               <p class="lead mb-5"></p>
 
@@ -318,15 +347,18 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">2</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="controlrepo">Add script to control-repo<a class="js-anchor-link duik-anchorjs-link" href="#controlrepo" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="addscript">Add script to task directory<a class="js-anchor-link duik-anchorjs-link" href="#addscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
 
                 <ol class="e">
-                  <li>Navigate to your control repo in <b>Visual Studio Code</b></li>
-                  <li>Create a new folder in <code>/site-modules</code> named <code class="n">lab</code></li>
-                  <li>Create a folder in <code>/lab</code> named <code class="n">tasks</code></li>
-                  <li>Copy your script to <code>/tasks</code></li>
+                  <li>Login to Gitlab web interface and navigate to your Control Repo</b></li>
+                  <li>Navigate to the <code>site-modules</code> directory </li>
+                  <li>Click the <b>+</b> icon in the navigation bar at the top and select <b>New directory</b></li>
+                  <li>Make sure <b>Start a new merge request with these changes</b> is <u>not</u> checked</li>
+                  <li>Click <b>Create directory</b></li>
+                  <li>In the <code>lab</code> directory, repeat the same process to create a directory named <code>tasks</code></li>
+                  <li>Click the <b>+</b> icon in the navigation bar at the top and select <b>Upload file</b> then choose your script </li>
                 </ol>
 
               </div>
@@ -338,25 +370,16 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">3</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="deploycode">Deploy Puppet Code<a class="js-anchor-link duik-anchorjs-link" href="#deploycode" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="deploycode">Find your new Task in Puppet Enterprise<a class="js-anchor-link duik-anchorjs-link" href="#deploycode" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
-                <p class="lead mb-5"></p>
-                <div class="duik-callout duik-callout-info mb-7">
-                  <p class="mb-0"><b>Note:</b> You can skip this step if you already have webhooks configured that automatically trigger a puppet code deploy</p>
-                </div>
-                <p class="lead mb-5"></p>
-
-                
-                <p>Run the command below:</p>
-
-                <pre class="mb-4">
-                  <code class="language-js" data-lang="bash">
-                    puppet code deploy --all --wait
-                  </code>
-                </pre>
-
-                <p>If successful, your puppet server should have a new version of code from your control repo. This means that your script should be available to use in puppet enterprise!</p>
+               
+                <ol class="e">
+                  <li>Switch back to the Puppet Enterprise web interface</b></li>
+                  <li>Navigate to <b>ORCHESTRATION</b>, <b>Tasks</b> and click <b>Run a task</b> on the top right hand corner</li>
+                  <li>Click on the dropdown box under <b>Task</b> and locate your <b>lab::lin_info</b> or <b>lab::win_info tasks</b></li>
+                  <li>Click <b>View task metadata</b>. Notice the tasks have virtually no documentation or explanation at this point</li>
+                </ol>
               </div>
               <!-- End Install NPM Modules -->
               <hr class="mt-7 mb-4">
@@ -366,21 +389,62 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">4</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="runscript">Run Script<a class="js-anchor-link duik-anchorjs-link" href="#runscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="runscript">Create Task metadata<a class="js-anchor-link duik-anchorjs-link" href="#runscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
+                <p>As seen above, it’s easy to add scripts as Tasks to Puppet Enterprise. Simply put your scripts in a <code>tasks</code> subdirectory of any module, the simplest approach for a new module being a new directory under <code>site-modules</code> in your Control Repo. But Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with <b>Task metadata.</b></p>
 
+                  <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented here.</p>
 
-                <ol class = "e">
-                  <li>From the puppet console, navigate to <b>Tasks</b> and then click <b>Run Task</b></li>
-                  <li>Under the <b>Task</b> click the dropdown <i><b>Enter a task to run</b></i>  and type <b>lab::timesync</b> and choose your task</b></li>
-                  <li>Scroll down the page and click the dropdown <b>Select a target type</b></li>
-                  <li>Choose <b>Node group</b> and then select or type the Node group name that contains the desired target for this task. Click <b>Select</b> and then <b>Run task</b>.</li>
-                </ol>
-                
-                <p class="lead mb-5"></p>
-                <p>You should see your task run successfully on your node(s) !</p>
-                <p class="lead mb-5"></p>
+                  <div class="mb-4">
+                    <ul class="nav nav-bordered" id="testTab2" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="testTab-result2" data-toggle="tab" href="#testTab-result-content2" role="tab" aria-controls="testTab-result-content" aria-selected="true">Linux</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="testTab-code2" data-toggle="tab" href="#testTab-code-content2" role="tab" aria-controls="testTab-code-content" aria-selected="false">Windows</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="testTabContent2">
+                      <div class="tab-pane bg-light fade show active" id="testTab-result-content2" role="tabpanel" aria-labelledby="testTab-result">
+                        <pre>
+                          <code class="language-html" data-lang="html">
+                            {
+                              "description": "Displays system information for a given Linux node via lscpu command",
+                              "input_method": "environment",
+                              "parameters": {
+                                      "myparam1": {
+                                            "description": "Your custom parameter",
+                                            "type": "Any"
+                                      }
+                                  }
+                              }                       
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="tab-pane bg-light fade" id="testTab-code-content2" role="tabpanel" aria-labelledby="testTab-code">
+                        <pre>
+                          <code class="language-html" data-lang="html">
+                            {
+                              "description": "Displays system information for a given Windows node via systeminfo command",
+                              "input_method": "powershell",
+                              "parameters": {
+                                      "myparam1": {
+                                            "description": "Your custom parameter",
+                                            "type": "Any"
+                                      }
+                                  }
+                              }                                   
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>Now follow the same procedure as outlined in <b>Step 2</b>, to add the JSON files to the <code>tasks</code> subdirectory of the <code>lab</code> module in your Control Repo.</p>
+
+                    <p>If, after adding the JSON files, you checked on your Tasks in Puppet Enterprise again, you’ll notice that your Tasks now have proper descriptions and parameter guidance.</p>
+                  
 
               </div>
               <!-- End Run Gulp -->

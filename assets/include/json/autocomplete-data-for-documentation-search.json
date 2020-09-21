@@ -37,7 +37,7 @@
     "url": "reference/orchestrator.html#pxpagent"
   },{
     "category": "Getting Started",
-    "label": "Use Existing Scripts",
+    "label": "Convert Script to Task",
     "url": "getting-started/use-scripts.html"
   },{
     "category": "Reference",

@@ -124,11 +124,6 @@ ol.e>li {
   padding-top: .2em;
 }
 
-ol li {
-  padding-top: 1rem; 
-  padding-bottom: 1rem; 
-}
-
 ul.nobull {
   list-style-type: none;
 }

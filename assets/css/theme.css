@@ -13473,6 +13473,10 @@ font-weight: 600;
   text-decoration-style: solid;
 }
 
+.duik-sidebar__link.subs {
+  display: flex;
+  }
+
 .duik-sidebar--dark .duik-sidebar__link:hover {
   color: #ffad1aff;
 }

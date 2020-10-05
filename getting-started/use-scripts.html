@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="navbar-fixed-top">
+  <div class="progress-bar" id="myBar"></div>
+</div>
   <!-- Title -->
   <title>Create task from a script</title>
 
@@ -221,6 +224,7 @@
               <p class="lead mb-5">Take existing scripts and use them in PE as Tasks</p>
 
               <div class="circle" id="circles-1"></div>
+
               <hr class="mt-7 mb-4">
             <p class="lead mb-5"></p>
             <!-- About -->
@@ -287,6 +291,8 @@
 
 
 
+
+
                 <ol class="e">
                   <b><li></b><p>Create script with the name corresponding to platform:</p></li>
 
@@ -320,7 +326,7 @@
                 <div class="tab-content" id="testTabContent">
                   <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
                     <pre>
-                      <code class="language-html" data-lang="html">
+                      <code class="language-bash" data-lang="bash">
                         #!/bin/bash
                         info=$(lscpu)
                         echo -e "System Info:\n \n$info"
@@ -516,9 +522,12 @@
     </div>
   </div>
 
+
   <!-- Go to Top -->
   <a class="js-go-to duik-go-to" href="javascript:;">
+
     <span class="fa fa-arrow-up duik-go-to__inner"></span>
+
   </a>
   <!-- End Go to Top -->
 
@@ -540,6 +549,7 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/autocomplete.js"></script>
   <script src="../assets/js/custom-scrollbar.js"></script>
+  <script src="../assets/js/scroll.js"></script>
   <script src="../assets/js/circles.js"></script>
   <script>
     var myCircle = Circles.create({
@@ -560,5 +570,17 @@
       styleText:           true
     });
     </script>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+  </script>
 </body>
 </html>

@@ -13457,6 +13457,8 @@ font-weight: 600;
   color: rgba(255, 255, 255, 0.6);
 }
 
+.inventory-nodes-search-controls .pql-query-container button 
+
 .duik-sidebar--dark .duik-sidebar__link.active {
   width: 215px;
   color: #ffae1a;
@@ -13475,6 +13477,30 @@ font-weight: 600;
 .duik-sidebar--dark .duik-sidebar__link:hover {
   color: #ffad1aff;
 }
+
+/* Style the header: fixed position (always stay at the top) */
+.navbar-fixed-top {
+  position: sticky;
+  top: 0;
+  height: 6px;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #006666;
+  width: 0%;
+}
+
 
 /* Page Nav */
 .duik-content-nav {

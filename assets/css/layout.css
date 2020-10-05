@@ -1447,14 +1447,14 @@ a.bg-hover-white:hover {
 pre[class*="language-"] {
   padding: 1.5rem;
   font-size: 15px;
-  background:  #f5f8fa;
+  background: #252937;
   margin-bottom: 1rem;
-  border-left: 4px solid #ccd4d9;
+  border-left: 4px solid #252937;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #454c52;
+  color: #f5f8fa;
   text-shadow: none;
   white-space: pre-wrap !important;
 }
@@ -1491,7 +1491,7 @@ div.code-toolbar > .toolbar {
 
 div.code-toolbar > .toolbar a {
   padding: .3rem .7rem !important;
-  color: inherit;
+  color: #f5f8fa;
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;

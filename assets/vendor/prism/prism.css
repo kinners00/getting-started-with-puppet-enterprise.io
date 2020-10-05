@@ -156,9 +156,11 @@ div.code-toolbar:hover > .toolbar {
 	opacity: 1;
 }
 
-div.code-toolbar > .toolbar .toolbar-item {
-	display: inline-block;
+div.code-toolbar > .toolbar .toolbar-item {	
+	display: inherit;
 }
+
+
 
 div.code-toolbar > .toolbar a {
 	cursor: pointer;

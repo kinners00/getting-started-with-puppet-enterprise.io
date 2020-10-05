@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
   <div class="navbar-fixed-top">
-  <div class="progress-bar" id="myBar"></div>
-</div>
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+<head>
   <!-- Title -->
   <title>Create task from a script</title>
 
@@ -326,7 +326,7 @@
                 <div class="tab-content" id="testTabContent">
                   <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
                     <pre>
-                      <code class="language-bash" data-lang="bash">
+                      <code class="language-shell-session" data-lang="shell-session">
                         #!/bin/bash
                         info=$(lscpu)
                         echo -e "System Info:\n \n$info"
@@ -336,7 +336,7 @@
                   </div>
                   <div class="tab-pane bg-light fade" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
                     <pre>
-                      <code class="language-html" data-lang="html">
+                      <code class="language-shell-session" data-lang="language-shell-session">
                         Param($myparam1)
                         $systeminfo = systeminfo
                         Write-Output "System Info:" $systeminfo

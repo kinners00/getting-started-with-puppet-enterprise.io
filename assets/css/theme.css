@@ -7994,6 +7994,13 @@ button.bg-black-soft:focus {
   height: 0;
 }
 
+#contenttest {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+
+}
+
 :focus {
   outline: -webkit-focus-ring-color auto 0px;;
 }
@@ -13486,6 +13493,15 @@ font-weight: 600;
   z-index: 1;
   width: 100%;
   background-color: #f1f1f1;
+}
+
+#progressbox {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: right;
+  font-size: 35px;
+  color: white;
+  padding-left: 50px;
 }
 
 /* The progress container (grey background) */

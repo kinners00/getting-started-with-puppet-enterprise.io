@@ -204,9 +204,9 @@
             <ul class="js-scroll-nav duik-content-nav top-4">
               <li class="duik-content-nav__item"><a href="#description">Overview</a></li>
               <li class="duik-content-nav__item"><a href="#usecases">Use Cases</a></li>
-              <li class="duik-content-nav__item"><a href="#how">How it works</a></li>
               <li class="duik-content-nav__item"><a href="#components">Components</a></li>
               <li class="duik-content-nav__item"><a href="#stored">Adding tasks to PE</a></li>
+              <li class="duik-content-nav__item"><a href="#how">How it works</a></li>
 
 
               </li>
@@ -275,7 +275,7 @@
 
               
               <p class="lead mb-5"></p>
-              <hr class="mt-7 mb-4">
+
             </div>
             <!-- End What’s Included -->
 
@@ -289,18 +289,7 @@
 
             <!-- End Getting Started -->
             
-            <h4 class="h4 font-weight-bold mb-0" id="how">How it works<a class="js-anchor-link duik-anchorjs-link" href="#how" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
-            <p class="lead mb-5"></p>
-            <ol class="e">
-            <li>The Puppet Server will copy the task content to remote targets agentlessly via SSH or WinRM or via the Puppet agent transport PCP. </li> 
-            <li>It will then run the task on the target and return the output to the Puppet console via the Puppet Server.</li>
-            </ol>
-
-          <p>When using the PCP transport does not require credentials to run tasks on hosts. This is made possible because Puppet uses the PCP transport already for the Puppet agent and has full privileges to make changes on nodes. Actions can be limited to specific teams or people using RBAC to ensure these privileges cannot be abused.</p>
-          <p class="lead mb-5"></p>
-          <div id="contenttest">
-            <img src="tasks1.png" alt="Flowers in Chania">
-            </div>
+            
             <p class="lead mb-5"></p>
             <hr class="mt-7 mb-4">
             <h2 class="h4 font-weight-bold" id="components">Components<a class="js-anchor-link duik-anchorjs-link" href="#components" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
@@ -368,12 +357,36 @@
                 </div>
               </div>
               </div>
-
+              <p class="lead mb-5"></p> 
               <h4 class="h5 font-weight-bold mb-0" id="Storage">Naming<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
 
               <p>Tasks are automatically namespaced with the format <b>MODULENAME::TASKNAME</b>.</p>
              <p>You can see in the example above that the <b>maintenance::log_rotate</b> task is part of the <b>maintenance</b> module. Notice that the tasks script extension <code>.sh</code> has been dropped in the tasks name. </p>
-               
+             <p class="lead mb-5"></p>  
+             <hr class="mt-7 mb-4">
+             <h4 class="h4 font-weight-bold mb-0" id="how">How it works<a class="js-anchor-link duik-anchorjs-link" href="#how" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+
+            <p>Once you've added your task to your control repo, you can then see your task via the Puppet Enterprise console running on Puppet Server. When you choose your task in PE and run it against your target node - two key things happen:</p>
+            <p class="lead mb-5"></p>  
+            <ol class="e">
+            <li>The Puppet Server will copy the task content to remote targets agentlessly via SSH or WinRM or via the Puppet agent transport PCP. </li> 
+            <li>It will then run the task on the target and return the output to the Puppet console via the Puppet Server.</li>
+            </ol>
+            <p class="lead mb-5"></p>
+
+       
+          
+          <p class="lead mb-5"></p>
+          <div id="contenttest">
+            <img src="tasks1.png" alt="Flowers in Chania">
+            </div>
+            <p class="lead mb-5"></p>  
+  
+            <p>When using the PCP transport does not require credentials to run tasks on hosts. This is made possible because Puppet uses the PCP transport already for the Puppet agent and has full privileges to make changes on nodes. Actions can be limited to specific teams or people using RBAC to ensure these privileges cannot be abused.</p>
+            <hr class="mt-7 mb-4">
+             <h4 class="h5 font-weight-bold mb-0" id="Storage">What next?<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
+             <p>Now that you've learnt a thing or two about Puppet tasks, it's time to apply that knowledge! 
+               <p>In next lab where we'll be converting a script to a Puppet Task - <a href="../getting-started/use-scripts.html">Lets go!</a></p>
               <!-- End Run Gulp -->
             </div>
 

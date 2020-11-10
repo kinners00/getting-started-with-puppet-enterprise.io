@@ -5,7 +5,7 @@
   </div>
 <head>
   <!-- Title -->
-  <title>Run your Task</title>
+  <title>Running your Task</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -203,15 +203,14 @@
           <!-- Content Nav -->
           <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
             <ul class="js-scroll-nav duik-content-nav top-4">
-              <li class="duik-content-nav__item"><a href="#description">Description</a></li>
+              <li class="duik-content-nav__item"><a href="#description">Overview</a></li>
               <li class="duik-content-nav__item"><a href="#videowalkthrough">Video Walkthrough</a></li>
               <li class="duik-content-nav__item">
                 <a href="#labs">Labs</a>
                 <ul>
-                  <li class="duik-content-nav__item"><a href="#createscript">Create a simple script</a></li>
-                  <li class="duik-content-nav__item"><a href="#addscript">Add script to task directory</a></li>
-                  <li class="duik-content-nav__item"><a href="#deploycode">Find your new Task in PE</a></li>
-                  <li class="duik-content-nav__item"><a href="#runscript">Create Task metadata</a></li>
+                  <li class="duik-content-nav__item"><a href="#createscript">Inspect Task metadata</a></li>
+                  <li class="duik-content-nav__item"><a href="#addscript">Run your Task</a></li>
+                  <li class="duik-content-nav__item"><a href="#deploycode">Review Task run information</a></li>
                 </ul>
               </li>
             </ul>
@@ -226,7 +225,7 @@
               
               </div>
 
-              <h1 class="font-weight-bold">Run your Task</h1>
+              <h1 class="font-weight-bold">Running your Task</h1>
               <p class="lead mb-5">Run your newly created Task in PE</p>
 
               <div class="circle" id="circles-1"></div>
@@ -235,7 +234,7 @@
             <p class="lead mb-5"></p>
             <!-- About -->
             <div id="description" class="mb-7">
-              <h2 class="h4 font-weight-bold">Description<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <h2 class="h4 font-weight-bold">Overview<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p>Now that you’ve created your first Task and uploaded it to the control repo, we want to run it against our test node in PE.</p>
               <p>In this lab you will:</p>
               <ul class="e">
@@ -291,67 +290,19 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">1</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="createscript">Create a simple script<a class="js-anchor-link duik-anchorjs-link" href="#createscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="createscript">Inspect Task metadata<a class="js-anchor-link duik-anchorjs-link" href="#createscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
-
-
-
-
-
                 <ol class="e">
-                  <b><li></b><p>Create script with the name corresponding to platform:</p></li>
-
-
-
-                  <p><b>Linux:</b> <code>lin_info.sh</code></p>
-                  <p><b>Windows:</b> <code>win_info.ps1</code></p>
-
-
+                  <li>In the puppet console under Orchestration, choose <b>Tasks</b></li>
+                  <li>Click <b>Run a task</b> button</li>
+                  <li>Under <b>Task</b> click the dropdown <i>Enter a task to run</i> and type <b>lab::lin_info</b> or <b>lab::win_info</b> and then click on your Task</li>
+                  <li>Click <b>view task metadata</b></li>
+                </ol>
 
                 <p class="lead mb-5"></p>
+                <p>You can see the description from the Task metadata file created in the previous lab now visualised within the console. The Task parameters we specified in our Task metadata also shows up here.</p>
 
-
-           
-
-            
-
-              
-
-
-              
-              <div class="mb-4">
-                <ul class="nav nav-bordered" id="testTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="testTab-result" data-toggle="tab" href="#testTab-result-content" role="tab" aria-controls="testTab-result-content" aria-selected="true">Linux</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="testTab-code" data-toggle="tab" href="#testTab-code-content" role="tab" aria-controls="testTab-code-content" aria-selected="false">Windows</a>
-                  </li>
-                </ul>
-                <div class="tab-content" id="testTabContent">
-                  <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
-                    <pre>
-                      <code class="language-shell-session" data-lang="shell-session">
-                        #!/bin/bash
-                        info=$(lscpu)
-                        echo -e "System Info:\n \n$info"
-                        echo "Your custom parameter was: ${PT_myparam1}"                         
-                      </code>
-                    </pre>
-                  </div>
-                  <div class="tab-pane bg-light fade" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
-                    <pre>
-                      <code class="language-shell-session" data-lang="language-shell-session">
-                        Param($myparam1)
-                        $systeminfo = systeminfo
-                        Write-Output "System Info:" $systeminfo
-                        Write-Output "Your custom parameter was: ${myparam1}"
-                      </code>
-                    </pre>
-                  </div>
-                </div>
-              </div>
               </div>
 
 
@@ -363,18 +314,14 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">2</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="addscript">Add script to task directory<a class="js-anchor-link duik-anchorjs-link" href="#addscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="addscript">Run your Task<a class="js-anchor-link duik-anchorjs-link" href="#addscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
 
                 <ol class="e">
-                  <li>Login to Gitlab web interface and navigate to your Control Repo</b></li>
-                  <li>Navigate to the <code>site-modules</code> directory </li>
-                  <li>Click the <b>+</b> icon in the navigation bar at the top and select <b>New directory</b></li>
-                  <li>Make sure <b>Start a new merge request with these changes</b> is <u>not</u> checked</li>
-                  <li>Click <b>Create directory</b></li>
-                  <li>In the <code>lab</code> directory, repeat the same process to create a directory named <code>tasks</code></li>
-                  <li>Click the <b>+</b> icon in the navigation bar at the top and select <b>Upload file</b> then choose your script </li>
+                  <li>Scroll down the page and click the dropdown <b>Select a target type</b></li>
+                  <li>Choose <b>Node group</b> and then select or type the Node group name <b>Lab Group</b> then Click <b>Select</b></li>
+                  <li>Click <b>Run task</b></li>
                 </ol>
 
               </div>
@@ -386,92 +333,30 @@
                 <div class="media mb-3">
                   <span class="badge badge-primary badge-pill align-self-center mr-2">3</span>
                   <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="deploycode">Find your new Task in Puppet Enterprise<a class="js-anchor-link duik-anchorjs-link" href="#deploycode" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    <h4 class="h5 font-weight-bold mb-0" id="deploycode">Review Task run information<a class="js-anchor-link duik-anchorjs-link" href="#deploycode" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
-               
-                <ol class="e">
-                  <li>Switch back to the Puppet Enterprise web interface</b></li>
-                  <li>Navigate to <b>ORCHESTRATION</b>, <b>Tasks</b> and click <b>Run a task</b> on the top right hand corner</li>
-                  <li>Click on the dropdown box under <b>Task</b> and locate your <b>lab::lin_info</b> or <b>lab::win_info tasks</b></li>
-                  <li>Click <b>View task metadata</b>. Notice the tasks have virtually no documentation or explanation at this point</li>
-                </ol>
+               <p>Once your Task has successfully completed, at the top of the page you will see some key information.</p>
+               <p class="lead mb-5"></p>
+                <ul class="e">
+                  <li><b>Code environment:</b>This environment in puppet corresponds to branches of the same name containing code specific to that environment (for example “production” or “development”).</li>
+                  <li><b>Task name:</b>Name of Task chosen for this run</li>
+                  <li><b>Start time:</b>What time the Task run was initiated</li>
+                  <li><b>Duration:</b> How long it took for the run across all target nodes to complete</li>
+                  <li><b>User:</b>Name of the user that has run the Task</li>
+                  <li><b>Details:</b>Inventory details or parameters passed to Task</li>
+
+                </ul>
+                <p class="lead mb-5"></p>
+                <p>Below this information, you can find output information from your Task on your target node.  </p>
               </div>
               <!-- End Install NPM Modules -->
-              <hr class="mt-7 mb-4">
               <p class="lead mb-5"></p>
               <!-- Run Gulp -->
-              <div class="mb-4">
-                <div class="media mb-3">
-                  <span class="badge badge-primary badge-pill align-self-center mr-2">4</span>
-                  <div class="media-body">
-                    <h4 class="h5 font-weight-bold mb-0" id="runscript">Create Task metadata<a class="js-anchor-link duik-anchorjs-link" href="#runscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
-                  </div>
-                </div>
-                <p>As seen above, it’s easy to add scripts as Tasks to Puppet Enterprise. Simply put your scripts in a <code>tasks</code> subdirectory of any module, the simplest approach for a new module being a new directory under <code>site-modules</code> in your Control Repo. But Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with <b>Task metadata.</b></p>
-
-                  <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented here.</p>
-
-                  <p class="lead mb-5"></p>
-                  <ol class="e">
-                    <li>Create task metadata file with the name corresponding to each script:</b></li>
-                    <p class="lead mb-5"></p>
-
-                    <p><b>Linux:</b> <code>lin_info.json</code></p>
-                    <p><b>Windows:</b> <code>win_info.json</code></p>
-
-                    <p class="lead mb-5"></p>
-                  <div class="mb-4">
-                    <ul class="nav nav-bordered" id="testTab2" role="tablist">
-                      <li class="nav-item">
-                        <a class="nav-link active" id="testTab-result2" data-toggle="tab" href="#testTab-result-content2" role="tab" aria-controls="testTab-result-content" aria-selected="true">Linux</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="testTab-code2" data-toggle="tab" href="#testTab-code-content2" role="tab" aria-controls="testTab-code-content" aria-selected="false">Windows</a>
-                      </li>
-                    </ul>
-                    <div class="tab-content" id="testTabContent2">
-                      <div class="tab-pane bg-light fade show active" id="testTab-result-content2" role="tabpanel" aria-labelledby="testTab-result">
-                        <pre>
-                          <code class="language-html" data-lang="html">
-                            {
-                              "description": "Displays system information for a given Linux node via lscpu command",
-                              "input_method": "environment",
-                              "parameters": {
-                                      "myparam1": {
-                                            "description": "Your custom parameter",
-                                            "type": "Any"
-                                      }
-                                  }
-                              }                       
-                          </code>
-                        </pre>
-                      </div>
-                      <div class="tab-pane bg-light fade" id="testTab-code-content2" role="tabpanel" aria-labelledby="testTab-code">
-                        <pre>
-                          <code class="language-html" data-lang="html">
-                            {
-                              "description": "Displays system information for a given Windows node via systeminfo command",
-                              "input_method": "powershell",
-                              "parameters": {
-                                      "myparam1": {
-                                            "description": "Your custom parameter",
-                                            "type": "Any"
-                                      }
-                                  }
-                              }                                   
-                          </code>
-                        </pre>
-                      </div>
-                    </div>
-                  </div>
+              
 
       
-                    
-                  <li>Now follow the same procedure as outlined in <b>Step 2</b>, to add the JSON files to the <code>tasks</code> subdirectory of the <code>lab</code> module in your Control Repo.</li>
-
-                  <li>If, after adding the JSON files, you checked on your Tasks in Puppet Enterprise again, you’ll notice that your Tasks now have proper descriptions and parameter guidance.</li>
-                </ol>
+              
 
               </div>
               <!-- End Run Gulp -->

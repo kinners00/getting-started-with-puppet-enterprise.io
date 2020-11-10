@@ -233,7 +233,7 @@
             <p class="lead mb-5"></p>
             <!-- About -->
             <div id="description" class="mb-7">
-              <h2 class="h4 font-weight-bold">Description<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              <h2 class="h4 font-weight-bold">Overview<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p>You’ll create and convert a bash/powershell script into a Puppet Task, which can then be used to perform ad-hoc action across your infrastructure in Puppet Enterprise.</p>
               <p>In this lab you will:</p>
               <ul class="e">
@@ -408,16 +408,16 @@
                     <h4 class="h5 font-weight-bold mb-0" id="runscript">Create Task metadata<a class="js-anchor-link duik-anchorjs-link" href="#runscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
                   </div>
                 </div>
-                <p>As seen above, it’s easy to add scripts as Tasks to Puppet Enterprise. Simply put your scripts in a <code>tasks</code> subdirectory of any module, the simplest approach for a new module being a new directory under <code>site-modules</code> in your Control Repo. But Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with <b>Task metadata.</b></p>
+               
 
-                  <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented here.</p>
+            
 
                   <p class="lead mb-5"></p>
                   <ol class="e">
                     <li>Create task metadata file with the name corresponding to each script:</b></li>
-                    <p class="lead mb-5"></p>
+                    <p></p>
 
-                    <p><b>Linux:</b> <code>lin_info.json</code></p>
+                    <p><b>Linux:</b> <code>lin_info.json</code>
                     <p><b>Windows:</b> <code>win_info.json</code></p>
 
                     <p class="lead mb-5"></p>
@@ -467,12 +467,12 @@
                   </div>
 
       
-                    
+                  <p class="lead mb-5"></p>
                   <li>Now follow the same procedure as outlined in <b>Step 2</b>, to add the JSON files to the <code>tasks</code> subdirectory of the <code>lab</code> module in your Control Repo.</li>
 
                   <li>If, after adding the JSON files, you checked on your Tasks in Puppet Enterprise again, you’ll notice that your Tasks now have proper descriptions and parameter guidance.</li>
                 </ol>
-
+                <p class="lead mb-5"></p>
               </div>
               <!-- End Run Gulp -->
             </div>

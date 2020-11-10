@@ -202,16 +202,13 @@
           <!-- Content Nav -->
           <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
             <ul class="js-scroll-nav duik-content-nav top-4">
-              <li class="duik-content-nav__item"><a href="#description">Description</a></li>
-              <li class="duik-content-nav__item"><a href="#videowalkthrough">Video Walkthrough</a></li>
-              <li class="duik-content-nav__item">
-                <a href="#labs">Labs</a>
-                <ul>
-                  <li class="duik-content-nav__item"><a href="#createscript">Create a simple script</a></li>
-                  <li class="duik-content-nav__item"><a href="#addscript">Add script to task directory</a></li>
-                  <li class="duik-content-nav__item"><a href="#deploycode">Find your new Task in PE</a></li>
-                  <li class="duik-content-nav__item"><a href="#runscript">Create Task metadata</a></li>
-                </ul>
+              <li class="duik-content-nav__item"><a href="#description">Overview</a></li>
+              <li class="duik-content-nav__item"><a href="#usecases">Use Cases</a></li>
+              <li class="duik-content-nav__item"><a href="#how">How it works</a></li>
+              <li class="duik-content-nav__item"><a href="#components">Components</a></li>
+              <li class="duik-content-nav__item"><a href="#stored">Adding tasks to PE</a></li>
+
+
               </li>
             </ul>
           </div>
@@ -251,26 +248,30 @@
               <h2 class="h4 font-weight-bold" id="whatistask">Overview<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
 
 
-              <p>Puppet Tasks enable you to easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications.</p>
+              <p>Puppet Tasks enable you to easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications. You can take your existing scripts, in any programming or scripting language and make them more robust and usable by converting them to a task.              </p>
+              <p class="lead mb-5"></p>
+              
+              <h2 class="h4 font-weight-bold" id="usecases">Use Cases<a class="js-anchor-link duik-anchorjs-link" href="#usecases" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
 
-              <h2 class="h4 font-weight-bold" id="whatistask">Components<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-
-              <p>Tasks comprise of two key components: </p>
+              <p>Due to the ad-hoc nature of tasks, there are some use cases where these method is particularly appropriate such as:              </p>
               <p class="lead mb-5"></p>
 
               <ul class="e">
 
                   <p class="lead mb-5"></p>
-                <li><b>Scripts</b></li>
-                <p>You can choose any script, written in any language to become a task in Puppet Enterprise, providing that your target node that run the script. This means you can leverage your existing investments and workflows when using Puppet tasks</p>
-                <li><b>Task Metadata</b></li>
-                <p>Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with Task metadata.</p>
-                <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented here.</p>
+                <li>Patching</li>
+  
+                <li>Vulnerability management</li>
+                <li>Network device management</li>
+                <li>Maintenance tasks:</li>
+                <ul class="e">
+                  <li>Rotate logs</li>
+                  <li>Back ups</li>
+                  <li>Restart system services</li>
+                </ul>
+        
               </ul>
-              <p class="lead mb-5"></p>
-              <div id="contenttest">
-                <img src="task.png" alt="Flowers in Chania">
-                </div>
+
 
               
               <p class="lead mb-5"></p>
@@ -288,22 +289,47 @@
 
             <!-- End Getting Started -->
             
+            <h4 class="h4 font-weight-bold mb-0" id="how">How it works<a class="js-anchor-link duik-anchorjs-link" href="#how" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+            <p class="lead mb-5"></p>
+            <ol class="e">
+            <li>The Puppet Server will copy the task content to remote targets agentlessly via SSH or WinRM or via the Puppet agent transport PCP. </li> 
+            <li>It will then run the task on the target and return the output to the Puppet console via the Puppet Server.</li>
+            </ol>
+
+          <p>When using the PCP transport does not require credentials to run tasks on hosts. This is made possible because Puppet uses the PCP transport already for the Puppet agent and has full privileges to make changes on nodes. Actions can be limited to specific teams or people using RBAC to ensure these privileges cannot be abused.</p>
+          <p class="lead mb-5"></p>
+          <div id="contenttest">
+            <img src="tasks1.png" alt="Flowers in Chania">
+            </div>
+            <p class="lead mb-5"></p>
+            <hr class="mt-7 mb-4">
+            <h2 class="h4 font-weight-bold" id="components">Components<a class="js-anchor-link duik-anchorjs-link" href="#components" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+            <p class="lead mb-5"></p>
+            <b>Scripts</b>
+            <p>You can choose any script, written in any language to become a task in Puppet Enterprise, providing that your target node that run the script. This means you can leverage your existing investments and workflows when using Puppet tasks</p>
+            <b>Task Metadata</b>
+            <p>Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with Task metadata.</p>
+            <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented here.</p>
+            <p class="lead mb-5"></p>
+            <p class="lead mb-5"></p>
+
+            <div id="contenttest">
+              <img src="task.png" alt="Flowers in Chania">
+              </div>
 
 
+            <hr class="mt-7 mb-4">
             <!-- Starter Template -->
             <div id="doc-starter-template" class="mb-7">
-              <h4 class="h4 font-weight-bold mb-0" id="labs">Where are they stored?<a class="js-anchor-link duik-anchorjs-link" href="#labs" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
-             <p>Tasks will be recognized and available in Puppet Enterprise if they are contained within a module. To do this in it's simplest form, tasks can be added under module directory of your choice in the site-modules directory of the control repository.</p>
-
-
-            
-             
+              <h4 class="h4 font-weight-bold mb-0" id="stored">Adding tasks to PE<a class="js-anchor-link duik-anchorjs-link" href="#stored" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+              <p class="lead mb-5"></p>
+              <h4 class="h5 font-weight-bold mb-0" id="Storage">Storage<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
+              <p>Tasks will be recognized and available in Puppet Enterprise if they are contained within a module. A module is a container for puppet code automation in Puppet Enterprise. We’ll go more in depth on modules and their uses in the further sections.</p>
+             <p>Tasks can be added to a module directory within the site-modules directory of the control repository. Here is an example of basic module directory structure required for tasks:            </p>
 
 
              <p class="lead mb-5"></p>
-             <p>Tasks are automatically namespaced with the format <b>MODULENAME::TASKNAME</b>.</p>
-             <p>The example task is named <b>maintenance::log_rotate</b> </p>
-             <p>You can find the directory structure for our task below: <b></b></p>
+
 
 
               <div class="mb-4">
@@ -314,13 +340,17 @@
                     <pre>
                       <code class="language-shell-session" data-lang="shell-session">
 
-                      ├─ controlrepo/
-                          └─ site-modules/    
-                              └─ maintenance/      
-                                  └─ tasks/
-                                      └─ log_rotate.sh    <-- Script      
-                                      └─ log_rotate.json  <-- Task 
-                                                              Metadata            
+                        Task name: maintenance::log_rotate
+
+
+                        ├─ controlrepo/
+                        └─ site-modules/
+                            └─ maintenance/		        <-- Module Name
+                                └─ tasks/
+                                    └─ log_rotate.sh    <-- Script
+                                    └─ log_rotate.json  <-- Task
+                                                            Metadata     
+                                                               
                                           
                       </code>
                     </pre>
@@ -338,11 +368,11 @@
                 </div>
               </div>
               </div>
-              <hr class="mt-7 mb-4">
-              <h4 class="h4 font-weight-bold mb-0" id="labs">When would you use tasks?<a class="js-anchor-link duik-anchorjs-link" href="#labs" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
 
+              <h4 class="h5 font-weight-bold mb-0" id="Storage">Naming<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
 
-
+              <p>Tasks are automatically namespaced with the format <b>MODULENAME::TASKNAME</b>.</p>
+             <p>You can see in the example above that the <b>maintenance::log_rotate</b> task is part of the <b>maintenance</b> module. Notice that the tasks script extension <code>.sh</code> has been dropped in the tasks name. </p>
                
               <!-- End Run Gulp -->
             </div>

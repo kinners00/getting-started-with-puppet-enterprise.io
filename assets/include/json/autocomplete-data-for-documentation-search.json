@@ -36,49 +36,20 @@
     "label": "PXP Agent",
     "url": "reference/orchestrator.html#pxpagent"
   },{
-    "category": "Getting Started",
-    "label": "Convert Script to Task",
+    "category": "Creating and Running Tasks",
+    "label": "What is a Task?",
+    "url": "getting-started/what-is-a-task.html"
+  },{
+    "category": "Creating and Running Tasks",
+    "label": "LAB: Create task to a Task?",
     "url": "getting-started/use-scripts.html"
   },{
-    "category": "Reference",
-    "label": "Puppet Server",
-    "url": "bootstrap/hs-doc/components/badge.html"
+    "category": "Creating and Running Tasks",
+    "label": "LAB: Run your task",
+    "url": "getting-started/run-your-task.html"
   },{
-    "category": "Reference",
-    "label": "Puppet Agent",
-    "url": "bootstrap/hs-doc/components/breadcrumb.html"
-  },{
-    "category": "Reference",
-    "label": "Puppet Databases",
-    "url": "bootstrap/hs-doc/components/buttons.html"
-  },{
-    "category": "Reference",
-    "label": "Facter",
-    "url": "bootstrap/hs-doc/components/cards.html"
-  },{
-    "category": "Reference",
-    "label": "Compiler",
-    "url": "bootstrap/hs-doc/components/collapse.html"
-  },{
-    "category": "Reference",
-    "label": "Disaster Recovery",
-    "url": "bootstrap/hs-doc/components/dividers.html"
-  },{
-    "category": "Components",
-    "label": "Forms",
-    "url": "bootstrap/hs-doc/components/forms.html"
-  },
-
-
-{
-    "category": "Plugins",
-    "section": "Slick carousel",
-    "label": "Slick carousel - JavaScript behavior",
-    "url": "bootstrap/hs-doc/plugins/slick-carousel.html#js-behavior"
-  },{
-    "category": "Plugins",
-    "section": "Slick carousel",
-    "label": "Slick carousel - Methods",
-    "url": "bootstrap/hs-doc/plugins/slick-carousel.html#methods"
+    "category": "Creating and Running Plans",
+    "label": "What is a Plan?",
+    "url": "getting-started/what-is-a-plan.html"
   }
 ]

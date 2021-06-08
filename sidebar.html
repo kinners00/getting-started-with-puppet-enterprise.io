@@ -13,7 +13,7 @@
             <ul class="duik-sidebar__nav">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" id="intro" href="getting-started/intro.html">Intro</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="getting-started/how-puppet-works.html">What is Puppet Enterprise?</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub" href="#installpe" data-toggle="collapse" aria-expanded="false" aria-controls="puppetinfra">Installing PE</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub" href="#installpe" data-toggle="collapse" aria-expanded="false">Installing PE</a></li>
               <div class="collapse" id="installpe">
               <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/prerequisities.html">Prerequisites</a></li>
               <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/control-repo.html">LAB: Downloading and Installing PE</a></li>
@@ -75,17 +75,22 @@
             <button class="col-xl"><h5 class="duik-sidebar__heading" id="gngfrt" href="#goingfurther" data-toggle="collapse" aria-expanded="false" aria-controls="goingfurther">Going Further</h5></button>
             <div class="collapse" id="goingfurther">
             <ul class="duik-sidebar__nav">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub" href="#workstation" data-toggle="collapse" aria-expanded="false">Configuring your Workstation</a></li>
-              <div class="collapse" id="workstation">
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/prerequisities.html">SSH, GIT and VSCode</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/dynamic-node-groups.html">Workstation Setup</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link sub" href="#rolesandprofiles" data-toggle="collapse" aria-expanded="false">Using Roles and Profiles</a></li>
+              <div class="collapse" id="rolesandprofiles">
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/prerequisities.html">What are Roles and Profiles?</a></li>
+              <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/control-repo.html">LAB: Build a Role</a></li>
             </div>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/dynamic-node-groups.html">Dynamic node groups</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/coding-best-practice.html">Coding Best Practice</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/node-specific-configurations.html">Node specific configurations</a></li> 
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/sensitive-parameters.html">Sensitive Parameters</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/creating-modules.html">Creating modules</a></li>
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/testing-puppet-code.html">Testing Puppet Code</a></li> 
-              <li class="duik-sidebar__item"><a class="duik-sidebar__link" href="going-further/working-with-environments.html">Working with enviroments</a></li>
+            <li class="duik-sidebar__item"><a class="duik-sidebar__link sub" href="#hiera" data-toggle="collapse" aria-expanded="false">Leveraging Hiera</a></li>
+            <div class="collapse" id="hiera">
+            <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/prerequisities.html">What is Hiera?</a></li>
+            <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/control-repo.html">LAB: Build a Role</a></li>
+          </div>
+          <li class="duik-sidebar__item"><a class="duik-sidebar__link sub" href="#environments" data-toggle="collapse" aria-expanded="false">Understanding Environments</a></li>
+          <div class="collapse" id="environments">
+          <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/prerequisities.html">What are environment groups?</a></li>
+          <li class="duik-sidebar__item"><a class="duik-sidebar__link subs" href="getting-started/control-repo.html">LAB: Create an environment group</a></li>
+        </div>
             </div>
             </ul>
 

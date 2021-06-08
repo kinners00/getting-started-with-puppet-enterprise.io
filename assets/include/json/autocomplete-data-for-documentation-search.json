@@ -36,13 +36,53 @@
     "label": "PXP Agent",
     "url": "reference/orchestrator.html#pxpagent"
   },{
-    "category": "Creating and Running Tasks",
-    "label": "What is a Task?",
+    "category": "Getting Started",
+    "label": "Intro",
     "url": "getting-started/what-is-a-task.html"
   },{
-    "category": "Creating and Running Tasks",
-    "label": "LAB: Create task from a script?",
+    "category": "Getting Started",
+    "label": "What is Puppet Enterprise?",
     "url": "getting-started/use-scripts.html"
+  },{
+    "category": "Installing PE",
+    "label": "Prerequisities",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Installing PE",
+    "label": "LAB: Download and Installing PE",
+    "url": "getting-started/what-is-a-plan.html"
+  },{
+    "category": "The Control Repo",
+    "label": "What is the Control Repo?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "The Control Repo",
+    "label": "LAB: Setting up the control repo",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Building Inventory",
+    "label": "Node and Package Inventory",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Building Inventory",
+    "label": "LAB: Enabling Package Inventory",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Building Inventory",
+    "label": "LAB: Add Nodes to Inventory",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Building Inventory",
+    "label": "LAB: Grouping Nodes",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Tasks",
+    "label": "What is a task?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Tasks",
+    "label": "LAB: Create a task from a script",
+    "url": "getting-started/run-your-task.html"
   },{
     "category": "Creating and Running Tasks",
     "label": "LAB: Run your task",
@@ -50,6 +90,34 @@
   },{
     "category": "Creating and Running Plans",
     "label": "What is a Plan?",
-    "url": "getting-started/what-is-a-plan.html"
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Plans",
+    "label": "LAB: Create a simple plan",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Creating and Running Plans",
+    "label": "LAB: Running your plan",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "What is Desired State?",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "Defining State in Code",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "LAB: Creating a Desired state config",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Enforcing Desired State",
+    "label": "LAB: Applying your configuration",
+    "url": "getting-started/run-your-task.html"
+  },{
+    "category": "Using Puppet Forge",
+    "label": "How do I use the Forge?",
+    "url": "getting-started/run-your-task.html"
   }
 ]

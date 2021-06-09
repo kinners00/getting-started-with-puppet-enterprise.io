@@ -178,43 +178,43 @@
   },{
     "category": "Reference",
     "label": "Log Locations",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/log-locations-reference.html"
   },{
     "category": "Reference",
     "label": "Important directories & Files",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/puppet/7/dirs_important_directories.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "Orchestrator APIs",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/orchestrator_api_v1_endpoints.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "RBAC API v1",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/rbac_api_v1.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "RBAC API v2",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/rbac_api_v2_endpoints.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "RBAC Activity Service API",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/activity_api.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "Node classifier API v1",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/node_classifier_service_api.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "Node classifier API v2",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/node_classifier_service_api_v2.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "Node Inventory API",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/node_inventory_api.html"
   },{
     "category": "Puppet Enterprise APIs",
     "label": "Puppet Status API",
-    "url": "getting-started/run-your-task.html"
+    "url": "https://puppet.com/docs/pe/2021.1/status_api.html"
   }
   
 ]

@@ -5,6 +5,19 @@
   </div>
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script>
+    $(function(){
+      $("#sidebar").load("sidebar.html", function (){
+        $("#controlrepo").attr( "class", "collapse show" );  
+        $("#controlrepo").attr( "data-toggle", "collapse" );
+        $("#controlreposub").attr( "aria-expanded", "true" );  
+        $("#controlrepo").attr( "aria-expanded", "true" );  
+        $("#whatiscontrolrepo").addClass("active");
+        $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
+        $("#gettingstarted").attr( "class", "btn-collapse in" );  
+    });
+  });
+</script>
   <!-- Title -->
   <title>What is the Control Repo?</title>
 
@@ -85,19 +98,7 @@
         <div id=sidebar>
 
         </div>
-        <script>
-          $(function(){
-            $("#sidebar").load("sidebar.html", function (){
-              $("#controlrepo").attr( "class", "collapse show" );  
-              $("#controlrepo").attr( "data-toggle", "collapse" );
-              $("#controlreposub").attr( "aria-expanded", "true" );  
-              $("#controlrepo").attr( "aria-expanded", "true" );  
-              $("#whatiscontrolrepo").addClass("active");
-              $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
-              $("#gettingstarted").attr( "class", "btn-collapse in" );  
-          });
-        });
-      </script>
+
 
       </nav>
         

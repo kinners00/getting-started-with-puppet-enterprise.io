@@ -89,8 +89,6 @@
           $(function(){
             $("#sidebar").load("sidebar.html", function (){
               $("#inventory").attr( "class", "collapse show" );  
-              $("#inventorysub").attr( "data-toggle", "collapse" );
-              $("#inventory").attr( "aria-expanded", "true" );  
               $("#addnodestoinv").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );  
@@ -101,8 +99,10 @@
       </nav>
         
 
-         <!-- End Header Search -->
-
+         <!-- End Header Search 
+         $("#inventorysub").attr( "data-toggle", "collapse" ); 
+         $("#inventory").attr( "aria-expanded", "true" );  
+         -->
           <!-- Sidebar Nav -->
 
           <!-- End Sidebar Nav -->

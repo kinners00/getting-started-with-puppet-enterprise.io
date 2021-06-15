@@ -85,23 +85,23 @@
         <div id=sidebar>
 
         </div>
-        <script>
-          $(function(){
-            $("#sidebar").load("sidebar.html", function (){
-              $("#inventory").attr( "class", "collapse show" );  
-              $("#inventory").attr( "data-toggle", "collapse" );
-              $("#inventorysub").attr( "aria-expanded", "true" );  
-              $("#inventory").attr( "aria-expanded", "true" );  
-              $("#addnodestoinv").addClass("active");
-              $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
-              $("#gettingstarted").attr( "class", "btn-collapse in" );  
-          });
-        });
-      </script>
+
 
       </nav>
         
-      
+      <script>
+        $(function(){
+          $("#sidebar").load("sidebar.html", function (){
+            $("#inventory").attr( "class", "collapse show" );  
+            $("#inventory").attr( "data-toggle", "collapse" );
+            $("#inventorysub").attr( "aria-expanded", "true" );  
+            $("#inventory").attr( "aria-expanded", "true" );  
+            $("#addnodestoinv").addClass("active");
+            $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
+            $("#gettingstarted").attr( "class", "btn-collapse in" );  
+        });
+      });
+    </script>
          <!-- End Header Search -->
 
           <!-- Sidebar Nav -->

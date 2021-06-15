@@ -89,10 +89,9 @@
         <script>
           $(function(){
             $("#sidebar").load("sidebar.html", function (){
+              $("#inventorysub").attr( "aria-expanded", "true" ); 
+              $("#inventorysub").attr( "data-toggle", "collapse" );
               $("#inventory").attr( "class", "collapse show" );  
-              $("#inventory").attr( "data-toggle", "collapse" );
-              $("#inventorysub").attr( "aria-expanded", "true" );  
-              $("#inventory").attr( "aria-expanded", "true" );  
               $("#nodepackinventory").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );  

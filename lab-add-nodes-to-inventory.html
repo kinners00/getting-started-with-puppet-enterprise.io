@@ -82,15 +82,18 @@
 
         <!-- End Sidebar Nav --> 
 
-        <div id=test>
+        <div id=sidebar>
 
         </div>
         <script>
           $(function(){
-            $("#test").load("sidebar2.html", function (){ 
-              $("#intro").addClass("active");
+            $("#sidebar").load("sidebar.html", function (){ 
+              $("#inventorysub").attr( "aria-expanded", "true" ); 
+              $("#inventorysub").attr( "data-toggle", "collapse" );
+              $("#inventory").attr( "class", "collapse show" );  
+              $("#addnodestoinv").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
-              $("#gettingstarted").attr( "class", "btn-collapse in" );  
+              $("#gettingstarted").attr( "class", "btn-collapse in" );   
           });
         });
       </script>

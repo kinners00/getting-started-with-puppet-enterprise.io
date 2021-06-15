@@ -88,10 +88,9 @@
         <script>
             $(function(){
               $("#sidebar").load("sidebar.html", function (){
+                $("#installpesub").attr( "aria-expanded", "true" );
+                $("#installpesub").attr( "data-toggle", "collapse" );  
                 $("#installpe").attr( "class", "collapse show" );  
-                $("#installpe").attr( "data-toggle", "collapse" );
-                $("#installpesub").attr( "aria-expanded", "true" );  
-                $("#installpe").attr( "aria-expanded", "true" );  
                 $("#prereqs").addClass("active");
                 $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
                 $("#gettingstarted").attr( "class", "btn-collapse in" );  

@@ -3,7 +3,7 @@
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>Welcome</title>
+  <title>Defining State in Code</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -41,14 +41,14 @@
   <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
 
   <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="../assets/vendor/font-awesome/css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
-  <link rel="stylesheet" href="../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
-  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="assets/vendor/prism/prism.css">
 
   <!-- CSS Template -->
-  <link rel="stylesheet" href="../assets/css/theme.css">
-  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 <body class="bg-white">
   <div class="container-fluid">
@@ -79,12 +79,12 @@
 
         <!-- End Sidebar Nav --> 
 
-        <div id=testface>
+        <div id=sidebar>
 
         </div>
         <script>
             $(function(){
-              $("#testface").load("sidebar.html", function (){
+              $("#sidebar").load("sidebar.html", function (){
                 $("#tasks").attr( "class", "collapse show" );  
                 $("#tasks").attr( "data-toggle", "collapse" );
                 $("#taskssub").attr( "aria-expanded", "true" );  

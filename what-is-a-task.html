@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div class="navbar-fixed-top">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
 <head>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>What is a Task?</title>
+  <title>Welcome</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../assets/img/favicon.png">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
 
   <!--  Meta tags -->
   <meta name="keywords" content="documentation template, help desk, open source, free template, freebies, bootstrap 4, bootstrap4">
@@ -43,14 +41,14 @@
   <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
 
   <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="../assets/vendor/font-awesome/css/fontawesome-all.min.css">
-  <link rel="stylesheet" href="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
-  <link rel="stylesheet" href="../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
-  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="assets/vendor/prism/prism.css">
 
   <!-- CSS Template -->
-  <link rel="stylesheet" href="../assets/css/theme.css">
-  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 <body class="bg-white">
   <div class="container-fluid">
@@ -58,8 +56,8 @@
       <!-- Sidebar -->
       <nav class="col-md-4 col-lg-3 col-xl-2 bg-dark text-white duik-sidebar duik-sidebar--dark ui-autocomplete-wrapper--dark navbar-expand-md pt-0">
         <div class="d-flex justify-content-between bg-black-soft w-100">
-          <a class="d-block w-md-100 p-3 mr-md-0" href="../index.html">
-            <img class="mr-2" src="../assets/img/pe-guide.png" alt="Getting Started with PE" style="width: 170px;">
+          <a class="d-block w-md-100 p-3 mr-md-0" href="home-page-1.html">
+            <img class="mr-2" src="assets/img/pe-guide.png" alt="Getting Started with PE" style="width: 170px;">
           </a>
 
           <!-- Responsive Toggle Button -->
@@ -73,332 +71,350 @@
 
         <!-- Header Search -->
         <div class="mb-2">
-          <input class="js-search form-control form-control-sm w-105 form-control-dark bg-white-11 text-white border-0 rounded-0" type="text" placeholder="Search..." aria-label="Search..." data-url="../assets/include/json/autocomplete-data-for-documentation-search.json">
+          <input class="js-search form-control form-control-sm w-105 form-control-dark bg-white-11 text-white border-0 rounded-0" type="text" placeholder="Search..." aria-label="Search..." data-url="assets/include/json/autocomplete-data-for-documentation-search.json">
         </div>
         <!-- End Header Search -->
 
-        <div id=test>
+        <!-- Sidebar Nav -->
+
+        <!-- End Sidebar Nav --> 
+
+        <div id=testface>
 
         </div>
         <script>
             $(function(){
-              $("#test").load("sidebar.html", function (){ 
-                $("#intro").addClass("active");
+              $("#testface").load("sidebar.html", function (){ 
+                $("#tasks").attr( "class", "duik-sidebar__link sub" );  
+                $("#tasks").attr( "aria-expanded", "true" );  
+                $("#whatisatask").addClass("active");
                 $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
                 $("#gettingstarted").attr( "class", "btn-collapse in" );  
             });
           });
         </script>
 
-
       </nav>
-      <!-- End Sidebar -->
 
-
-
-      <main class="ml-sm-auto col-md-8 col-lg-9 col-xl-10 px-4 pt-4">
-        <div class="row pt-3">
-          <!-- Content Nav -->
-          <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
-            <ul class="js-scroll-nav duik-content-nav top-4">
-              <li class="duik-content-nav__item"><a href="#description">Overview</a></li>
-              <li class="duik-content-nav__item"><a href="#usecases">Use Cases</a></li>
-              <li class="duik-content-nav__item"><a href="#components">Components</a></li>
-              <li class="duik-content-nav__item"><a href="#stored">Adding tasks to PE</a></li>
-              <li class="duik-content-nav__item"><a href="#how">How it works</a></li>
-
-
-              </li>
-            </ul>
-          </div>
-          <!-- End Content Nav -->
-         
-         
-          <!-- Content -->
-          <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
-            <div id="progressbox">
-              <div class="circle" id="circles-1"></div>
- 
-             
-            </div>
-
-             <h1 class="font-weight-bold">What is a Task?</h1>
-
-
-              <hr class="mt-7 mb-4">
-            <p class="lead mb-5"></p>
-            <!-- About -->
-            <div id="description" class="mb-7">
-              
-              <p class="lead mb-5"></p>
-
-
-
-
-                <h5 class="h5 text-danger"></h5>
-
-            </div>
-
-            <!-- End About -->
-
-            <p class="lead mb-5"></p>
-            <!-- What’s Included -->
-            <div id="puppet-agent" class="mb-7">
-              <h2 class="h4 font-weight-bold" id="whatistask">Overview<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-
-
-              <p>Puppet Tasks enable you to easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications. You can take your existing scripts, in any programming or scripting language and make them more robust and usable by converting them to a task.              </p>
-              <p class="lead mb-5"></p>
-              
-              <h2 class="h4 font-weight-bold" id="usecases">Use Cases<a class="js-anchor-link duik-anchorjs-link" href="#usecases" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-
-              <p>Due to the ad-hoc nature of tasks, there are some use cases where these method is particularly appropriate such as:              </p>
-              <p class="lead mb-5"></p>
-
-              <ul class="e">
-
-                  <p class="lead mb-5"></p>
-                <li>Patching</li>
-  
-                <li>Vulnerability management</li>
-                <li>Network device management</li>
-                <li>Maintenance tasks:</li>
-                <ul class="e">
-                  <li>Rotate logs</li>
-                  <li>Back ups</li>
-                  <li>Restart system services</li>
-                </ul>
+      aria-expanded="true"
+      class="duik-sidebar__link sub
         
+
+         <!-- End Header Search -->
+
+          <!-- Sidebar Nav -->
+
+          <!-- End Sidebar Nav -->
+
+
+
+        <!-- End Sidebar -->
+
+
+
+        <main class="ml-sm-auto col-md-8 col-lg-9 col-xl-10 px-4 pt-4">
+          <div class="row pt-3">
+            <!-- Content Nav -->
+            <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+              <ul class="js-scroll-nav duik-content-nav top-4">
+                <li class="duik-content-nav__item"><a href="#description">Overview</a></li>
+                <li class="duik-content-nav__item"><a href="#usecases">Use Cases</a></li>
+                <li class="duik-content-nav__item"><a href="#components">Components</a></li>
+                <li class="duik-content-nav__item"><a href="#stored">Adding tasks to PE</a></li>
+                <li class="duik-content-nav__item"><a href="#how">How it works</a></li>
+  
+  
+                </li>
               </ul>
-
-
+            </div>
+            <!-- End Content Nav -->
+           
+           
+            <!-- Content -->
+            <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
+              <div id="progressbox">
+                <div class="circle" id="circles-1"></div>
+   
+               
+              </div>
+  
+               <h1 class="font-weight-bold">What is a Task?</h1>
+  
+  
+                <hr class="mt-7 mb-4">
+              <p class="lead mb-5"></p>
+              <!-- About -->
+              <div id="description" class="mb-7">
+                
+                <p class="lead mb-5"></p>
+  
+  
+  
+  
+                  <h5 class="h5 text-danger"></h5>
+  
+              </div>
+  
+              <!-- End About -->
+  
+              <p class="lead mb-5"></p>
+              <!-- What’s Included -->
+              <div id="puppet-agent" class="mb-7">
+                <h2 class="h4 font-weight-bold" id="whatistask">Overview<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+  
+  
+                <p>Puppet Tasks enable you to easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications. You can take your existing scripts, in any programming or scripting language and make them more robust and usable by converting them to a task.              </p>
+                <p class="lead mb-5"></p>
+                
+                <h2 class="h4 font-weight-bold" id="usecases">Use Cases<a class="js-anchor-link duik-anchorjs-link" href="#usecases" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+  
+                <p>Due to the ad-hoc nature of tasks, there are some use cases where these method is particularly appropriate such as:              </p>
+                <p class="lead mb-5"></p>
+  
+                <ul class="e">
+  
+                    <p class="lead mb-5"></p>
+                  <li>Patching</li>
+    
+                  <li>Vulnerability management</li>
+                  <li>Network device management</li>
+                  <li>Maintenance tasks:</li>
+                  <ul class="e">
+                    <li>Rotate logs</li>
+                    <li>Back ups</li>
+                    <li>Restart system services</li>
+                  </ul>
+          
+                </ul>
+  
+  
+                
+                <p class="lead mb-5"></p>
+  
+              </div>
+              <!-- End What’s Included -->
+  
+  
+            <div id="Lab" class="mb-7">
+  
+  
+              <!-- Getting Started -->
+  
+                <!-- Install Node.js and Gulp -->
+  
+              <!-- End Getting Started -->
+              
               
               <p class="lead mb-5"></p>
-
-            </div>
-            <!-- End What’s Included -->
-
-
-          <div id="Lab" class="mb-7">
-
-
-            <!-- Getting Started -->
-
-              <!-- Install Node.js and Gulp -->
-
-            <!-- End Getting Started -->
-            
-            
-            <p class="lead mb-5"></p>
-            <hr class="mt-7 mb-4">
-            <h2 class="h4 font-weight-bold" id="components">Components<a class="js-anchor-link duik-anchorjs-link" href="#components" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-            <p class="lead mb-5"></p>
-            <b>Scripts</b>
-            <p>You can choose any script, written in any language to become a task in Puppet Enterprise, providing that your target node that run the script. This means you can leverage your existing investments and workflows when using Puppet tasks</p>
-            <b>Task Metadata</b>
-            <p>Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with Task metadata.</p>
-            <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented <a href="https://puppet.com/docs/bolt/latest/writing_tasks.html#task-metadata-fields">here</a>.</p>
-            <p class="lead mb-5"></p>
-            <p class="lead mb-5"></p>
-
-            <div id="contenttest">
-              <img src="task.png" alt="Flowers in Chania">
-              </div>
-
-
-            <hr class="mt-7 mb-4">
-            <!-- Starter Template -->
-            <div id="doc-starter-template" class="mb-7">
-              <h4 class="h4 font-weight-bold mb-0" id="stored">Adding tasks to PE<a class="js-anchor-link duik-anchorjs-link" href="#stored" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+              <hr class="mt-7 mb-4">
+              <h2 class="h4 font-weight-bold" id="components">Components<a class="js-anchor-link duik-anchorjs-link" href="#components" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
               <p class="lead mb-5"></p>
-              <h4 class="h5 font-weight-bold mb-0" id="Storage">Storage<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
-              <p>Tasks will be recognized and available in Puppet Enterprise if they are contained within a module. A module is a container for puppet code automation in Puppet Enterprise. We’ll go more in depth on modules and their uses in the further sections.</p>
-             <p>Tasks can be added to a module directory within the site-modules directory of the control repository. Here is an example of basic module directory structure required for tasks:            </p>
-
-
-             <p class="lead mb-5"></p>
-
-
-
-              <div class="mb-4">
-                <ul class="nav nav-bordered" id="testTab" role="tablist">
-                </ul>
-                <div class="tab-content" id="testTabContent">
-                  <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
-                    <pre>
-                      <code class="language-shell-session" data-lang="shell-session">
-
-                        Task name: maintenance::log_rotate
-
-
-                        ├─ controlrepo/
-                        └─ site-modules/
-                            └─ maintenance/		        <-- Module Name
-                                └─ tasks/
-                                    └─ log_rotate.sh    <-- Script
-                                    └─ log_rotate.json  <-- Task
-                                                            Metadata     
-                                                               
-                                          
-                      </code>
-                    </pre>
-                  </div>
-                  <div class="tab-pane bg-light fade" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
-                    <pre>
-                      <code class="language-shell-session" data-lang="language-shell-session">
-                        Param($myparam1)
-                        $systeminfo = systeminfo
-                        Write-Output "System Info:" $systeminfo
-                        Write-Output "Your custom parameter was: ${myparam1}"
-                      </code>
-                    </pre>
+              <b>Scripts</b>
+              <p>You can choose any script, written in any language to become a task in Puppet Enterprise, providing that your target node that run the script. This means you can leverage your existing investments and workflows when using Puppet tasks</p>
+              <b>Task Metadata</b>
+              <p>Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with Task metadata.</p>
+              <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented <a href="https://puppet.com/docs/bolt/latest/writing_tasks.html#task-metadata-fields">here</a>.</p>
+              <p class="lead mb-5"></p>
+              <p class="lead mb-5"></p>
+  
+              <div id="contenttest">
+                <img src="task.png" alt="Flowers in Chania">
+                </div>
+  
+  
+              <hr class="mt-7 mb-4">
+              <!-- Starter Template -->
+              <div id="doc-starter-template" class="mb-7">
+                <h4 class="h4 font-weight-bold mb-0" id="stored">Adding tasks to PE<a class="js-anchor-link duik-anchorjs-link" href="#stored" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                <p class="lead mb-5"></p>
+                <h4 class="h5 font-weight-bold mb-0" id="Storage">Storage<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
+                <p>Tasks will be recognized and available in Puppet Enterprise if they are contained within a module. A module is a container for puppet code automation in Puppet Enterprise. We’ll go more in depth on modules and their uses in the further sections.</p>
+               <p>Tasks can be added to a module directory within the site-modules directory of the control repository. Here is an example of basic module directory structure required for tasks:            </p>
+  
+  
+               <p class="lead mb-5"></p>
+  
+  
+  
+                <div class="mb-4">
+                  <ul class="nav nav-bordered" id="testTab" role="tablist">
+                  </ul>
+                  <div class="tab-content" id="testTabContent">
+                    <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
+                      <pre>
+                        <code class="language-shell-session" data-lang="shell-session">
+  
+                          Task name: maintenance::log_rotate
+  
+  
+                          ├─ controlrepo/
+                          └─ site-modules/
+                              └─ maintenance/		        <-- Module Name
+                                  └─ tasks/
+                                      └─ log_rotate.sh    <-- Script
+                                      └─ log_rotate.json  <-- Task
+                                                              Metadata     
+                                                                 
+                                            
+                        </code>
+                      </pre>
+                    </div>
+                    <div class="tab-pane bg-light fade" id="testTab-code-content" role="tabpanel" aria-labelledby="testTab-code">
+                      <pre>
+                        <code class="language-shell-session" data-lang="language-shell-session">
+                          Param($myparam1)
+                          $systeminfo = systeminfo
+                          Write-Output "System Info:" $systeminfo
+                          Write-Output "Your custom parameter was: ${myparam1}"
+                        </code>
+                      </pre>
+                    </div>
                   </div>
                 </div>
-              </div>
-              </div>
-              <p class="lead mb-5"></p> 
-              <h4 class="h5 font-weight-bold mb-0" id="Storage">Naming<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
-
-              <p>Tasks are automatically namespaced with the format <b>MODULENAME::TASKNAME</b>.</p>
-             <p>You can see in the example above that the <b>maintenance::log_rotate</b> task is part of the <b>maintenance</b> module. Notice that the tasks script extension <code>.sh</code> has been dropped in the tasks name. </p>
-             <p class="lead mb-5"></p>  
-             <hr class="mt-7 mb-4">
-             <h4 class="h4 font-weight-bold mb-0" id="how">How it works<a class="js-anchor-link duik-anchorjs-link" href="#how" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
-
-            <p>Once you've added your task to your control repo, you can then see your task via the Puppet Enterprise console running on Puppet Server. When you choose your task in PE and run it against your target node - two key things happen:</p>
-            <p class="lead mb-5"></p>  
-            <ol class="e">
-            <li>The Puppet Server will copy the task content to remote targets agentlessly via SSH or WinRM or via the Puppet agent transport PCP. </li> 
-            <li>It will then run the task on the target and return the output to the Puppet console via the Puppet Server.</li>
-            </ol>
+                </div>
+                <p class="lead mb-5"></p> 
+                <h4 class="h5 font-weight-bold mb-0" id="Storage">Naming<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
+  
+                <p>Tasks are automatically namespaced with the format <b>MODULENAME::TASKNAME</b>.</p>
+               <p>You can see in the example above that the <b>maintenance::log_rotate</b> task is part of the <b>maintenance</b> module. Notice that the tasks script extension <code>.sh</code> has been dropped in the tasks name. </p>
+               <p class="lead mb-5"></p>  
+               <hr class="mt-7 mb-4">
+               <h4 class="h4 font-weight-bold mb-0" id="how">How it works<a class="js-anchor-link duik-anchorjs-link" href="#how" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+  
+              <p>Once you've added your task to your control repo, you can then see your task via the Puppet Enterprise console running on Puppet Server. When you choose your task in PE and run it against your target node - two key things happen:</p>
+              <p class="lead mb-5"></p>  
+              <ol class="e">
+              <li>The Puppet Server will copy the task content to remote targets agentlessly via SSH or WinRM or via the Puppet agent transport PCP. </li> 
+              <li>It will then run the task on the target and return the output to the Puppet console via the Puppet Server.</li>
+              </ol>
+              <p class="lead mb-5"></p>
+  
+         
+            
             <p class="lead mb-5"></p>
-
-       
-          
-          <p class="lead mb-5"></p>
-          <div id="contenttest">
-            <img src="tasks1.png" alt="Flowers in Chania">
-            </div>
-            <p class="lead mb-5"></p>  
+            <div id="contenttest">
+              <img src="tasks1.png" alt="Flowers in Chania">
+              </div>
+              <p class="lead mb-5"></p>  
+    
+              <p>When using the PCP transport does not require credentials to run tasks on hosts. This is made possible because Puppet uses the PCP transport already for the Puppet agent and has full privileges to make changes on nodes. Actions can be limited to specific teams or people using RBAC to ensure these privileges cannot be abused.</p>
+              <hr class="mt-7 mb-4">
+               <h4 class="h5 font-weight-bold mb-0" id="Storage">What next?<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
+               <p>Now that you've learnt a thing or two about Puppet tasks, it's time to apply that knowledge! 
+                 <p>In next lab where we'll be converting a script to a Puppet Task - <a href="../getting-started/use-scripts.html">Lets go!</a></p>
+                <!-- End Run Gulp -->
+              </div>
   
-            <p>When using the PCP transport does not require credentials to run tasks on hosts. This is made possible because Puppet uses the PCP transport already for the Puppet agent and has full privileges to make changes on nodes. Actions can be limited to specific teams or people using RBAC to ensure these privileges cannot be abused.</p>
-            <hr class="mt-7 mb-4">
-             <h4 class="h5 font-weight-bold mb-0" id="Storage">What next?<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
-             <p>Now that you've learnt a thing or two about Puppet tasks, it's time to apply that knowledge! 
-               <p>In next lab where we'll be converting a script to a Puppet Task - <a href="../getting-started/use-scripts.html">Lets go!</a></p>
-              <!-- End Run Gulp -->
-            </div>
-
-
-            </div>
-            <!-- End  Starter Template -->
-
-
-          </div>
-          <!-- End Content -->
   
-
-        <!-- Footer -->
-        <footer class="small py-4">
-          <div class="row">
-            <!-- Copyright -->
-            <div class="col-md-6 text-center text-dark text-md-left mb-3 mb-md-0">
-              &copy; 2020 <a class="text-dark" href="https://puppet.com">Puppet</a>. All Rights Reserved.
+              </div>
+              <!-- End  Starter Template -->
+  
+  
             </div>
-            <!-- End Copyright -->
-
-            <!-- Social Icons -->
-            <div class="col-md-6 col-xl-4 align-self-center">
-              <ul class="list-inline text-center text-md-right mb-0">
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github">
-                  <a class="text-dark" target="_blank" href="https://github.com/kinners00/getting-started-with-puppet-enterprise.io">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-                  <a class="text-dark" target="_blank" href="https://www.facebook.com/PuppetSoftware">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-                  <a class="text-dark" target="_blank" href="https://twitter.com/puppetize">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item ml-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Youtube">
-                  <a class="text-dark" target="_blank" href="https://www.youtube.com/c/Puppet-Inc/featured">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </li>
-              </ul>
+            <!-- End Content -->
+    
+  
+          <!-- Footer -->
+          <footer class="small py-4">
+            <div class="row">
+              <!-- Copyright -->
+              <div class="col-md-6 text-center text-dark text-md-left mb-3 mb-md-0">
+                &copy; 2020 <a class="text-dark" href="https://puppet.com">Puppet</a>. All Rights Reserved.
+              </div>
+              <!-- End Copyright -->
+  
+              <!-- Social Icons -->
+              <div class="col-md-6 col-xl-4 align-self-center">
+                <ul class="list-inline text-center text-md-right mb-0">
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github">
+                    <a class="text-dark" target="_blank" href="https://github.com/kinners00/getting-started-with-puppet-enterprise.io">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                    <a class="text-dark" target="_blank" href="https://www.facebook.com/PuppetSoftware">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                    <a class="text-dark" target="_blank" href="https://twitter.com/puppetize">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item ml-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Youtube">
+                    <a class="text-dark" target="_blank" href="https://www.youtube.com/c/Puppet-Inc/featured">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Social Icons -->
             </div>
-            <!-- End Social Icons -->
-          </div>
-        </footer>
-        <!-- End Footer -->
-      </main>
+          </footer>
+          <!-- End Footer -->
+        </main>
+      </div>
     </div>
-  </div>
-
-
-  <!-- Go to Top -->
-  <a class="js-go-to duik-go-to" href="javascript:;">
-
-    <span class="fa fa-arrow-up duik-go-to__inner"></span>
-
-  </a>
-  <!-- End Go to Top -->
-
-  <!-- JS Global Compulsory -->
-  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
-  <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
-  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-
-  <!-- JS Implementing Plugins -->
-  <script src="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-  <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
-  <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-  <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
-  <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
-  <script src="../assets/vendor/prism/prism.js"></script>
-
-  <!-- JS -->
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/autocomplete.js"></script>
-  <script src="../assets/js/custom-scrollbar.js"></script>
-  <script src="../assets/js/scroll.js"></script>
-  <script src="../assets/js/circles.js"></script>
-  <script>
-    var myCircle = Circles.create({
-      id:                  'circles-1',
-      radius:              60,      
-      value:               1,
-      maxValue:            3,
-      width:               13,
-      text:                '1/3',
-      colors:              ['#CCCCCC', '#006666'],
-      duration:            300,
-      wrpClass:            'circles-wrp',
-      textClass:           'circles-text',
-      textClass:           '#006666',
-      valueStrokeClass:    'circles-valueStroke',
-      maxValueStrokeClass: 'circles-maxValueStroke',
-      styleWrapper:        true,
-      styleText:           true
-    });
+  
+  
+    <!-- Go to Top -->
+    <a class="js-go-to duik-go-to" href="javascript:;">
+  
+      <span class="fa fa-arrow-up duik-go-to__inner"></span>
+  
+    </a>
+    <!-- End Go to Top -->
+  
+    <!-- JS Global Compulsory -->
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+    <!-- JS Implementing Plugins -->
+    <script src="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../assets/vendor/prism/prism.js"></script>
+  
+    <!-- JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/autocomplete.js"></script>
+    <script src="../assets/js/custom-scrollbar.js"></script>
+    <script src="../assets/js/scroll.js"></script>
+    <script src="../assets/js/circles.js"></script>
+    <script>
+      var myCircle = Circles.create({
+        id:                  'circles-1',
+        radius:              60,      
+        value:               1,
+        maxValue:            3,
+        width:               13,
+        text:                '1/3',
+        colors:              ['#CCCCCC', '#006666'],
+        duration:            300,
+        wrpClass:            'circles-wrp',
+        textClass:           'circles-text',
+        textClass:           '#006666',
+        valueStrokeClass:    'circles-valueStroke',
+        maxValueStrokeClass: 'circles-maxValueStroke',
+        styleWrapper:        true,
+        styleText:           true
+      });
+      </script>
+    <script>
+      window.onscroll = function() {myFunction()};
+  
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  
+  
     </script>
-  <script>
-    window.onscroll = function() {myFunction()};
-
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-
-  </script>
-</body>
-</html>
+  </body>
+  </html>

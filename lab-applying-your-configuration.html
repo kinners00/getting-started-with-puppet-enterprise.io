@@ -115,81 +115,70 @@
             <!-- Content Nav -->
             <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
               <ul class="js-scroll-nav duik-content-nav top-4">
-                <li class="duik-content-nav__item"><a href="#description">Overview</a></li>
-                <li class="duik-content-nav__item"><a href="#usecases">Use Cases</a></li>
-                <li class="duik-content-nav__item"><a href="#components">Components</a></li>
-                <li class="duik-content-nav__item"><a href="#stored">Adding tasks to PE</a></li>
-                <li class="duik-content-nav__item"><a href="#how">How it works</a></li>
-  
-  
+                <li class="duik-content-nav__item"><a href="#description">Description</a></li>
+                <li class="duik-content-nav__item"><a href="#videowalkthrough">Video Walkthrough</a></li>
+                <li class="duik-content-nav__item">
+                  <a href="#labs">Labs</a>
+                  <ul>
+                    <li class="duik-content-nav__item"><a href="#createscript">Create a simple script</a></li>
+                    <li class="duik-content-nav__item"><a href="#addscript">Add script to task directory</a></li>
+                    <li class="duik-content-nav__item"><a href="#deploycode">Find your new Task in PE</a></li>
+                    <li class="duik-content-nav__item"><a href="#runscript">Create Task metadata</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>
             <!-- End Content Nav -->
-           
-           
+  
             <!-- Content -->
             <div class="col-xl-10 order-xl-1 duik-content-2 border-bottom top-2">
               <div id="progressbox">
                 <div class="circle" id="circles-1"></div>
-   
-               
+  
+              
               </div>
-  
-               <h1 class="font-weight-bold">LAB: Applying your configuration</h1>
-  
+                <h1 class="font-weight-bold">LAB: Applying your configuration</h1>
+                <p class="lead mb-5">Apply your configuration to targets</p>
+       
   
                 <hr class="mt-7 mb-4">
               <p class="lead mb-5"></p>
               <!-- About -->
               <div id="description" class="mb-7">
-                
+                <h2 class="h4 font-weight-bold">Overview<a class="js-anchor-link duik-anchorjs-link" href="#description" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                <p>You’ll create and convert a bash/powershell script into a Puppet Task, which can then be used to perform ad-hoc action across your infrastructure in Puppet Enterprise.</p>
+                <p>In this lab you will:</p>
+                <ul class="e">
+                  <li>Create a simple script</li>
+                  <li>Create task metadata</li>
+                  <li>Add to control repo</li>
+                </ul>
                 <p class="lead mb-5"></p>
-  
-  
-  
-  
+                <div class="duik-callout duik-callout-danger mb-7">
                   <h5 class="h5 text-danger"></h5>
-  
+                  <p class="mb-0"><b>Important:</b> The target node must have the pre-reqs neccessary to run the script for a given language.</code></p>
+                </div>
               </div>
-  
+              <hr class="mt-7 mb-4">
               <!-- End About -->
   
               <p class="lead mb-5"></p>
               <!-- What’s Included -->
               <div id="puppet-agent" class="mb-7">
-                <h2 class="h4 font-weight-bold" id="whatistask">Overview<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-  
-  
-                <p>Puppet Tasks enable you to easily automate ad hoc tasks and eliminate manual work across your infrastructure and applications. You can take your existing scripts, in any programming or scripting language and make them more robust and usable by converting them to a task.              </p>
-                <p class="lead mb-5"></p>
-                
-                <h2 class="h4 font-weight-bold" id="usecases">Use Cases<a class="js-anchor-link duik-anchorjs-link" href="#usecases" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-  
-                <p>Due to the ad-hoc nature of tasks, there are some use cases where these method is particularly appropriate such as:              </p>
+                <h2 class="h4 font-weight-bold" id="videowalkthrough">Video walkthrough<a class="js-anchor-link duik-anchorjs-link" href="#videowalkthrough" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
                 <p class="lead mb-5"></p>
   
-                <ul class="e">
-  
-                    <p class="lead mb-5"></p>
-                  <li>Patching</li>
-    
-                  <li>Vulnerability management</li>
-                  <li>Network device management</li>
-                  <li>Maintenance tasks:</li>
-                  <ul class="e">
-                    <li>Rotate logs</li>
-                    <li>Back ups</li>
-                    <li>Restart system services</li>
-                  </ul>
-          
-                </ul>
-  
-  
-                
+       
+                <div id="videocontainer">
+                  <video width="100%" height="100%" controls preload="none" poster="../assets/img/test.png">
+                    <source src="../assets/img/test11.mp4" type="video/mp4"> 
+                  Your browser does not support the video tag.
+                  </video>
+                </div>
+                </div>
                 <p class="lead mb-5"></p>
   
-              </div>
+              
               <!-- End What’s Included -->
   
   
@@ -202,58 +191,64 @@
   
               <!-- End Getting Started -->
               
-              
-              <p class="lead mb-5"></p>
-              <hr class="mt-7 mb-4">
-              <h2 class="h4 font-weight-bold" id="components">Components<a class="js-anchor-link duik-anchorjs-link" href="#components" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
-              <p class="lead mb-5"></p>
-              <b>Scripts</b>
-              <p>You can choose any script, written in any language to become a task in Puppet Enterprise, providing that your target node that run the script. This means you can leverage your existing investments and workflows when using Puppet tasks</p>
-              <b>Task Metadata</b>
-              <p>Tasks become a whole lot easier to use if they provide builtin explanations of what they do and how they can be used. This, and more, is what we can achieve with Task metadata.</p>
-              <p>Task metadata is a JSON file that accompanies a script, by having the same name as the script, but with a JSON file extension. The file contains descriptions for the Task itself, as well as for any of the Task’s parameters. It also allows you to easily control which parameters are mandatory vs optional, and what input values/types are allowed for each parameter. Task metadata also enables a number of more advanced capabilities, which you can find documented <a href="https://puppet.com/docs/bolt/latest/writing_tasks.html#task-metadata-fields">here</a>.</p>
-              <p class="lead mb-5"></p>
               <p class="lead mb-5"></p>
   
-              <div id="contenttest">
-                <img src="task.png" alt="Flowers in Chania">
-                </div>
-  
-  
-              <hr class="mt-7 mb-4">
               <!-- Starter Template -->
               <div id="doc-starter-template" class="mb-7">
-                <h4 class="h4 font-weight-bold mb-0" id="stored">Adding tasks to PE<a class="js-anchor-link duik-anchorjs-link" href="#stored" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                <h2 class="h4 font-weight-bold" id="labs">Labs<a class="js-anchor-link duik-anchorjs-link" href="#labs" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                
                 <p class="lead mb-5"></p>
-                <h4 class="h5 font-weight-bold mb-0" id="Storage">Storage<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
-                <p>Tasks will be recognized and available in Puppet Enterprise if they are contained within a module. A module is a container for puppet code automation in Puppet Enterprise. We’ll go more in depth on modules and their uses in the further sections.</p>
-               <p>Tasks can be added to a module directory within the site-modules directory of the control repository. Here is an example of basic module directory structure required for tasks:            </p>
-  
-  
-               <p class="lead mb-5"></p>
-  
-  
   
                 <div class="mb-4">
+                  <div class="media mb-3">
+                    <span class="badge badge-primary badge-pill align-self-center mr-2">1</span>
+                    <div class="media-body">
+                      <h4 class="h5 font-weight-bold mb-0" id="createscript">Create a simple script<a class="js-anchor-link duik-anchorjs-link" href="#createscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    </div>
+                  </div>
+  
+  
+  
+  
+  
+                  <ol class="e">
+                    <b><li></b><p>Create script with the name corresponding to platform:</p></li>
+  
+  
+  
+                    <p><b>Linux:</b> <code>lin_info.sh</code></p>
+                    <p><b>Windows:</b> <code>win_info.ps1</code></p>
+  
+  
+  
+                  <p class="lead mb-5"></p>
+  
+  
+             
+  
+              
+  
+                
+  
+  
+                
+                <div class="mb-4">
                   <ul class="nav nav-bordered" id="testTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="testTab-result" data-toggle="tab" href="#testTab-result-content" role="tab" aria-controls="testTab-result-content" aria-selected="true">Linux</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="testTab-code" data-toggle="tab" href="#testTab-code-content" role="tab" aria-controls="testTab-code-content" aria-selected="false">Windows</a>
+                    </li>
                   </ul>
                   <div class="tab-content" id="testTabContent">
                     <div class="tab-pane bg-light fade show active" id="testTab-result-content" role="tabpanel" aria-labelledby="testTab-result">
                       <pre>
                         <code class="language-shell-session" data-lang="shell-session">
-  
-                          Task name: maintenance::log_rotate
-  
-  
-                          ├─ controlrepo/
-                          └─ site-modules/
-                              └─ maintenance/		        <-- Module Name
-                                  └─ tasks/
-                                      └─ log_rotate.sh    <-- Script
-                                      └─ log_rotate.json  <-- Task
-                                                              Metadata     
-                                                                 
-                                            
+                          #!/bin/bash
+                          info=$(lscpu)
+                          echo -e "System Info:\n \n$info"
+                          echo "Your custom parameter was: ${PT_myparam1}"                         
                         </code>
                       </pre>
                     </div>
@@ -270,36 +265,130 @@
                   </div>
                 </div>
                 </div>
-                <p class="lead mb-5"></p> 
-                <h4 class="h5 font-weight-bold mb-0" id="Storage">Naming<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
   
-                <p>Tasks are automatically namespaced with the format <b>MODULENAME::TASKNAME</b>.</p>
-               <p>You can see in the example above that the <b>maintenance::log_rotate</b> task is part of the <b>maintenance</b> module. Notice that the tasks script extension <code>.sh</code> has been dropped in the tasks name. </p>
-               <p class="lead mb-5"></p>  
-               <hr class="mt-7 mb-4">
-               <h4 class="h4 font-weight-bold mb-0" id="how">How it works<a class="js-anchor-link duik-anchorjs-link" href="#how" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
   
-              <p>Once you've added your task to your control repo, you can then see your task via the Puppet Enterprise console running on Puppet Server. When you choose your task in PE and run it against your target node - two key things happen:</p>
-              <p class="lead mb-5"></p>  
-              <ol class="e">
-              <li>The Puppet Server will copy the task content to remote targets agentlessly via SSH or WinRM or via the Puppet agent transport PCP. </li> 
-              <li>It will then run the task on the target and return the output to the Puppet console via the Puppet Server.</li>
-              </ol>
-              <p class="lead mb-5"></p>
+              
+                <hr class="mt-7 mb-4">
+                <p class="lead mb-5"></p>
   
-         
-            
-            <p class="lead mb-5"></p>
-            <div id="contenttest">
-              <img src="tasks1.png" alt="Flowers in Chania">
-              </div>
-              <p class="lead mb-5"></p>  
-    
-              <p>When using the PCP transport does not require credentials to run tasks on hosts. This is made possible because Puppet uses the PCP transport already for the Puppet agent and has full privileges to make changes on nodes. Actions can be limited to specific teams or people using RBAC to ensure these privileges cannot be abused.</p>
-              <hr class="mt-7 mb-4">
-               <h4 class="h5 font-weight-bold mb-0" id="Storage">What next?<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
-               <p>Now that you've learnt a thing or two about Puppet tasks, it's time to apply that knowledge! 
-                 <p>In next lab where we'll be converting a script to a Puppet Task - <a href="../getting-started/use-scripts.html">Lets go!</a></p>
+                <div class="mb-4">
+                  <div class="media mb-3">
+                    <span class="badge badge-primary badge-pill align-self-center mr-2">2</span>
+                    <div class="media-body">
+                      <h4 class="h5 font-weight-bold mb-0" id="addscript">Add script to task directory<a class="js-anchor-link duik-anchorjs-link" href="#addscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    </div>
+                  </div>
+  
+                  <ol class="e">
+                    <li>Login to Gitlab web interface and navigate to your Control Repo</b></li>
+                    <li>Navigate to the <code>site-modules</code> directory </li>
+                    <li>Click the <b>+</b> icon in the navigation bar at the top and select <b>New directory</b></li>
+                    <li>Make sure <b>Start a new merge request with these changes</b> is <u>not</u> checked</li>
+                    <li>Click <b>Create directory</b></li>
+                    <li>In the <code>lab</code> directory, repeat the same process to create a directory named <code>tasks</code></li>
+                    <li>Click the <b>+</b> icon in the navigation bar at the top and select <b>Upload file</b> then choose your script </li>
+                  </ol>
+  
+                </div>
+                <!-- End Install Node.js and Gulp -->
+                <hr class="mt-7 mb-4">
+                <p class="lead mb-5"></p>
+                <!-- Install NPM Modules -->
+                <div class="mb-4">
+                  <div class="media mb-3">
+                    <span class="badge badge-primary badge-pill align-self-center mr-2">3</span>
+                    <div class="media-body">
+                      <h4 class="h5 font-weight-bold mb-0" id="deploycode">Find your new Task in Puppet Enterprise<a class="js-anchor-link duik-anchorjs-link" href="#deploycode" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    </div>
+                  </div>
+                 
+                  <ol class="e">
+                    <li>Switch back to the Puppet Enterprise web interface</b></li>
+                    <li>Navigate to <b>ORCHESTRATION</b>, <b>Tasks</b> and click <b>Run a task</b> on the top right hand corner</li>
+                    <li>Click on the dropdown box under <b>Task</b> and locate your <b>lab::lin_info</b> or <b>lab::win_info tasks</b></li>
+                    <li>Click <b>View task metadata</b>. Notice the tasks have virtually no documentation or explanation at this point</li>
+                  </ol>
+                </div>
+                <!-- End Install NPM Modules -->
+                <hr class="mt-7 mb-4">
+                <p class="lead mb-5"></p>
+                <!-- Run Gulp -->
+                <div class="mb-4">
+                  <div class="media mb-3">
+                    <span class="badge badge-primary badge-pill align-self-center mr-2">4</span>
+                    <div class="media-body">
+                      <h4 class="h5 font-weight-bold mb-0" id="runscript">Create Task metadata<a class="js-anchor-link duik-anchorjs-link" href="#runscript" aria-label="Anchor" data-anchorjs-icon="#"></a></h4>
+                    </div>
+                  </div>
+                 
+  
+              
+  
+                    <p class="lead mb-5"></p>
+                    <ol class="e">
+                      <li>Create task metadata file with the name corresponding to each script:</b></li>
+                      <p></p>
+  
+                      <p><b>Linux:</b> <code>lin_info.json</code>
+                      <p><b>Windows:</b> <code>win_info.json</code></p>
+  
+                      <p class="lead mb-5"></p>
+                    <div class="mb-4">
+                      <ul class="nav nav-bordered" id="testTab2" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="testTab-result2" data-toggle="tab" href="#testTab-result-content2" role="tab" aria-controls="testTab-result-content" aria-selected="true">Linux</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="testTab-code2" data-toggle="tab" href="#testTab-code-content2" role="tab" aria-controls="testTab-code-content" aria-selected="false">Windows</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="testTabContent2">
+                        <div class="tab-pane bg-light fade show active" id="testTab-result-content2" role="tabpanel" aria-labelledby="testTab-result">
+                          <pre>
+                            <code class="language-html" data-lang="html">
+                              {
+                                "description": "Displays system information for a given Linux node via lscpu command",
+                                "input_method": "environment",
+                                "parameters": {
+                                        "myparam1": {
+                                              "description": "Your custom parameter",
+                                              "type": "Any"
+                                        }
+                                    }
+                                }                       
+                            </code>
+                          </pre>
+                        </div>
+                        <div class="tab-pane bg-light fade" id="testTab-code-content2" role="tabpanel" aria-labelledby="testTab-code">
+                          <pre>
+                            <code class="language-html" data-lang="html">
+                              {
+                                "description": "Displays system information for a given Windows node via systeminfo command",
+                                "input_method": "powershell",
+                                "parameters": {
+                                        "myparam1": {
+                                              "description": "Your custom parameter",
+                                              "type": "Any"
+                                        }
+                                    }
+                                }                                   
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+  
+        
+                    <p class="lead mb-5"></p>
+                    <li>Now follow the same procedure as outlined in <b>Step 2</b>, to add the JSON files to the <code>tasks</code> subdirectory of the <code>lab</code> module in your Control Repo.</li>
+  
+                    <li>If, after adding the JSON files, you checked on your Tasks in Puppet Enterprise again, you’ll notice that your Tasks now have proper descriptions and parameter guidance.</li>
+                  </ol>
+                  <p class="lead mb-5"></p>
+                  <hr class="mt-7 mb-4">
+                  <h4 class="h5 font-weight-bold mb-0" id="Storage">What next?<a class="js-anchor-link duik-anchorjs-link" ></a></h4>
+                  <p>Congratulations! You've converted a script to a Puppet Task. In our next lab we'll run the task against target nodes - <a href="../getting-started/run-your-task.html">Lets go!</a></p>
+                </div>
                 <!-- End Run Gulp -->
               </div>
   
@@ -310,7 +399,7 @@
   
             </div>
             <!-- End Content -->
-    
+          </div>
   
           <!-- Footer -->
           <footer class="small py-4">
@@ -364,25 +453,25 @@
     <!-- End Go to Top -->
   
     <!-- JS Global Compulsory -->
-    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
-    <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   
     <!-- JS Implementing Plugins -->
-    <script src="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
-    <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-    <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
-    <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
-    <script src="../assets/vendor/prism/prism.js"></script>
+    <script src="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="assets/vendor/prism/prism.js"></script>
   
     <!-- JS -->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/autocomplete.js"></script>
-    <script src="../assets/js/custom-scrollbar.js"></script>
-    <script src="../assets/js/scroll.js"></script>
-    <script src="../assets/js/circles.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/autocomplete.js"></script>
+    <script src="assets/js/custom-scrollbar.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/circles.js"></script>
     <script>
       var myCircle = Circles.create({
         id:                  'circles-1',

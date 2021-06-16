@@ -82,17 +82,13 @@
 
         <!-- End Sidebar Nav --> 
 
-        <div id=testface>
+        <div id=sidebar>
 
         </div>
         <script>
             $(function(){
-              $("#testface").load("sidebar.html", function (){
-                $("#tasks").attr( "class", "collapse show" );  
-                $("#tasks").attr( "data-toggle", "collapse" );
-                $("#taskssub").attr( "aria-expanded", "true" );  
-                $("#tasks").attr( "aria-expanded", "true" );  
-                $("#whatisatask").addClass("active");
+              $("#sidebar").load("sidebar.html", function (){
+                $("#workstation").addClass("active");
                 $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
                 $("#gettingstarted").attr( "class", "btn-collapse in" );  
                 $("#gngfrt").attr( "data-toggle", "btn-collapse in" );

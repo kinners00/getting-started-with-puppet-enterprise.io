@@ -1,76 +1,51 @@
-.markdown-navigation {
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scrollbar-width: 0;
-  width:200px
-}
-.markdown-navigation::-webkit-scrollbar{
-  width:0;
+html {
+  background: #f0f0f0;
 }
 
-.markdown-navigation .title-anchor {
-  display: block;
-  color: #bbb;
-  transition: all 0.2s;
-  margin: 0.8em 0;
-  font-weight: lighter;
-  line-height: 2em;
-  padding-right: 1.8em;
+.App {
+  font-family: sans-serif;
+}
+
+.article-container {
+  width: 960px;
+  max-width: 100%;
+  margin: 60px auto;
+  padding: 20px 40px;
+  background: #fff;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  position: fixed;
+  right: 20px;
+  top: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(0, 0);
+  transition: transform 500ms ease;
+}
+
+.nav-container.hide {
+  transform: translate(calc(20px + 100%), 0);
+}
+
+.toggle-btn {
+  position: absolute;
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(255, 115, 0);
+  font-size: 18px;
+  line-height: 40px;
+  padding: 0 11px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(calc(-12px - 100%), 0);
+  transition: color 300ms ease, background-color 300ms ease;
 }
 
-.markdown-navigation .title-anchor:hover,
-.markdown-navigation .title-anchor.active {
-  background-color: #f8f8f8;
-  text-decoration: inherit;
-}
-
-.markdown-navigation .title-anchor.active {
-  color: #007fff;
-}
-
-.markdown-navigation .title-anchor small {
-  margin: 0 0.8em;
-}
-
-.markdown-navigation .title-level1 {
-  color: #000;
-  font-size: 1.2em;
-  padding-left: 1em;
-  font-weight: normal;
-}
-
-.markdown-navigation .title-level2 {
-  color: #333;
-  font-size: 1em;
-  padding-left: 1em;
-  font-weight: normal;
-}
-
-.markdown-navigation .title-level3 {
-  color: #666;
-  font-size: 0.8em;
-  padding-left: 3em;
-  font-weight: normal;
-}
-
-.markdown-navigation .title-level4 {
-  color: #999;
-  font-size: 0.72em;
-  padding-left: 5em;
-}
-
-.markdown-navigation .title-level5 {
-  color: #aaa;
-  font-size: 0.72em;
-  padding-left: 7em;
-}
-
-.markdown-navigation .title-level6 {
-  color: #bbb;
-  font-size: 0.72em;
-  padding-left: 9em;
+.toggle-btn:active {
+  background-color: rgb(255, 115, 0);
+  color: #fff;
 }

@@ -1,8 +1,29 @@
-   - [What is Bolt?](#what-is-bolt)
-   - [What are the use cases for Bolt?](#what-are-the-use-cases-for-bolt)
-   - [Sorry, I don't have time to learn another language right now](#sorry-i-dont-have-time-to-learn-another-language-right-now)
-   - [Any language, surely you can't be serious?](#any-language-surely-you-cant-be-serious)
-   - [What's the catch? Targets must need prequisities of some kind](#whats-the-catch-targets-must-need-prequisities-of-some-kind)
-   - [Agentless Connectivity](#agentless-connectivity)
-   - [What platforms does Bolt support?](#what-platforms-does-bolt-support)
-   - [Lets get started!](#lets-get-started)
+---
+
+title: Help Center
+
+navigation:
+
+  - section: Help Center
+
+  - document: overview_doc
+
+    label: Overview
+
+  - document: data_sources_doc
+
+    label: Data Sources
+
+  - document: data_definitions_doc
+
+    label: Data Definitions
+
+  - document: faq_doc
+
+    label: FAQ
+
+  - document: release_notes_doc
+
+    label: Release Notes
+
+---

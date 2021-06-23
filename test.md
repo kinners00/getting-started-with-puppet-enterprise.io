@@ -1,3 +1,33 @@
+---
+
+title: Help Center
+
+navigation:
+
+  - section: Help Center
+
+  - document: overview_doc
+
+    label: Overview
+
+  - document: data_sources_doc
+
+    label: Data Sources
+
+  - document: data_definitions_doc
+
+    label: Data Definitions
+
+  - document: faq_doc
+
+    label: FAQ
+
+  - document: release_notes_doc
+
+    label: Release Notes
+
+---
+
 # bolt_sandbox
 
 A sandbox-type project to aid learning around Bolt and it's various functionality enabling folks to hit the ground running when beginning to use Bolt and leverage pre-built automation from the forge. 

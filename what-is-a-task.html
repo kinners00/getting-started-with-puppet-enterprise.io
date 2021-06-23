@@ -59,6 +59,48 @@
 <!-- Load the element definition -->
 <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 
+<script>
+import React from 'react';
+import ReactDOM from 'react-dom';
+// One third-part component for render markdown documentation
+import ReactMarkdown from 'react-markdown';
+import MarkdownNavbar from 'markdown-navbar';
+// The default style of markdown-navbar should be imported additionally
+import 'markdown-navbar/dist/navbar.css';
+ 
+const article = `# Markdown-Navbar Demo
+ 
+## Chicken Chicken
+ 
+Chicken Chicken Chicken Chicken Chicken.
+ 
+* Chicken Chicken Chicken Chicken Chicken.
+* Chicken Chicken Chicken Chicken Chicken.
+* Chicken Chicken Chicken Chicken Chicken.
+ 
+### Chicken Chicken Chicken
+ 
+Chicken Chicken Chicken Chicken Chicken.
+ 
+#### Chicken Chicken Chicken Chicken
+ 
+Chicken Chicken Chicken Chicken Chicken Chicken.`;
+ 
+function App() {
+  return (
+    <div className="App">
+      <div className="article">
+        <ReactMarkdown source={article} />
+      </div>
+      <div className="navigation">
+        <MarkdownNavbar source={article} />
+      </div>
+    </div>
+  );
+}
+ 
+ReactDOM.render(<App />, document.getElementById('root'));
+</script>
 </head>
 <body class="bg-white">
   <div class="container-fluid">

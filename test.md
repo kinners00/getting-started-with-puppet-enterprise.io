@@ -113,7 +113,7 @@ Begin your bolt journey below:
 
 ```
 
-```console
+```bash
 
 #!/bin/bash
 
@@ -131,7 +131,7 @@ fi
 
 ```
 
-```ps
+```powershell
 [CmdletBinding()]
 Param(
  [Parameter(Mandatory)][string]$firstname,

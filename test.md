@@ -103,7 +103,7 @@ Begin your bolt journey below:
 ```
 
 
-```puppet
+```Puppet
 
     service { 'ntpd':
 	    ensure => 'running',
@@ -115,9 +115,40 @@ Begin your bolt journey below:
 
 ```shell
 
-systemctl start ntpd
-systemctl enable ntpd
+#!/bin/bash
 
+# Validation of "firstname" and "surname" puppet task inputs
+if [[ $PT_firstname ]] && [[ $PT_surname ]]; then
+   echo "Full name:" $PT_firstname $PT_surname
+else 
+   echo "First name:" $PT_firstname
+fi
 
+# Validation of "age" input
+if [[ $PT_age ]]; then
+   echo "Age:" $PT_age
+fi
+
+```
+
+```powershell
+[CmdletBinding()]
+Param(
+ [Parameter(Mandatory)][string]$firstname,
+ [string]$surname,
+ [int]$age
+ )
+
+# Validation of "firstname" and "surname" puppet task inputs 
+ if (($firstname) -and (($surname)))  {
+    Write-Host "Full name: $firstname $surname"
+    }  else {
+    Write-Host "First name: $firstname"
+}
+
+# Validation of "age" input
+ if ($age) {
+    Write-Host "Age: $age"
+}
 
 ```

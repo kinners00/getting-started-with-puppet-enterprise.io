@@ -1,4 +1,5 @@
-
+{
+    "text" : 
    - [What is Bolt?](#what-is-bolt)
    - [What are the use cases for Bolt?](#what-are-the-use-cases-for-bolt)
    - [Sorry, I don't have time to learn another language right now](#sorry-i-dont-have-time-to-learn-another-language-right-now)
@@ -71,6 +72,7 @@ Virtually everything - if you can connect to it via SSH/WinRM, you can most like
 Begin your bolt journey below:
 
 [**I'm ready!**](https://github.com/kinners00/bolt_sandbox/blob/master/docs/1_intro_to_bolt.md)
+
 
 ```json
 {
@@ -149,7 +151,8 @@ Param(
     }
 
 
-```
-
-
+```,
+    "mode" : "markdown",
+    "context" : "none"
+}
 

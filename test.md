@@ -15,7 +15,7 @@ A sandbox-type project to aid learning around Bolt and it's various functionalit
 
 If you've never used bolt before, start your journey below!
 
-<iframe width="560" height="315"
+<iframe width="374" height="210"
 src="https://www.youtube.com/embed/MUQfKFzIOeU" 
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 

@@ -113,7 +113,7 @@ Begin your bolt journey below:
 
 ```
 
-```bash
+```sh
 
 #!/bin/bash
 

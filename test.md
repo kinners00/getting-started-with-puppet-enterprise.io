@@ -48,6 +48,8 @@ You don't have to! Bolt is language agnostic, so you can use whatever you're mos
 
  You can use Bolt with any scripting/programming language beit bash, powershell, python, ruby etc. Put simply, if your target can run it locally, Bolt can handle it.
 
+![alt text](https://miro.medium.com/max/1474/0*lmMW87wdhzte-zAn.png)
+
  ## What's the catch? Targets must need prequisities of some kind
 
  No, nothing. Unlike other tools, Bolt is built to be easy to use and flexible so you can bring your skills to the table and begin reducing manual effort, today. No python packages needed, no puppet agent.

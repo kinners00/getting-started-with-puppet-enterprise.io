@@ -72,7 +72,7 @@ Begin your bolt journey below:
 
 [**I'm ready!**](https://github.com/kinners00/bolt_sandbox/blob/master/docs/1_intro_to_bolt.md)
 
-```bash
+```json
 {
      "description": "Displays first name/surname and age based on user input",
      "input_method": "environment"
@@ -80,41 +80,7 @@ Begin your bolt journey below:
 
 ```
 
-```json
-{
-     "description": "Displays first name/surname and age based on user input",
-     "input_method": "environment",
-     "parameters": {
-       "firstname": {
-           "description": "Provide a first name of least 2 characters",
-            "type": "String[2]"
-       },
-       "surname": {
-           "description": "Provide a surname",
-            "type": "Optional[String]"
-       },
-       "age": {
-             "description": "Provide your age",
-             "type": "Optional[Integer[18,100]]"
-        }
-     }
-   }
-
-```
-
-
-```Puppet
-
-    service { 'ntpd':
-	    ensure => 'running',
-        enable => 'true',
-    }
-
-
-```
-
 ```bash
-
 #!/bin/bash
 
 # Validation of "firstname" and "surname" puppet task inputs
@@ -152,3 +118,38 @@ Param(
 }
 
 ```
+
+```json
+{
+     "description": "Displays first name/surname and age based on user input",
+     "input_method": "environment",
+     "parameters": {
+       "firstname": {
+           "description": "Provide a first name of least 2 characters",
+            "type": "String[2]"
+       },
+       "surname": {
+           "description": "Provide a surname",
+            "type": "Optional[String]"
+       },
+       "age": {
+             "description": "Provide your age",
+             "type": "Optional[Integer[18,100]]"
+        }
+     }
+   }
+
+```
+
+
+```puppet
+    service { 'ntpd':
+	    ensure => 'running',
+        enable => 'true',
+    }
+
+
+```
+
+
+

@@ -41,11 +41,12 @@
  
  /* Code blocks */
  pre[class*="language-"] {
-	 padding: 1em;
-	 margin: .5em 0;
-	 overflow: auto;
-	 border: 1px solid #dddddd;
-	 background-color: white;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    font-size: 85%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
  }
  
  /* Inline code */

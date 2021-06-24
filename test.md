@@ -72,7 +72,7 @@ Begin your bolt journey below:
 
 [**I'm ready!**](https://github.com/kinners00/bolt_sandbox/blob/master/docs/1_intro_to_bolt.md)
 
-```json
+```bash
 {
      "description": "Displays first name/surname and age based on user input",
      "input_method": "environment"

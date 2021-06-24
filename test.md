@@ -1,5 +1,4 @@
-{
-    "text" : 
+
    - [What is Bolt?](#what-is-bolt)
    - [What are the use cases for Bolt?](#what-are-the-use-cases-for-bolt)
    - [Sorry, I don't have time to learn another language right now](#sorry-i-dont-have-time-to-learn-another-language-right-now)
@@ -150,9 +149,5 @@ Param(
         enable => 'true',
     }
 
-
-```,
-    "mode" : "markdown",
-    "context" : "none"
-}
+```
 

@@ -402,10 +402,12 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
   font-size: 2.3rem;
+  color: #1e2022;
 }
 
 h2, .h2 {
   font-size: 2rem;
+  color: #1e2022;
 }
 
 h3, .h3 {
@@ -14506,14 +14508,6 @@ a.bg-hover-white:hover {
 .z-index-3 {
   z-index: 3;
 }
-
-/*------------------------------------
-  Markup */
-
-  .markdown-body h1 {
-color: #000;
-  }
-
 
 /*------------------------------------
   Markup

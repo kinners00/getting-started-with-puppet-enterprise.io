@@ -14508,6 +14508,14 @@ a.bg-hover-white:hover {
 }
 
 /*------------------------------------
+  Markup */
+
+  .markdown-body h1 {
+color: #000;
+  }
+
+
+/*------------------------------------
   Markup
 
 .code-toolbar {

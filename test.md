@@ -151,3 +151,39 @@ Param(
 
 ```
 
+```yaml
+---
+version: 5
+
+defaults:
+  datadir: "data"
+
+hierarchy:
+  - name: 'Yaml backend'
+    data_hash: yaml_data
+    paths:
+      - "nodes/%{trusted.certname}.yaml"
+      - 'common.yaml'
+
+```
+
+```puppet
+class profile::apache_web(
+  String $doc_root,
+  String $vhost_name,
+  Integer $port,
+  Boolean $default_vhost
+) {
+
+  class { 'apache':
+    default_vhost => $default_vhost,
+  }
+  apache::vhost { '$vhost_name':
+    port    => $port,
+    docroot => '$doc_root',
+  }
+}
+```
+
+
+

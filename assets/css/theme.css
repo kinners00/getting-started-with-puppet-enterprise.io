@@ -14509,7 +14509,7 @@ a.bg-hover-white:hover {
 
 /*------------------------------------
   Markup
-------------------------------------*/
+
 .code-toolbar {
   position: relative;
 }
@@ -14575,6 +14575,8 @@ div.code-toolbar > .toolbar a:hover {
   background-color: #107ef4;
   color: #fff !important;
 }
+
+------------------------------------*/
 
 /*------------------------------------
   Scrollbar

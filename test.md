@@ -72,3 +72,52 @@ Begin your bolt journey below:
 
 [**I'm ready!**](https://github.com/kinners00/bolt_sandbox/blob/master/docs/1_intro_to_bolt.md)
 
+```json
+{
+     "description": "Displays first name/surname and age based on user input",
+     "input_method": "environment"
+   }
+
+```
+
+```json
+{
+     "description": "Displays first name/surname and age based on user input",
+     "input_method": "environment",
+     "parameters": {
+       "firstname": {
+           "description": "Provide a first name of least 2 characters",
+            "type": "String[2]"
+       },
+       "surname": {
+           "description": "Provide a surname",
+            "type": "Optional[String]"
+       },
+       "age": {
+             "description": "Provide your age",
+             "type": "Optional[Integer[18,100]]"
+        }
+     }
+   }
+
+```
+
+
+```puppet
+
+    service { 'ntpd':
+	    ensure => 'running',
+        enable => 'true',
+    }
+
+
+```
+
+```shell
+
+systemctl start ntpd
+systemctl enable ntpd
+
+
+
+```

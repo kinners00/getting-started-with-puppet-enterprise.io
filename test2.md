@@ -1,6 +1,6 @@
 # nessus_agent
 
-#### Table of Contents
+#### Sections
 
 - [Description](#description)
 - [Bolt Newcomers - Quickstart](#bolt-quickstart)

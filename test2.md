@@ -57,8 +57,13 @@ Tasks are cross platform so you only need to specify your targets and the task w
 
 **Windows**
 
-```shell
-bolt task run nessus_agent::install -t <targets> installer_path="C:\tmp\NessusAgent-8.2.2-x64.msi"
+```
+control-repo/
+└─ data/
+   ├─ common.yaml   	            		  
+   ├─ nodes/  
+   └─ os/ 						
+      └─ RedHat.yaml			<- OS specific values go here  
 ```
 
 **Linux**

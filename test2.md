@@ -2,18 +2,18 @@
 
 #### Table of Contents
 
-1. [Description](#description)
-1. [Bolt Newcomers - Quickstart](#bolt-quickstart)
-1. [Gotchas/Limitations](#gotchas)
-1. [Tasks](#tasks)
+[Description](#description)
+[Bolt Newcomers - Quickstart](#bolt-quickstart)
+[Gotchas/Limitations](#gotchas)
+[Tasks](#tasks)
     1. [install](#install)
     1. [link](#link)
     1. [unlink](#unlink)
     1. [generatelogs](#generatelogs)
-1. [Plans](#plans)
+[Plans](#plans)
     1. [install_link](#install_link)
     1. [generatelogs](#generatelogsplan)
-1. [Contributions - Guide for contributing to the module](#contributions)
+[Contributions - Guide for contributing to the module](#contributions)
 
 # Description
 

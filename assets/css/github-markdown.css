@@ -138,6 +138,12 @@
     color: #0366d6;
     text-decoration: none;
   }
+
+  .markdown-body ol li a {
+    color: #0366d6;
+    text-decoration: none;
+    padding-left: 150px;
+  }
   
   .markdown-body a:hover {
     text-decoration: underline;
@@ -696,10 +702,6 @@
     font-size: 1em;
     margin-left: 100px;
 
-  }
-
-  .markdown-body h4#table-of-contents ol {
-    margin-left: 100px;
   }
   
   .markdown-body h5 {

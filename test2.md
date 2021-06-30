@@ -10,10 +10,10 @@
     -   [link](#link)
     -   [unlink](#unlink)
     -   [generatelogs](#generatelogs)
-[Plans](#plans)
+- [Plans](#plans)
     -   [install_link](#install_link)
     -   [generatelogs](#generatelogsplan)
-[Contributions - Guide for contributing to the module](#contributions)
+- [Contributions - Guide for contributing to the module](#contributions)
 
 # Description
 

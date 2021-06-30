@@ -57,13 +57,13 @@ Tasks are cross platform so you only need to specify your targets and the task w
 
 **Windows**
 
-```
+```none
 control-repo/
 └─ data/
    ├─ common.yaml   	            		  
    ├─ nodes/  
-   └─ **os**/ 						
-      └─ `RedHat.yaml`			**<- OS specific values go here**  
+   └─ os/ 						
+      └─ RedHat.yaml			        <- OS specific values go here 
 ```
 
 **Linux**

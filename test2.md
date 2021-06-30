@@ -63,7 +63,7 @@ control-repo/
    ├─ common.yaml   	            		  
    ├─ nodes/  
    └─ **os**/ 						
-      └─ **RedHat.yaml**			**<- OS specific values go here**  
+      └─ ```**RedHat.yaml**```			**<- OS specific values go here**  
 ```
 
 **Linux**

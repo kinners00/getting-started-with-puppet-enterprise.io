@@ -13523,9 +13523,7 @@ font-weight: 600;
 }
 
 .progress-bar {
-  position: absolute;
   height: 6px;
-  left: 240px;
   background: #006666;
   width: 0%;
 }

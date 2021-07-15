@@ -13502,6 +13502,7 @@ font-weight: 600;
   top: 0;
   height: 6px;
   z-index: 1;
+  padding-left: 240px;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -13529,8 +13530,8 @@ font-weight: 600;
 }
 
 @media (max-width: 767.98px) {
-  .progress-bar {
-    left: 0px;
+  .navbar-fixed-top {
+    padding-left: 0px;
  }
 }
 

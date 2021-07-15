@@ -13524,14 +13524,14 @@ font-weight: 600;
 
 .progress-bar {
   height: 6px;
-  padding-left: 230px;
+  left: 235px;
   background: #006666;
   width: 0%;
 }
 
 @media (max-width: 767.98px) {
   .progress-bar {
-    padding-left: 0px;
+    left: 0px;
  }
 }
 

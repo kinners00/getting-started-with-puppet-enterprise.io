@@ -4926,10 +4926,6 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0;
   }
-
-  .progress-bar {
-    margin-left: 0px;
-}
 }
 
 @media (min-width: 768px) {
@@ -13531,6 +13527,12 @@ font-weight: 600;
   margin-left: 230px;
   background: #006666;
   width: 0%;
+}
+
+@media (max-width: 767.98px) {
+  .progress-bar {
+    margin-left: 0px;
+ }
 }
 
 

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div class="navbar-fixed-top">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Delgating Permissions</title>
+  <title>LAB: Apply Role Configuration</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -88,10 +85,10 @@
         <script>
           $(function(){
             $("#sidebar").load("sidebar.html", function (){
-              $("#rbacsub").attr( "data-toggle", "collapse" );
-              $("#rbacsub").attr( "aria-expanded", "true" ); 
-              $("#rbac").attr( "class", "collapse show" );   
-              $("#delegateperms").addClass("active");
+              $("#rolesandprofilessub").attr( "data-toggle", "collapse" );
+              $("#rolesandprofilessub").attr( "aria-expanded", "true" );
+              $("#rolesandprofiles").attr( "class", "collapse show" );  
+              $("#applyrole").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );
               $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
@@ -143,8 +140,8 @@
   
               
               </div>
-            <h1 class="font-weight-bold">LAB: Delgating Permissions</h1>
-            <p class="lead mb-5">Create a role with limited permissions</p>
+            <h1 class="font-weight-bold">LAB: Apply Role Configuration</h1>
+            <p class="lead mb-5">Apply your role to your node</p>
      
 
             <hr class="mt-7 mb-4">
@@ -482,10 +479,10 @@
       var myCircle = Circles.create({
         id:                  'circles-1',
         radius:              60,      
-        value:               2,
-        maxValue:            3,
+        value:               3,
+        maxValue:            4,
         width:               13,
-        text:                '2/3',
+        text:                '3/4',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

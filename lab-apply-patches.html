@@ -3,10 +3,11 @@
   <div class="navbar-fixed-top">
     <div class="progress-bar" id="myBar"></div>
   </div>
+
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Running your Plan</title>
+  <title>LAB: Apply patches</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -88,10 +89,10 @@
         <script>
             $(function(){
               $("#sidebar").load("sidebar.html", function (){
-                $("#planssub").attr( "data-toggle", "collapse" );
-                $("#planssub").attr( "aria-expanded", "true" );  
-                $("#plans").attr( "class", "collapse show" ); 
-                $("#runyourplan").addClass("active");
+                $("#patchmanagementsub").attr( "data-toggle", "collapse" );
+                $("#patchmanagementsub").attr( "aria-expanded", "true" ); 
+                $("#patchmanagement").attr( "class", "collapse show" );   
+                $("#patchingnodes").addClass("active");
                 $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
                 $("#gettingstarted").attr( "class", "btn-collapse in" );
                 $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
@@ -143,8 +144,8 @@
   
               
               </div>
-            <h1 class="font-weight-bold">LAB: Running your Plan</h1>
-            <p class="lead mb-5">Create a task using a bash or powershell script</p>
+            <h1 class="font-weight-bold">LAB: Apply patches</h1>
+            <p class="lead mb-5">Apply patches to nodes using the built-in task</p>
      
 
             <hr class="mt-7 mb-4">
@@ -478,36 +479,36 @@
 <script src="assets/js/custom-scrollbar.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets/js/circles.js"></script>
-<script>
-    var myCircle = Circles.create({
-      id:                  'circles-1',
-      radius:              60,      
-      value:               3,
-      maxValue:            3,
-      width:               13,
-      text:                '3/3',
-      colors:              ['#CCCCCC', '#006666'],
-      duration:            300,
-      wrpClass:            'circles-wrp',
-      textClass:           'circles-text',
-      textClass:           '#006666',
-      valueStrokeClass:    'circles-valueStroke',
-      maxValueStrokeClass: 'circles-maxValueStroke',
-      styleWrapper:        true,
-      styleText:           true
-    });
+    <script>
+      var myCircle = Circles.create({
+        id:                  'circles-1',
+        radius:              60,      
+        value:               3,
+        maxValue:            3,
+        width:               13,
+        text:                '3/3',
+        colors:              ['#CCCCCC', '#006666'],
+        duration:            300,
+        wrpClass:            'circles-wrp',
+        textClass:           'circles-text',
+        textClass:           '#006666',
+        valueStrokeClass:    'circles-valueStroke',
+        maxValueStrokeClass: 'circles-maxValueStroke',
+        styleWrapper:        true,
+        styleText:           true
+      });
+      </script>
+    <script>
+      window.onscroll = function() {myFunction()};
+  
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+  }
+  
+  
     </script>
-  <script>
-    window.onscroll = function() {myFunction()};
-
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-
-  </script>
-</body>
-</html>
+  </body>
+  </html>

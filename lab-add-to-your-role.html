@@ -3,7 +3,7 @@
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Setting Hiera Variables</title>
+  <title>LAB: Add to your Role</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -85,10 +85,10 @@
         <script>
           $(function(){
             $("#sidebar").load("sidebar.html", function (){
-              $("#hierasub").attr( "data-toggle", "collapse" );
-              $("#hierasub").attr( "aria-expanded", "true" );  
-              $("#hiera").attr( "class", "collapse show" );   
-              $("#settinghieravariables").addClass("active");
+              $("#rolesandprofilessub").attr( "data-toggle", "collapse" );
+              $("#rolesandprofilessub").attr( "aria-expanded", "true" );
+              $("#rolesandprofiles").attr( "class", "collapse show" );  
+              $("#addtorole").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );
               $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
@@ -140,8 +140,8 @@
   
               
               </div>
-            <h1 class="font-weight-bold">LAB: Setting Hiera Variables</h1>
-            <p class="lead mb-5">Set variables in Hiera</p>
+            <h1 class="font-weight-bold">LAB: Add to your Role</h1>
+            <p class="lead mb-5">Add an additional profile to your role</p>
      
 
             <hr class="mt-7 mb-4">
@@ -479,10 +479,10 @@
       var myCircle = Circles.create({
         id:                  'circles-1',
         radius:              60,      
-        value:               2,
-        maxValue:            2,
+        value:               4,
+        maxValue:            4,
         width:               13,
-        text:                '2/2',
+        text:                '4/4',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

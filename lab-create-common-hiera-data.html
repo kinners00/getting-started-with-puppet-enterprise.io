@@ -3,7 +3,7 @@
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Build a Role</title>
+  <title>LAB: Create common Hiera data</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -85,10 +85,10 @@
         <script>
           $(function(){
             $("#sidebar").load("sidebar.html", function (){
-              $("#rolesandprofilessub").attr( "data-toggle", "collapse" );
-              $("#rolesandprofilessub").attr( "aria-expanded", "true" );
-              $("#rolesandprofiles").attr( "class", "collapse show" );  
-              $("#buildarole").addClass("active");
+              $("#hierasub").attr( "data-toggle", "collapse" );
+              $("#hierasub").attr( "aria-expanded", "true" );  
+              $("#hiera").attr( "class", "collapse show" );   
+              $("#createcommondata").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );
               $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
@@ -140,8 +140,8 @@
   
               
               </div>
-            <h1 class="font-weight-bold">LAB: Build a Role</h1>
-            <p class="lead mb-5">Build a role using multiple profiles</p>
+            <h1 class="font-weight-bold">LAB: Create common Hiera data</h1>
+            <p class="lead mb-5">Add data to the common data layer</p>
      
 
             <hr class="mt-7 mb-4">
@@ -479,10 +479,10 @@
       var myCircle = Circles.create({
         id:                  'circles-1',
         radius:              60,      
-        value:               2,
+        value:               3,
         maxValue:            4,
         width:               13,
-        text:                '2/4',
+        text:                '3/4',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

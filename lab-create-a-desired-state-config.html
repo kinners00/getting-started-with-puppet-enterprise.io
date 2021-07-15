@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <div class="navbar-fixed-top">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Applying your configuration</title>
+  <title>LAB: Create a Desired state config</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -88,11 +91,11 @@
               $("#desiredstatesub").attr( "data-toggle", "collapse" );
               $("#desiredstatesub").attr( "aria-expanded", "true" ); 
               $("#desiredstate").attr( "class", "collapse show" );  
-              $("#applyyourconfig").addClass("active");
+              $("#createaconfig").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );
               $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
-              $("#goingfurther").attr( "class", "btn-collapse in" ); 
+              $("#goingfurther").attr( "class", "btn-collapse in" );  
           });
         });
       </script>
@@ -139,8 +142,8 @@
   
               
               </div>
-                <h1 class="font-weight-bold">LAB: Applying your configuration</h1>
-                <p class="lead mb-5">Apply your configuration to targets</p>
+                <h1 class="font-weight-bold">LAB: Create a Desired state config</h1>
+                <p class="lead mb-5">Create a desired state configuration with a puppet manifest</p>
        
   
                 <hr class="mt-7 mb-4">
@@ -478,10 +481,10 @@
       var myCircle = Circles.create({
         id:                  'circles-1',
         radius:              60,      
-        value:               4,
+        value:               3,
         maxValue:            4,
         width:               13,
-        text:                '4/4',
+        text:                '3/4',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

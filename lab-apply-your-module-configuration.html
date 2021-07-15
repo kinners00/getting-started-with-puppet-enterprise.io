@@ -6,7 +6,7 @@
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Creating a Desired state config</title>
+  <title>LAB: Apply your configuration</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -88,14 +88,14 @@
         <script>
           $(function(){
             $("#sidebar").load("sidebar.html", function (){
-              $("#desiredstatesub").attr( "data-toggle", "collapse" );
-              $("#desiredstatesub").attr( "aria-expanded", "true" ); 
-              $("#desiredstate").attr( "class", "collapse show" );  
-              $("#createaconfig").addClass("active");
+              $("#forgesub").attr( "data-toggle", "collapse" );
+              $("#forgesub").attr( "aria-expanded", "true" );  
+              $("#forge").attr( "class", "collapse show" );
+              $("#applyyourconfigmod").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );
               $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
-              $("#goingfurther").attr( "class", "btn-collapse in" );  
+              $("#goingfurther").attr( "class", "btn-collapse in" ); 
           });
         });
       </script>
@@ -142,8 +142,8 @@
   
               
               </div>
-                <h1 class="font-weight-bold">LAB: Creating a Desired state config</h1>
-                <p class="lead mb-5">Create a desired state configuration with a puppet manifest</p>
+                <h1 class="font-weight-bold">LAB: Apply your configuration</h1>
+                <p class="lead mb-5">Apply your configuration to targets</p>
        
   
                 <hr class="mt-7 mb-4">
@@ -482,9 +482,9 @@
         id:                  'circles-1',
         radius:              60,      
         value:               3,
-        maxValue:            4,
+        maxValue:            3,
         width:               13,
-        text:                '3/4',
+        text:                '3/3',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

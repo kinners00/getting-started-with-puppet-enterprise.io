@@ -3,11 +3,10 @@
   <div class="navbar-fixed-top">
     <div class="progress-bar" id="myBar"></div>
   </div>
-
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Enabling Package Inventory</title>
+  <title>LAB: Group Nodes</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -91,12 +90,12 @@
             $("#sidebar").load("sidebar.html", function (){
               $("#inventorysub").attr( "aria-expanded", "true" ); 
               $("#inventorysub").attr( "data-toggle", "collapse" );
-              $("#inventory").attr( "class", "collapse show" );   
-              $("#enablingpackinv").addClass("active");
+              $("#inventory").attr( "class", "collapse show" );  
+              $("#groupingnodes").addClass("active");
               $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
               $("#gettingstarted").attr( "class", "btn-collapse in" );
               $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
-              $("#goingfurther").attr( "class", "btn-collapse in" ); 
+              $("#goingfurther").attr( "class", "btn-collapse in" );
           });
         });
       </script>
@@ -142,7 +141,7 @@
                
               </div>
   
-               <h1 class="font-weight-bold">LAB: Enabling Package Inventory</h1>
+               <h1 class="font-weight-bold">LAB: Group Nodes</h1>
   
   
                 <hr class="mt-7 mb-4">
@@ -393,10 +392,10 @@
       var myCircle = Circles.create({
         id:                  'circles-1',
         radius:              60,      
-        value:               2,
+        value:               4,
         maxValue:            4,
         width:               13,
-        text:                '2/4',
+        text:                '4/4',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <div class="navbar-fixed-top">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Build a Role</title>
+  <title>LAB: Run your Plan</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -83,19 +86,19 @@
 
         </div>
         <script>
-          $(function(){
-            $("#sidebar").load("sidebar.html", function (){
-              $("#rolesandprofilessub").attr( "data-toggle", "collapse" );
-              $("#rolesandprofilessub").attr( "aria-expanded", "true" );
-              $("#rolesandprofiles").attr( "class", "collapse show" );  
-              $("#buildarole").addClass("active");
-              $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
-              $("#gettingstarted").attr( "class", "btn-collapse in" );
-              $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
-              $("#goingfurther").attr( "class", "btn-collapse in" ); 
+            $(function(){
+              $("#sidebar").load("sidebar.html", function (){
+                $("#planssub").attr( "data-toggle", "collapse" );
+                $("#planssub").attr( "aria-expanded", "true" );  
+                $("#plans").attr( "class", "collapse show" ); 
+                $("#runyourplan").addClass("active");
+                $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
+                $("#gettingstarted").attr( "class", "btn-collapse in" );
+                $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
+                $("#goingfurther").attr( "class", "btn-collapse in" ); 
+            });
           });
-        });
-      </script>
+        </script>
 
       </nav>
         
@@ -140,8 +143,8 @@
   
               
               </div>
-            <h1 class="font-weight-bold">LAB: Build a Role</h1>
-            <p class="lead mb-5">Build a role using multiple profiles</p>
+            <h1 class="font-weight-bold">LAB: Run your Plan</h1>
+            <p class="lead mb-5">Create a task using a bash or powershell script</p>
      
 
             <hr class="mt-7 mb-4">
@@ -475,36 +478,36 @@
 <script src="assets/js/custom-scrollbar.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets/js/circles.js"></script>
-    <script>
-      var myCircle = Circles.create({
-        id:                  'circles-1',
-        radius:              60,      
-        value:               2,
-        maxValue:            4,
-        width:               13,
-        text:                '2/4',
-        colors:              ['#CCCCCC', '#006666'],
-        duration:            300,
-        wrpClass:            'circles-wrp',
-        textClass:           'circles-text',
-        textClass:           '#006666',
-        valueStrokeClass:    'circles-valueStroke',
-        maxValueStrokeClass: 'circles-maxValueStroke',
-        styleWrapper:        true,
-        styleText:           true
-      });
-      </script>
-    <script>
-      window.onscroll = function() {myFunction()};
-  
-      function myFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-  }
-  
-  
+<script>
+    var myCircle = Circles.create({
+      id:                  'circles-1',
+      radius:              60,      
+      value:               3,
+      maxValue:            3,
+      width:               13,
+      text:                '3/3',
+      colors:              ['#CCCCCC', '#006666'],
+      duration:            300,
+      wrpClass:            'circles-wrp',
+      textClass:           'circles-text',
+      textClass:           '#006666',
+      valueStrokeClass:    'circles-valueStroke',
+      maxValueStrokeClass: 'circles-maxValueStroke',
+      styleWrapper:        true,
+      styleText:           true
+    });
     </script>
-  </body>
-  </html>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+  </script>
+</body>
+</html>

@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div class="navbar-fixed-top">
-    <div class="progress-bar" id="myBar"></div>
-  </div>
-
 <head>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <!-- Title -->
-  <title>LAB: Patching Nodes</title>
+  <title>LAB: Create node specific Hiera data</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -87,19 +83,19 @@
 
         </div>
         <script>
-            $(function(){
-              $("#sidebar").load("sidebar.html", function (){
-                $("#patchmanagementsub").attr( "data-toggle", "collapse" );
-                $("#patchmanagementsub").attr( "aria-expanded", "true" ); 
-                $("#patchmanagement").attr( "class", "collapse show" );   
-                $("#patchingnodes").addClass("active");
-                $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
-                $("#gettingstarted").attr( "class", "btn-collapse in" );
-                $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
-                $("#goingfurther").attr( "class", "btn-collapse in" ); 
-            });
+          $(function(){
+            $("#sidebar").load("sidebar.html", function (){
+              $("#hierasub").attr( "data-toggle", "collapse" );
+              $("#hierasub").attr( "aria-expanded", "true" );  
+              $("#hiera").attr( "class", "collapse show" );   
+              $("#createnodedata").addClass("active");
+              $("#gtnsbtn").attr( "data-toggle", "btn-collapse in" );
+              $("#gettingstarted").attr( "class", "btn-collapse in" );
+              $("#gngfrt").attr( "data-toggle", "btn-collapse in" );
+              $("#goingfurther").attr( "class", "btn-collapse in" ); 
           });
-        </script>
+        });
+      </script>
 
       </nav>
         
@@ -144,8 +140,8 @@
   
               
               </div>
-            <h1 class="font-weight-bold">LAB: Patching Nodes</h1>
-            <p class="lead mb-5">Apply patches to nodes</p>
+            <h1 class="font-weight-bold">LAB: Create node specific Hiera data</h1>
+            <p class="lead mb-5">Add data to the nodes data layer</p>
      
 
             <hr class="mt-7 mb-4">
@@ -484,9 +480,9 @@
         id:                  'circles-1',
         radius:              60,      
         value:               3,
-        maxValue:            3,
+        maxValue:            4,
         width:               13,
-        text:                '3/3',
+        text:                '3/4',
         colors:              ['#CCCCCC', '#006666'],
         duration:            300,
         wrpClass:            'circles-wrp',

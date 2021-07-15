@@ -1,5 +1,3 @@
-# nessus_agent
-
 #### Sections
 
 - [Description](#description)

@@ -898,6 +898,10 @@ pre code {
   margin-left: 91.66667%;
 }
 
+h4#sections {
+  font-size: 2em;
+}
+
 @media (min-width: 576px) {
   .col-sm {
     -ms-flex-preferred-size: 0;
